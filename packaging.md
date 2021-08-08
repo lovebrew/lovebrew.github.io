@@ -20,18 +20,21 @@ Grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) a
 
 ### LÖVEBrew Application
 
-!> Make sure you have python3 installed before you proceed! The application does **not** work on python2.
+Please download the respective binary for your platform [on the releases page](https://github.com/lovebrew/lovebrew/releases/latest) and follow the instructions in the README. If you are able to run `lovebrew` it will prompt you with a first-time message about reporting issues.
 
-Clone the [repository for `lovebrew`](https://github.com/TurtleP/lovebrew). Please read the readme as well for proper installation and usage instructions.
+#### Directory Structure
 
-One the application is installed, run `lovebrew --init` in your project directory. Your directory structure should look something like the following:
+A typical directory structure when using LÖVEBrew looks like the following:
 
 ```
+SuperProject
 ├── SuperGame
 │   ├── conf.lua
 │   └── main.lua
 └── lovebrew.toml
 ```
+
+The `toml` file is created by running `lovebrew init`. There are several settings that can be changed, but some of the more important ones are detailed below.
 
 #### Custom Icons
 
@@ -39,7 +42,7 @@ On Nintendo 3DS, create a 48x48 png image. For the Nintendo Switch version, the 
 
 #### Custom Metadata
 
-Edit the `lovebrew.toml` file in the directory. Read the comments for specific details on each item. Once done, run `lovebrew`.
+Edit the `lovebrew.toml` file in the directory. Read the comments for specific details on each item. Once done, run `lovebrew build`.
 
 Copy the newly built *SuperGame.(nro/3dsx)* to the micro SD card under `/switch` (or `/3ds`) and it will show up as an entry once you open the Homebrew Menu.
 
