@@ -10,10 +10,10 @@ Provides of audio interface for playback/recording sound.
 |-----------------------------------------------------------|---------------------------------------------------------|--------------------------------------------------------|
 | [getVolume](https://love2d.org/wiki/love.audio.getVolume) | Returns the master volume                               |                                                        |
 | [newSource](https://love2d.org/wiki/love.audio.newSource) | Creates a new Source from a file, SoundData, or Decoder |                                                        |
-| [pause](https://love2d.org/wiki/love.audio.pause)         | Pauses specified Source                                 | LÖVE can pause all Sources. Currently not implemented. |
-| [play](https://love2d.org/wiki/love.audio.play)           | Plays the specified Source                              |                                                        |
+| [pause](https://love2d.org/wiki/love.audio.pause)         | Pauses specific or all currently played Sources         |                                                        |
+| [play](https://love2d.org/wiki/love.audio.play)           | Plays the specified Source or multiple Sources          |                                                        |
 | [setVolume](https://love2d.org/wiki/love.audio.setVolume) | Sets the master volume                                  |                                                        |
-| [stop](https://love2d.org/wiki/love.audio.stop)           | Stops a specified playing source                        | LÖVE can stop all sources. Currently not implemented.  |
+| [stop](https://love2d.org/wiki/love.audio.stop)           | Stops a specified playing source or all Sources         |                                                        |
 
 <br>
 
@@ -48,9 +48,3 @@ See also:
 | [stop](https://love2d.org/wiki/Source:stop)                             | Stops a source                                    |                                                        |
 
 <br>
-
-### To-Do:
-- Source:tell
-- Source:getDuration (not hooked up?)
-- QueueableSource?
-  - It's an std::vector of Sources and some other things -- gotta check it during the overhaul

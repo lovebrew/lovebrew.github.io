@@ -10,41 +10,11 @@ Follow the instructions for [setting up a development environment](building?id=g
 
 ### Foreword
 
-When you run LÖVE Potion by itself, it will first try to locate a game within its own *RomFS*, a read-only filesystem. If you did not build your game with the provided templates for standalone usage (useful for custom metadata), it will default to using the 'Game Folder'. If it fails to locate that, it will show the 'No Game' screen.
+When you run LÖVE Potion by itself, it will first try to locate a game within its own *RomFS*, a read-only filesystem. If you did not build your game with LÖVEBrew for standalone usage (useful for custom metadata), it will default to using the 'Game Folder'. If it fails to locate that, it will show the 'No Game' screen.
 
 Make sure you keep your LÖVE Potion projects in an easy-to-remember directory. Do **_not_** put any of the LÖVE Potion data, your games **_or_** other binaries within the `devkitPro` folder. Keep it on your Desktop or even on cloud storage, like Dropbox.
 
-### Environment Setup
-
-Grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) and place it under your home directory inside the `.lovepotion` folder under your HOME directory (`~/.lovepotion`). Each elf file must be named specifically. If using the 3DS version, name the elf file `3ds.elf`, and for Switch, `switch.elf`
-
-### LÖVEBrew Application
-
-Please download the respective binary for your platform [on the releases page](https://github.com/lovebrew/lovebrew/releases/latest) and follow the instructions in the README. If you are able to run `lovebrew` it will prompt you with a first-time message about reporting issues.
-
-#### Directory Structure
-
-A typical directory structure when using LÖVEBrew looks like the following:
-
-```
-SuperProject
-├── SuperGame
-│   ├── conf.lua
-│   └── main.lua
-└── lovebrew.toml
-```
-
-The `toml` file is created by running `lovebrew init`. There are several settings that can be changed, but some of the more important ones are detailed below.
-
-#### Custom Icons
-
-On Nintendo 3DS, create a 48x48 png image. For the Nintendo Switch version, the image must be 256x256 pixels and saved as a jpg.
-
-#### Custom Metadata
-
-Edit the `lovebrew.toml` file in the directory. Read the comments for specific details on each item. Once done, run `lovebrew build`.
-
-Copy the newly built *SuperGame.(nro/3dsx)* to the micro SD card under `/switch` (or `/3ds`) and it will show up as an entry once you open the Homebrew Menu.
+For more information about the LÖVEBrew application, please [follow this link](lovebrew)
 
 ### LÖVE Executable
 
@@ -62,4 +32,4 @@ All that's left is to copy the new *SuperGame.love* file to the `/switch` folder
 
 The quickest way to debug is through the `game` folder. Just download the [latest *.nro or *.3dsx binary](https://github.com/TurtleP/LovePotion/releases) and put it under `/switch/LovePotion` (or `/3ds/LovePotion`). Create the `LovePotion` directory if it doesn't exist.
 
-Create a directory inside of `/switch/LovePotion` (or `/3ds/LovePotion`) called `game` and then copy all your source files into it. Open the Homebrew Menu and run the LÖVE Potion entry and it will run your game!
+Create a directory inside of `/switch/LovePotion` (or `/3ds/LovePotion`) called `game`. This will contain all of your source files. Do note, however, that on Nintendo 3DS, you are required to convert textures and fonts to special formats. To do this, you can use `tex3ds` and `mkbcfnt` to do these by hand, but it's also easiest [with the LÖVEBrew application](lovebrew) and setting the `raw` configuration item to `true`. When everything is done, open the Homebrew Menu and run the LÖVE Potion entry and it will run your game!

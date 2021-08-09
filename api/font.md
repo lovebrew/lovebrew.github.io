@@ -3,18 +3,10 @@
 <b><i>
 Allows you to work with fonts.
 </b></i>
-
-!> This module is only available on Nintendo Switch. This is currently only used internally. It will be fixed in the next release (2.1.0).
-
 ## Functions
 
-| Name                                                             | Description              | Notes |
-|------------------------------------------------------------------|--------------------------|-------|
-| [newRasterizer](https://love2d.org/wiki/love.font.newRasterizer) | Creates a new Rasterizer |       |
-
-### To Do:
-- newGlyphData
-- newImageRasterizer
-- newTrueTypeRasterizer
-  - Used internally, needs to be hooked up
-- new BMFontRasterizer
+| Name                                                                             | Description                       | Notes                |
+|----------------------------------------------------------------------------------|-----------------------------------|----------------------|
+| [newRasterizer](https://love2d.org/wiki/love.font.newRasterizer)                 | Creates a new Rasterizer          |                      |
+| [newTrueTypeRasterizer](https://love2d.org/wiki/love.font.newTrueTypeRasterizer) | Creates a new TrueType Rasterizer | Nintendo Switch only |
+| newBCFNTRasterizer                                                               | Creates a bew BCFNT Rasterizer    | Nintendo 3DS only    |

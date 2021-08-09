@@ -3,6 +3,7 @@
 - [Building LÖVE Potion](building)
 - [Compatibility](compatability)
 - [Game Distribution](packaging)
+- [LÖVEBrew Tutorial](lovebrew)
 - **Other**
 - [FAQ](faq)
 - [Showcase](showcase)
