@@ -33,10 +33,11 @@ You can try aligning the coordinate system with the center of pixels rather than
 | [getHeight](https://love2d.org/wiki/love.graphics.getHeight)                         | Gets the height in pixels of the window                                                                            |                                                                           |
 | [getLineWidth](https://love2d.org/wiki/love.graphics.getLineWidth)                   | Gets the current line width                                                                                        |                                                                           |
 | [getPointSize](https://love2d.org/wiki/love.graphics.getPointSize)                   | Gets the current point size                                                                                        |                                                                           |
-| [getStereoscopicDepth](https://love2d.org/wiki/love.graphics.getStereoscopicDepth)   | Gets the current 3D slider value on 3DS (0 ~ 1), useful for "3D rendering"                                         | This will throw an error on Switch as it is not supported on there        |
+| get3DDepth                                                                           | Gets the current 3D slider value on 3DS (0 ~ 1), useful for "3D rendering"                                         | This will throw an error on Switch as it is not supported on there        |
 | [getRendererInfo](https://love2d.org/wiki/love.graphics.getRendererInfo)             | Gets information about the system's video card and drivers                                                         |                                                                           |
 | [getScissor](https://love2d.org/wiki/love.graphics.getScissor)                       | Gets the current scissor box                                                                                       |                                                                           |
 | getScreens                                                                           | Get the names of the renderable screens                                                                            |                                                                           |
+| get3D                                                                                | Check if Stereoscopic 3D is enabled                                                                                |                                                                           |
 | [getWidth](https://love2d.org/wiki/love.graphics.getWidth)                           | Gets the width in pixels of the window                                                                             | On 3DS, you may pass "top" or "bottom" to get a specific screen's width   |
 | [instersectScissor](https://love2d.org/wiki/love.graphics.instersectScissor)         | Sets the scissor to the rectangle created by the intersection of the specified rectangle with the existing scissor |                                                                           |
 | [inverseTransformPoint](https://love2d.org/wiki/love.graphics.inverseTransformPoint) | Converts the given 2D position from screen-space into global coordinates                                           |                                                                           |
@@ -63,6 +64,7 @@ You can try aligning the coordinate system with the center of pixels rather than
 | setActiveScreen                                                                      | Sets the current screen to be rendered                                                                             | Used internally, do not call this                                         |
 | [setBackgroundColor](https://love2d.org/wiki/love.graphics.setBackgroundColor)       | Sets the background color                                                                                          |                                                                           |
 | setBlendFactor                                                                       | Sets the blend factor [0 - 1]; Nintendo 3DS Only                                                                   | num >= 0 enables colorized tinting for images and 0 disables it           |
+| set3D                                                                                | Sets whether Stereoscopic 3D is enabled. Nintendo 3DS Only                                                         |                                                                           |
 | [setCanvas](https://love2d.org/wiki/love.graphics.setCanvas)                         | Captures drawing operations to a Canvas                                                                            |                                                                           |
 | [setColor](https://love2d.org/wiki/love.graphics.setColor)                           | Sets the color used for drawing                                                                                    | On 3DS, only the alpha component will affect textures due to a limitation |
 | [setDefaultFilter](https://love2d.org/wiki/love.graphics.setDefaultFilter)           | Sets the default scaling filters used with Images, Canvases, and Fonts                                             |                                                                           |
@@ -72,7 +74,7 @@ You can try aligning the coordinate system with the center of pixels rather than
 | [setFont](https://love2d.org/wiki/love.graphics.setFont)                             | Set an already-loaded Font as the current font                                                                     |                                                                           |
 | [setScissor](https://love2d.org/wiki/love.graphics.setScissor)                       | Sets or disables scissor                                                                                           |                                                                           |
 | [transformPoint](https://love2d.org/wiki/love.graphics.transformPoint)               | Converts the given 2D position from global coordinates into screen-space                                           |                                                                           |
-| [translate](https://love2d.org/wiki/love.graphics.translate)                         | Translates the coordinate system in two dimensions                                                                 |                                                                           |
+| [translate](https://love2d.org/wiki/love.graphics.translate)                         | Translates the coordinate system in two dimensions
 
 ## Types
 
@@ -84,7 +86,7 @@ All Textures can be drawn with Quads. This is an abstract type that can't be cre
 </b></i>
 
 See also:
-- [Object](api/love?id=Object)
+* [Object](api/love?id=Object)
 
 | Name                                                             | Description                               | Notes |
 |------------------------------------------------------------------|-------------------------------------------|-------|
@@ -108,9 +110,9 @@ By drawing things that do not change position often (such as background items) t
 </b></i>
 
 See also:
-- [Texture](#texture)
-- [Object](api/love?id=Object)
-- [love.graphics.newCanvas](https://love2d.org/wiki/love.graphics.newCanvas)
+* [Texture](#texture)
+* [Object](api/love?id=Object)
+* [love.graphics.newCanvas](https://love2d.org/wiki/love.graphics.newCanvas)
 
 | Name                                                | Description                         | Notes |
 |-----------------------------------------------------|-------------------------------------|-------|
@@ -125,9 +127,10 @@ Drawable image type.
 !> Images on 3DS will need to be converted to a `*.t3x` format prior to use. See [compatibility](compatibility?id=drawing) for more information.
 
 See also:
-- [Texture](#texture)
-- [Object](api/love?id=Object)
-- [love.graphics.newImage](https://love2d.org/wiki/love.graphics.newImage)
+* [Texture](#texture)
+* [Object](api/love?id=Object)
+* [love.graphics.newImage](https://love2d.org/wiki/love.graphics.newImage)
+
 ### Quad
 
 <b><i>
@@ -136,8 +139,8 @@ Quads can be used to select part of a texture to draw. In this way, one large te
 </b></i>
 
 See also:
-- [Object](api/love?id=Object)
-- [love.graphics.newQuad](https://love2d.org/wiki/love.graphics.newQuad)
+* [Object](api/love?id=Object)
+* [love.graphics.newQuad](https://love2d.org/wiki/love.graphics.newQuad)
 
 | Name                                                                      | Description                                                                    | Notes |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------|-------|
@@ -145,7 +148,7 @@ See also:
 | [getViewport](https://love2d.org/wiki/Quad:getViewport)                   | Gets the current viewport of this Quad                                         |       |
 | [setViewport](https://love2d.org/wiki/Quad:setViewport)                   | Sets the texture coordinates according to a viewport                           |       |
 
-!> On Nintendo 3DS, Text and Font objects (via `love.graphics.print`) have a limit of 512 characters that can be printed at one time. This is due to the tight limitations on the console. System fonts also do not carry the tab character (`\t`) and will render as a `[?]` glyph.
+!> On Nintendo 3DS, Text and Font objects (via `love.graphics.print` ) have a limit of 512 characters that can be printed at one time. This is due to the tight limitations on the console. System fonts also do not carry the tab character ( `\t` ) and will render as a `[?]` glyph.
 
 ### Font
 
@@ -156,8 +159,8 @@ Defines the shape of characters that can be drawn onto the screen.
 !> Fonts on 3DS will need to be converted to a `*.bcfnt` format prior to use. See [compatibility](compatibility?id=system-font-loading) for more information.
 
 See also:
-- [Object](api/love?id=Object)
-- [love.graphics.newFont](https://love2d.org/wiki/love.graphics.newFont)
+* [Object](api/love?id=Object)
+* [love.graphics.newFont](https://love2d.org/wiki/love.graphics.newFont)
 
 | Name                                                | Description                           | Notes |
 |-----------------------------------------------------|---------------------------------------|-------|
@@ -171,8 +174,8 @@ Drawable text.
 </b></i>
 
 See also:
-- [Object](api/love?id=Object)
-- [love.graphics.newText](https://love2d.org/wiki/love.graphics.newText)
+* [Object](api/love?id=Object)
+* [love.graphics.newText](https://love2d.org/wiki/love.graphics.newText)
 
 | Name                                                        | Description                                                                           | Notes                                                                          |
 |-------------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|

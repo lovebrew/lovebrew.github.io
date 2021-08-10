@@ -8,7 +8,7 @@ On a Nintendo 3DS, this was a big hurdle. The initial codebase would rely on a c
 
 For example, if you wish to draw to only *one* screen. You would simply check against the `screen` value that was passed in:
 
-``` lua
+```lua
 function love.draw(screen)
     if screen ~= "bottom" then
         -- render top screen
@@ -18,7 +18,7 @@ end
 
 Currently the `screen` parameter can be one of three strings: `left` , `right` , and `bottom` . The first two correspond with the screens on the top, so that one could use the 3D depth functionality.
 
-Additionally, textures (such as png or jpg files) must be converted to the t3x format on Nintendo 3DS using `tex3ds`. It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details.
+Additionally, textures (such as png or jpg files) must be converted to the t3x format on Nintendo 3DS using `tex3ds` . It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details.
 
 ## System Font Loading
 
@@ -44,9 +44,9 @@ One can load a system font using the follwing names in place of the path paramet
 | korean                      | Korean font                         |
 | nintendo extended           | Nintendo Extended Symbols font      |
 
-It is important to note that for custom fonts you must convert your TrueType or OpenType font to bfnt using `mkbcfnt`. It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details. The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
+It is important to note that for custom fonts you must convert your TrueType or OpenType font to bfnt using `mkbcfnt` . It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details. The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
 
-``` lua
+```lua
 local utf8 = require("utf8")
 
 -- get the encoded utf8 of the Play Coin icon
@@ -122,9 +122,9 @@ Calling `love.keyboard.setTextInput` brings up the System Software Keyboard appl
 
 !> Stereoscopic depth is not available Nintendo 2DS family systems and will always return zero. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
 
-The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getStereoscopicDepth()`. This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
+The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getStereoscopicDepth()` . This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
 
-``` lua
+```lua
 local str, font = "Hello World", nil
 local textDepth = 6
 function love.load()
@@ -161,13 +161,13 @@ This is a little more involved and advanced, but developers will be required to 
 
 #### **Windows (msys2)**
 
-``` bash
+```bash
 pacman -S devkitARM-gdb
 ```
 
 #### **Unix-like (Linux, macOS)**
 
-``` bash
+```bash
 sudo (dkp-)pacman -S devkitARM-gdb
 ```
 
@@ -176,3 +176,7 @@ Once this is installed, go to the hbmenu. Run the rosalina menu combo (default `
 ### Nintendo Switch
 
 Since `nxlink` comes with the `switch-tools` package, all that's required is to load the netsender in hbmenu by pressing `y` and in the terminal running `nxlink -s path/to/nro` . The Switch will receive the nro and immediately run it once it's fully downloaded. Any `print` calls ran will output to this terminal's window.
+
+### Alternatives
+
+The only other alternative method for the *absolute* best experience is to use LÖVE itself. Simply plug in a controller and [use the nëst](https://github.com/TurtleP/nest) library. Not all features in LÖVE Potion are available, of course, so please bear this in mind.
