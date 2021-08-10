@@ -1,7 +1,7 @@
 - **Main**
 - [Home](/)
 - [Building LÖVE Potion](building)
-- [Compatibility](compatability)
+- [Compatibility](compatibility)
 - [Game Distribution](packaging)
 - [LÖVEBrew Tutorial](lovebrew)
 - **Other**

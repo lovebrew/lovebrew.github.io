@@ -122,7 +122,7 @@ See also:
 Drawable image type.
 </b></i>
 
-!> Images on 3DS will need to be converted to a `*.t3x` format prior to use. See [compatability](compatability?id=drawing) for more information.
+!> Images on 3DS will need to be converted to a `*.t3x` format prior to use. See [compatibility](compatibility?id=drawing) for more information.
 
 See also:
 - [Texture](#texture)
@@ -153,7 +153,7 @@ See also:
 Defines the shape of characters that can be drawn onto the screen.
 </b></i>
 
-!> Fonts on 3DS will need to be converted to a `*.bcfnt` format prior to use. See [compatability](compatability?id=system-font-loading) for more information.
+!> Fonts on 3DS will need to be converted to a `*.bcfnt` format prior to use. See [compatibility](compatibility?id=system-font-loading) for more information.
 
 See also:
 - [Object](api/love?id=Object)

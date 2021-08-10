@@ -10,4 +10,4 @@ Provides an interface to the system's software keyboard
 
 | Name                                                               | Description                                                         | Notes |
 |--------------------------------------------------------------------|---------------------------------------------------------------------|-------|
-| [setTextInput](https://love2d.org/wiki/love.keyboard.setTextInput) | Enables [the software keyboard](compatability?id=software-keyboard) |       |
+| [setTextInput](https://love2d.org/wiki/love.keyboard.setTextInput) | Enables [the software keyboard](compatibility?id=software-keyboard) |       |

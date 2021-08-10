@@ -3,7 +3,7 @@
 ### Can I run my LÖVE game on this?
 
 Running your game without any changes is possible, but it's recommended to currently use LÖVE Potion to make games from the ground up.<br>
-Take a look at [compatability](compatability) and the API reference on the sidebar to see what may need changing.
+Take a look at [compatibility](compatibility) and the API reference on the sidebar to see what may need changing.
 
 ### Can I help?
 
