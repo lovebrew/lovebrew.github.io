@@ -14,10 +14,15 @@
 <body>
   <nav>
     <a href="#/">English</a>
+    <a href="#/ko-kr/">한국어</a>
   </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
+      alias: {
+        '/ko-kr/(.*)':
+          'https://raw.githubusercontent.com/2jun0/lovebrew-ko-kr/master/$1',
+      },
       name: 'LÖVE Potion',
       subMaxLevel: 2,
       loadSidebar: 'sidebar.md',
@@ -27,11 +32,13 @@
       executeScript: true,
       search: {
         noData: {
-          '/': 'No results!'
+          '/': 'No results!',
+          '/ko-kr/': '결과 없음!'
         },
         paths: 'auto',
         placeholder: {
-          '/': 'Search'
+          '/': 'Search',
+          '/ko-kr/': '검색'
         }
       }
     }
