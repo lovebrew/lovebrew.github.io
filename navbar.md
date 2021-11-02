@@ -1,2 +1,3 @@
 - Translations
     - [English](/)
+    - [한국어](/ko-kr/)
