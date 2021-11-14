@@ -20,6 +20,37 @@ Currently the `screen` parameter can be one of three strings: `left` , `right` ,
 
 Additionally, textures (such as png or jpg files) must be converted to the t3x format on Nintendo 3DS using `tex3ds` . It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details.
 
+## Stereoscopic 3D Depth
+
+!> Stereoscopic depth is only for Nintendo 3DS. This is function will always return zero on Nintendo 2DS family systems. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
+
+The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getStereoscopicDepth()` . This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
+
+```lua
+local str, font = "Hello World", nil
+local textDepth = 6
+function love.load()
+    font = love.graphics.getFont()
+end
+
+function love.draw(screen)
+    if screen == "bottom" then
+        return
+    end
+
+    local sysDepth = -love.graphics.getStereoscopicDepth()
+
+    if screen == "right" then
+        sysDepth = -sysDepth
+    end
+
+    local left = math.floor(0.5 * (400 - font:getWidth(str)))
+    love.graphics.print("Hello World", left - sysDepth * textDepth, 120)
+end
+```
+
+We define where the main `x` coordinate should be defined as `left` . This specifically is the anchor point to draw at. In this case, it's going to be in the center of the screen. This value is then subtracted by what the depth value currently is on the system and multiplied by a constant `z` value.
+
 ## System Font Loading
 
 One can load a system font using the follwing names in place of the path parameter for `love.graphics.newFont` :
@@ -115,37 +146,6 @@ Calling `love.keyboard.setTextInput` brings up the System Software Keyboard appl
 ### Nintendo Switch
 
 ![](files/SwitchControllerMap.png)
-
-## Miscellaneous
-
-### Nintendo 3DS
-
-!> Stereoscopic depth is not available Nintendo 2DS family systems and will always return zero. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
-
-The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getStereoscopicDepth()` . This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
-
-```lua
-local str, font = "Hello World", nil
-local textDepth = 6
-function love.load()
-    font = love.graphics.getFont()
-end
-
-function love.draw(screen)
-    if screen == "bottom" then
-        return
-    end
-
-    local sysDepth = -love.graphics.getStereoscopicDepth()
-
-    if screen == "right" then
-        sysDepth = -sysDepth
-    end
-
-    local left = math.floor(0.5 * (400 - font:getWidth(str)))
-    love.graphics.print("Hello World", left - sysDepth * textDepth, 120)
-end
-```
 
 ## Debugging Your Game
 
