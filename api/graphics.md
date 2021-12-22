@@ -88,16 +88,16 @@ All Textures can be drawn with Quads. This is an abstract type that can't be cre
 See also:
 * [Object](api/love?id=Object)
 
-| Name                                                             | Description                               | Notes |
-|------------------------------------------------------------------|-------------------------------------------|-------|
-| [getTextureType](https://love2d.org/wiki/Texture:getTextureType) | Gets the type of the Texture              |       |
-| [getWidth](https://love2d.org/wiki/Texture:getWidth)             | Gets the width of the Texture             |       |
-| [getHeight](https://love2d.org/wiki/Texture:getHeight)           | Gets the height of the Texture            |       |
-| [getDimensions](https://love2d.org/wiki/Texture:getDimensions)   | Gets the width and height of the Texture  |       |
-| [setFilter](https://love2d.org/wiki/Texture:setFilter)           | Sets the filter mode of the Texture       |       |
-| [getFilter](https://love2d.org/wiki/Texture:getFilter)           | Gets the filter mode of the Texture       |       |
-| [setWrap](https://love2d.org/wiki/Texture:setWrap)               | Sets the wrapping properties of a Texture |       |
-| [getWrap](https://love2d.org/wiki/Texture:getWrap)               | Gets the wrapping properties of a Texture |       |
+| Name                                                             | Description                               |
+|------------------------------------------------------------------|-------------------------------------------|
+| [getTextureType](https://love2d.org/wiki/Texture:getTextureType) | Gets the type of the Texture              |
+| [getWidth](https://love2d.org/wiki/Texture:getWidth)             | Gets the width of the Texture             |
+| [getHeight](https://love2d.org/wiki/Texture:getHeight)           | Gets the height of the Texture            |
+| [getDimensions](https://love2d.org/wiki/Texture:getDimensions)   | Gets the width and height of the Texture  |
+| [setFilter](https://love2d.org/wiki/Texture:setFilter)           | Sets the filter mode of the Texture       |
+| [getFilter](https://love2d.org/wiki/Texture:getFilter)           | Gets the filter mode of the Texture       |
+| [setWrap](https://love2d.org/wiki/Texture:setWrap)               | Sets the wrapping properties of a Texture |
+| [getWrap](https://love2d.org/wiki/Texture:getWrap)               | Gets the wrapping properties of a Texture |
 
 ### Canvas
 
@@ -114,9 +114,9 @@ See also:
 * [Object](api/love?id=Object)
 * [love.graphics.newCanvas](https://love2d.org/wiki/love.graphics.newCanvas)
 
-| Name                                                | Description                         | Notes |
-|-----------------------------------------------------|-------------------------------------|-------|
-| [renderTo](https://love2d.org/wiki/Canvas:renderTo) | Render to a Canvas using a function |       |
+| Name                                                | Description                         |
+|-----------------------------------------------------|-------------------------------------|
+| [renderTo](https://love2d.org/wiki/Canvas:renderTo) | Render to a Canvas using a function |
 
 ### Image
 
@@ -142,11 +142,11 @@ See also:
 * [Object](api/love?id=Object)
 * [love.graphics.newQuad](https://love2d.org/wiki/love.graphics.newQuad)
 
-| Name                                                                      | Description                                                                    | Notes |
-|---------------------------------------------------------------------------|--------------------------------------------------------------------------------|-------|
-| [getTextureDimensions](https://love2d.org/wiki/Quad:getTextureDimensions) | Gets reference texture dimensions initially specified in love.graphics.newQuad |       |
-| [getViewport](https://love2d.org/wiki/Quad:getViewport)                   | Gets the current viewport of this Quad                                         |       |
-| [setViewport](https://love2d.org/wiki/Quad:setViewport)                   | Sets the texture coordinates according to a viewport                           |       |
+| Name                                                                      | Description                                                                    |
+|---------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| [getTextureDimensions](https://love2d.org/wiki/Quad:getTextureDimensions) | Gets reference texture dimensions initially specified in love.graphics.newQuad |
+| [getViewport](https://love2d.org/wiki/Quad:getViewport)                   | Gets the current viewport of this Quad                                         |
+| [setViewport](https://love2d.org/wiki/Quad:setViewport)                   | Sets the texture coordinates according to a viewport                           |
 
 !> On Nintendo 3DS, Text and Font objects (via `love.graphics.print` ) have a limit of 512 characters that can be printed at one time. This is due to the tight limitations on the console. System fonts also do not carry the tab character ( `\t` ) and will render as a `[?]` glyph.
 
@@ -162,12 +162,23 @@ See also:
 * [Object](api/love?id=Object)
 * [love.graphics.newFont](https://love2d.org/wiki/love.graphics.newFont)
 
-| Name                                                | Description                           | Notes |
-|-----------------------------------------------------|---------------------------------------|-------|
-| [getHeight](https://love2d.org/wiki/Font:getHeight) | Gets the height of the Font in pixels |       |
-| [getWidth](https://love2d.org/wiki/Font:getWidth)   | Gets the width of the given text      |       |
+| Name                                                        | Description                                                             |
+|-------------------------------------------------------------|-------------------------------------------------------------------------|
+| [getAscent](https://love2d.org/wiki/Font:getAscent)         | Gets the ascent of the Font in pixels.                                  |
+| [getBaseline](https://love2d.org/wiki/Font:getBaseline)     | Gets the baseline of the Font in pixels.                                |
+| [getDPIScale](https://love2d.org/wiki/Font:getDPIScale)     | Gets the DPI scale factor of the Font.                                  |
+| [getDescent](https://love2d.org/wiki/Font:getDescent)       | Gets the descent of the Font in pixels.                                 |
+| [getFilter](https://love2d.org/wiki/Font:getFilter)         | Gets the filter mode for a font.                                        |
+| [getHeight](https://love2d.org/wiki/Font:getHeight)         | Gets the height of the Font in pixels.                                  |
+| [getLineHeight](https://love2d.org/wiki/Font:getLineHeight) | Gets the line height.                                                   |
+| [getWidth](https://love2d.org/wiki/Font:getWidth)           | Determines the width of the given text.                                 |
+| [getWrap](https://love2d.org/wiki/Font:getWrap)             | Gets formatting information for text, given a wrap limit.               |
+| [hasGlyphs](https://love2d.org/wiki/Font:hasGlyphs)         | Gets whether the Font can render a character or string.                 |
+| [setFallbacks](https://love2d.org/wiki/Font:setFallbacks)   | Sets other Fonts to use if this Font doesn't have a specific character. |
+| [setFilter](https://love2d.org/wiki/Font:setFilter)         | Sets the filter mode for a font.                                        |
+| [setLineHeight](https://love2d.org/wiki/Font:setLineHeight) | Sets the line height.                                                   |
 
-### Text
+### Tex
 
 <b></i>
 Drawable text.

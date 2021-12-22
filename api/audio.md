@@ -6,14 +6,14 @@ Provides of audio interface for playback/recording sound.
 
 ## Functions
 
-| Name                                                      | Description                                             | Notes                                                  |
-|-----------------------------------------------------------|---------------------------------------------------------|--------------------------------------------------------|
-| [getVolume](https://love2d.org/wiki/love.audio.getVolume) | Returns the master volume                               |                                                        |
-| [newSource](https://love2d.org/wiki/love.audio.newSource) | Creates a new Source from a file, SoundData, or Decoder |                                                        |
-| [pause](https://love2d.org/wiki/love.audio.pause)         | Pauses specific or all currently played Sources         |                                                        |
-| [play](https://love2d.org/wiki/love.audio.play)           | Plays the specified Source or multiple Sources          |                                                        |
-| [setVolume](https://love2d.org/wiki/love.audio.setVolume) | Sets the master volume                                  |                                                        |
-| [stop](https://love2d.org/wiki/love.audio.stop)           | Stops a specified playing source or all Sources         |                                                        |
+| Name                                                      | Description                                             |
+|-----------------------------------------------------------|---------------------------------------------------------|
+| [getVolume](https://love2d.org/wiki/love.audio.getVolume) | Returns the master volume                               |
+| [newSource](https://love2d.org/wiki/love.audio.newSource) | Creates a new Source from a file, SoundData, or Decoder |
+| [pause](https://love2d.org/wiki/love.audio.pause)         | Pauses specific or all currently played Sources         |
+| [play](https://love2d.org/wiki/love.audio.play)           | Plays the specified Source or multiple Sources          |
+| [setVolume](https://love2d.org/wiki/love.audio.setVolume) | Sets the master volume                                  |
+| [stop](https://love2d.org/wiki/love.audio.stop)           | Stops a specified playing source or all Sources         |
 
 <br>
 
@@ -26,8 +26,8 @@ A Source represents audio you can play back. The source is internally referenced
 </b></i>
 
 See also:
-- [love.audio.newSource](https://love2d.org/wiki/love.audio.newSource)
-- [Object](api/love?id=Object)
+* [love.audio.newSource](https://love2d.org/wiki/love.audio.newSource)
+* [Object](api/love?id=Object)
 
 | Name                                                                    | Description                                       | Notes                                                  |
 |-------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------|

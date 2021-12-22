@@ -5,12 +5,12 @@ Provides an interface to the user's filesystem.
 
 This module provides access to files in specific places:
 
-- The root folder of the .love archive (or source directory)
-- The root folder of the game's save directory.
-- The folder containing the game's .love archive (or source directory), but only if specific conditions are met.
+* The root folder of the .love archive (or source directory)
+* The root folder of the game's save directory.
+* The folder containing the game's .love archive (or source directory), but only if specific conditions are met.
 
 Save data will always be written next to the application.<br>
-If the app is not fused (compiled into a ROMFS with LÖVE Potion), it is in `{CURRENT_DIRECTORY}/save/{identity}`.
+If the app is not fused (compiled into a ROMFS with LÖVE Potion), it is in `{CURRENT_DIRECTORY}/save/{identity}` .
 Otherwise, it will be under `{CURRENT_DIRECTORY}/save`
 
 `{CURRENT_DIRECTORY}` is the directory containing the application (3dsx or nro)
@@ -59,27 +59,26 @@ Represents a file on the filesystem. A function that takes a file path can also 
 </b></i>
 
 See also:
-- [love.filesystem.newFile](https://love2d.org/wiki/love.filesystem.newFile)
-- [Object](api/love?id=Object)
+* [love.filesystem.newFile](https://love2d.org/wiki/love.filesystem.newFile)
+* [Object](api/love?id=Object)
 
-| Name                                                    | Description                                                     | Notes |
-|---------------------------------------------------------|-----------------------------------------------------------------|-------|
-| [close](https://love2d.org/wiki/File:close)             | Closes a File                                                   |       |
-| [flush](https://love2d.org/wiki/File:flush)             | Flushes any buffered written data in the file to disk           |       |
-| [getBuffer](https://love2d.org/wiki/File:getBuffer)     | Gets the buffer mode of a file                                  |       |
-| [getFilename](https://love2d.org/wiki/File:getFilename) | Gets the filename that the File object was created with         |       |
-| [getMode](https://love2d.org/wiki/File:getMode)         | Gets the FileMode the file has been opened with                 |       |
-| [getSize](https://love2d.org/wiki/File:getSize)         | Returns the File's size                                         |       |
-| [isEOF](https://love2d.org/wiki/File:isEOF)             | Gets whether end-of-file has been reached                       |       |
-| [isOpen](https://love2d.org/wiki/File:isOpen)           | Gets whether the file is open                                   |       |
-| [lines](https://love2d.org/wiki/File:lines)             | Iterate over all the lines in a file                            |       |
-| [open](https://love2d.org/wiki/File:open)               | Open the file for write, read or append                         |       |
-| [read](https://love2d.org/wiki/File:read)               | Read a number of bytes from a file                              |       |
-| [seek](https://love2d.org/wiki/File:seek)               | Seek to a position in a file                                    |       |
-| [setBuffer](https://love2d.org/wiki/File:setBuffer)     | Sets the buffer mode for a file opened for writing or appending |       |
-| [tell](https://love2d.org/wiki/File:tell)               | Returns the position in the file                                |       |
-| [write](https://love2d.org/wiki/File:write)             | Write data to a file                                            |       |
-
+| Name                                                    | Description                                                     |
+|---------------------------------------------------------|-----------------------------------------------------------------|
+| [close](https://love2d.org/wiki/File:close)             | Closes a File                                                   |
+| [flush](https://love2d.org/wiki/File:flush)             | Flushes any buffered written data in the file to disk           |
+| [getBuffer](https://love2d.org/wiki/File:getBuffer)     | Gets the buffer mode of a file                                  |
+| [getFilename](https://love2d.org/wiki/File:getFilename) | Gets the filename that the File object was created with         |
+| [getMode](https://love2d.org/wiki/File:getMode)         | Gets the FileMode the file has been opened with                 |
+| [getSize](https://love2d.org/wiki/File:getSize)         | Returns the File's size                                         |
+| [isEOF](https://love2d.org/wiki/File:isEOF)             | Gets whether end-of-file has been reached                       |
+| [isOpen](https://love2d.org/wiki/File:isOpen)           | Gets whether the file is open                                   |
+| [lines](https://love2d.org/wiki/File:lines)             | Iterate over all the lines in a file                            |
+| [open](https://love2d.org/wiki/File:open)               | Open the file for write, read or append                         |
+| [read](https://love2d.org/wiki/File:read)               | Read a number of bytes from a file                              |
+| [seek](https://love2d.org/wiki/File:seek)               | Seek to a position in a file                                    |
+| [setBuffer](https://love2d.org/wiki/File:setBuffer)     | Sets the buffer mode for a file opened for writing or appending |
+| [tell](https://love2d.org/wiki/File:tell)               | Returns the position in the file                                |
+| [write](https://love2d.org/wiki/File:write)             | Write data to a file                                            |
 
 ### FileData
 
@@ -88,12 +87,12 @@ Data representing the contents of a file
 </b></i>
 
 See also:
-- [love.filesystem.newFileData](https://love2d.org/wiki/love.filesystem.newFileData)
-- [Data](api/data)
-- [Object](api/love?id=Object)
+* [love.filesystem.newFileData](https://love2d.org/wiki/love.filesystem.newFileData)
+* [Data](api/data)
+* [Object](api/love?id=Object)
 
-| Name                                                         | Description                           | Notes |
-|--------------------------------------------------------------|---------------------------------------|-------|
-| [clone](https://love2d.org/wiki/FileData:clone)               | Creates a new copy of the Data object |       |
-| [getFilename](https://love2d.org/wiki/FileData:getFilename)   | Gets the filename of the FileData     |       |
-| [getExtension](https://love2d.org/wiki/FileData:getExtension) | Gets the extension of the FileData    |       |
+| Name                                                          | Description                           |
+|---------------------------------------------------------------|---------------------------------------|
+| [clone](https://love2d.org/wiki/FileData:clone)               | Creates a new copy of the Data object |
+| [getFilename](https://love2d.org/wiki/FileData:getFilename)   | Gets the filename of the FileData     |
+| [getExtension](https://love2d.org/wiki/FileData:getExtension) | Gets the extension of the FileData    |
