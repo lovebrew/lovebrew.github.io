@@ -24,7 +24,7 @@ Additionally, textures (such as png or jpg files) must be converted to the t3x f
 
 !> Stereoscopic depth is only for Nintendo 3DS. This is function will always return zero on Nintendo 2DS family systems. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
 
-The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getStereoscopicDepth()` . This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
+The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.get3DDepth()` . This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
 
 ```lua
 local str, font = "Hello World", nil
@@ -38,7 +38,7 @@ function love.draw(screen)
         return
     end
 
-    local sysDepth = -love.graphics.getStereoscopicDepth()
+    local sysDepth = -love.graphics.get3DDepth()
 
     if screen == "right" then
         sysDepth = -sysDepth
