@@ -17,6 +17,7 @@
 * [love.filesystem](api/filesystem)
 * [love.font](api/font)
 * [love.graphics](api/graphics)
+* [love.image](https://love2d.org/wiki/love.image)
 * [love.joystick](api/joystick)
 * [love.keyboard](api/keyboard)
 * [love.math](api/math)
