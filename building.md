@@ -139,7 +139,7 @@ enable_standalone_gdbstub = u8!0x1
 
 You will need to reboot your console in order for it to take affect.
 
-Once rebooted, title override whatever game you want. In your terminal, run `/opt/devkitpro/devkitA64/bin/aarch64-none-elf-gdb`. Then execute `file "path/to/ELF.elf"` where the path is to the compiled LÖVE Potion ELF binary. You will need to know your console's IP address. It can be found by pressing `y` on the right JoyCon, via the NetLoader functionality of hbmenu.
+Once rebooted, title override whatever game you want. In your terminal, run `/opt/devkitpro/devkitA64/bin/aarch64-none-elf-gdb`. You will need to know your console's IP address. It can be found by pressing `y` on the right JoyCon, via the NetLoader functionality of hbmenu.
 
 With the address known, run the following commands:
 
@@ -151,4 +151,4 @@ With the address known, run the following commands:
     - e.g. `attach 136` -- the pid should be from step #3
 4. Execute the LÖVE Potion binary on console
 
-When gdb finally hits the interrupt for the segfault, execute `bt`. This will show the backtrace of what happened.
+gdb will immediately break once LÖVE Potion is loaded. Run `share {path/to/nro}`. The path does not require to be the \*.nro itself. This will load the symbols in and you can debug further. You will want to most likely enter the `continue` command until the app crashes. For more details see [this GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), primarily the alternate backtrace located further down, which will be super useful.
