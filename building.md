@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-In order to start contributing, you will need to follow [the instructions on the devkitPro wiki](https://devkitpro.org/wiki/Getting_Started) for setting up a development environment.
+In order to start contributing, you will need to follow [the instructions on the devkitPro Wiki](https://devkitpro.org/wiki/Getting_Started) for setting up a development environment. If you have an existing pacman installation (e.g. msys2 or Linux) then [refer to this section on the devkitPro Wiki](https://devkitpro.org/wiki/devkitPro_pacman#Customising_Existing_Pacman_Install)
 
 ### Dependencies
 
