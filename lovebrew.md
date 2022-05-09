@@ -33,6 +33,25 @@ If a custom icon is desired, please note that for Nintendo 3DS, you must create 
 
 ### Building Your Project
 
+In order for LÖVEBrew to work, you need to have 3dsxtool, smdhtool, tex3ds, elf2nro, and nacptool installed. If they are installed, you may need to add them to the PATH.
+
+#### Linux
+
+Install the `devkit-env` package from devkitpro-pacman (if it isn't already). This package does not automatically work with shells other than bash. Should you be using something such as fish or zsh, you will have to find a way to source `devkit-env.sh` which is under `/etc/profile.d`.
+
+#### Windows
+
+Open the msys2 terminal and run `nano ~/.bashrc`, adding the following lines at the bottom:
+
+```
+export DEVKITPRO=/opt/devkitpro
+export PATH=${DEVKITPRO}/tools/bin:$PATH
+```
+
+Once this is done, save it via `CTRL+O` and hitting enter to save the filename.
+
+#### Building
+
 Once done, run `lovebrew build`.
 
 On Nintendo 3DS, this will convert assets as necessary.
