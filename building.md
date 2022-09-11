@@ -31,16 +31,18 @@ Once the packages have syncronized, run the following:
 #### **Windows (msys2)**
 
 ```bash
-pacman -S switch-dev 3ds-dev
+pacman -S switch-dev 3ds-dev wiiu-dev¹
 ```
 
 #### **Unix-like (Linux, macOS)**
 
 ```bash
-sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env
+sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env wiiu-dev¹
 ```
 
 <!-- tabs:end -->
+
+¹This is only applicable to LÖVE Potion 3.x
 
 !> The following information is for development purposes only! Do not build LÖVE Potion directly if you don't understand programming or are not going to contribute. It only leads to [fragmentation](https://en.wikipedia.org/wiki/Market_fragmentation). If you wish to package your game for distribution, please see [Game Distribution](packaging)
 
@@ -68,7 +70,17 @@ sudo (dkp-)pacman -S --needed - < pkglist.txt
 
 <!-- tabs:end -->
 
+#### LÖVE Potion 2.x
+
 Once everything finishes installing, run `make` . You can specify more jobs to allocate via `make -j{CPU_CORES}` where {CPU_CORES} is the amount of processor cores your CPU has. It is recommended to use MAX_CORES minus one.
+
+#### LÖVE Potion 3.x
+
+Once everything finishes installing, run the following, depending on the console:
+
+- 3DS: /opt/devkitpro/portlibs/3ds/bin/arm-none-eabi-cmake -S . -B build
+- Switch: /opt/devkitpro/portlibs/switch/bin/aarch64-none-elf-cmake -S . -B build
+- Wii U: /opt/devkitpro/portlibs/wiiu/bin/powerpc-eabi-cmake -S . -B build
 
 ## Pull Requests
 
@@ -94,10 +106,11 @@ for (size_t i = 0; i < 10; i++)
 
 ### Variable & Function Names
 
-* Variable names should be in camelCase
-* Class names should be in Titlecase
-    - Functions should be as CamelCase
-* Lua wrapper functions should be treated like class Function names
+- Variable names should be in camelCase.
+- Class names and their functions should be CamelCase.
+  - Examples: `JoystickModule` versus `Channel`.
+- Lua wrapper functions should be placed in a respective `Wrap_{type}` namespace.
+  - These functions will also be in CamelCase.
 
 ## Debugging Crashes
 
@@ -144,11 +157,11 @@ Once rebooted, title override whatever game you want. In your terminal, run `/op
 With the address known, run the following commands:
 
 1. `target extended-remote {ip}:22225`
-    - e.g. `target extended-remote 192.168.3.30:22225`
+   - e.g. `target extended-remote 192.168.3.30:22225`
 2. `info os processes`
-    - Lists the process IDs running on the console, find hbloader
+   - Lists the process IDs running on the console, find hbloader
 3. `attach {pid}`
-    - e.g. `attach 136` -- the pid should be from step #3
+   - e.g. `attach 136` -- the pid should be from step #3
 4. Execute the LÖVE Potion binary on console
 
 gdb will immediately break once LÖVE Potion is loaded. Run `share {path/to/nro}`. The path does not require to be the \*.nro itself. This will load the symbols in and you can debug further. You will want to most likely enter the `continue` command until the app crashes. For more details see [this GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), primarily the alternate backtrace located further down, which will be super useful.
