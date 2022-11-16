@@ -164,4 +164,4 @@ With the address known, run the following commands:
    - e.g. `attach 136` -- the pid should be from step #3
 4. Execute the LÖVE Potion binary on console
 
-gdb will immediately break once LÖVE Potion is loaded. Run `share {path/to/nro}`. The path does not require to be the \*.nro itself. This will load the symbols in and you can debug further. You will want to most likely enter the `continue` command until the app crashes. For more details see [this GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), primarily the alternate backtrace located further down, which will be super useful.
+gdb will immediately break once LÖVE Potion is loaded. Run `share {path/to/elf_file}`. The path does not require to be the \*.elf itself. This will load the symbols in and you can debug further. You will want to most likely enter the `continue` command until the app crashes. For more details see [this GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), primarily the alternate backtrace located further down, which will be super useful.
