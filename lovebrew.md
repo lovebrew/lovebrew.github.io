@@ -2,14 +2,22 @@
 
 ### Environment Setup
 
-Download the [latest release of LÖVE Potion](https://github.com/lovebrew/LovePotion/releases) for your console and save it somewhere that will be memorable. Inside the zip are two files, but only focus on the one with the *.elf extension. Depending on the console, rename it to `3DS.elf` or `Switch.elf` and then copy the file to your configuration directory:
+Download the [latest **stable** release of LÖVE Potion](https://github.com/lovebrew/LovePotion/releases)¹ for your console and save it somewhere that will be memorable. Inside the zip are two files, but only focus on the one **without** the \*.elf extension. Specifically, you will want:
 
-* Windows: `%appdata%\lovebrew`
-* Linux/macOS: `~/.config/lovebrew`
+- Nintendo 3DS: LOVEPotion.3dsx
+- Nintendo Switch: LOVEPotion.nro
+- Nintendo Wii U: LOVEPotion.wuhb²
 
-Next, download the [latest release of LÖVEBrew](https://github.com/lovebrew/lovebrew/releases) for your platform. Copy this to the prior mentioned directory. Windows users will need to add this directory to their `PATH` environment variable.
+Next, download the [latest release of LÖVEBrew](https://github.com/lovebrew/lovebrew/releases) for your platform. Copy this to:
 
-If you are able to run `lovebrew` in the command line, it will prompt you with a first-time message.
+- Windows: `%appdata%\lovebrew`
+- Linux/macOS: `~/.config/lovebrew`
+
+Windows users will need to add their directory to their `PATH` environment variable.
+
+The only other dependency, besides requiring tex3ds is [downloading hbupdater](https://github.com/TurtleP/hbupdater). Ideally you should put this in the appdata directory for lovebrew (see the prior paths) to be certain of where it is.
+
+If you are able to run `lovebrew` in the command line, it will prompt you with a first-time message. This, however, does not guarantee that the application will run properly. Make sure you have all dependencies taken care of before trying to build your game.
 
 ### Directory Structure
 
@@ -33,7 +41,7 @@ If a custom icon is desired, please note that for Nintendo 3DS, you must create 
 
 ### Building Your Project
 
-In order for LÖVEBrew to work, you need to have 3dsxtool, smdhtool, tex3ds, elf2nro, and nacptool installed. If they are installed, you may need to add them to the PATH.
+In order for LÖVEBrew to work, you need to have tex3ds installed. If they are installed, you may need to add them to the PATH.
 
 #### Linux
 
@@ -56,4 +64,9 @@ Once done, run `lovebrew build`.
 
 On Nintendo 3DS, this will convert assets as necessary.
 
-Copy the newly built *SuperGame.(nro/3dsx)* to the micro SD card under `/switch` (or `/3ds`) in its own named directory, *SuperProject* or whatever the name of the resulting binary is. It will show up as an entry once you open the Homebrew Menu.
+Copy the newly built _SuperGame.(nro/3dsx)_ to the micro SD card under `/switch` (or `/3ds`) in its own named directory, _SuperProject_ or whatever the name of the resulting binary is. It will show up as an entry once you open the Homebrew Menu.
+
+---
+
+¹You can also use pre-releases, but please be sure to read their release notes.
+²Wii U is currently not supported on the lovebrew builder, but will be at some point. When it is, further instructions will be provided.
