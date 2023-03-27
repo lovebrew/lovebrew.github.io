@@ -1,0 +1,48 @@
+<h2 style='margin:0; border:none'>Channel</h2>
+
+An object which can be used to send and receive data between different threads.
+
+<h3 style='border-bottom: 1px solid rgb(77, 94, 105);'>Functions</h3>
+
+<table style='border-radius:4px; max-width:fit-content'>
+  <tbody>
+    <tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:clear</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Clears all the messages in the Channel queue.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:demand</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Retrieves the value of a Channel message and removes it from the message queue.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:getCount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Retrieves the number of messages in the thread Channel queue.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:hasRead</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets whether a pushed value has been popped or otherwise removed from the Channel.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:peek</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Retrieves the value of a Channel message, but leaves it in the queue.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:performAtomic</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Executes the specified function atomically with respect to this Channel.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:pop</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Retrieves the value of a Channel message and removes it from the message queue.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:push</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Send a message to the thread Channel.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Channel:supply</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Send a message to the thread Channel and wait for a thread to accept it.</td>
+</tr>
+  </tbody>
+</table>
+<br>
+<br>

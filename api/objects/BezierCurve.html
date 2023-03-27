@@ -1,0 +1,70 @@
+<h2 style='margin:0; border:none'>BezierCurve</h2>
+
+A Bézier curve object that can evaluate and render Bézier curves of arbitrary degree.
+
+For more information on Bézier curves check this great article on Wikipedia.
+
+<h3 style='border-bottom: 1px solid rgb(77, 94, 105);'>Functions</h3>
+
+<table style='border-radius:4px; max-width:fit-content'>
+  <tbody>
+    <tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:evaluate</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Evaluate Bézier curve at parameter t.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:getControlPoint</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Get coordinates of the i-th control point.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:getControlPointCount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Get the number of control points in the Bézier curve.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:getDegree</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Get degree of the Bézier curve.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:getDerivative</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Get the derivative of the Bézier curve.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:getSegment</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets a BezierCurve that corresponds to the specified segment of this BezierCurve.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:insertControlPoint</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Insert control point as the new i-th control point.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:removeControlPoint</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Removes the specified control point.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:render</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Get a list of coordinates to be used with love.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:renderSegment</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Get a list of coordinates on a specific part of the curve, to be used with love.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:rotate</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Rotate the Bézier curve by an angle.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:scale</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Scale the Bézier curve by a factor.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:setControlPoint</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Set coordinates of the i-th control point.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>BezierCurve:translate</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Move the Bézier curve by an offset.</td>
+</tr>
+  </tbody>
+</table>
+<br>
+<br>

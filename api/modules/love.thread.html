@@ -1,0 +1,23 @@
+<h2 style='margin:0; border:none'>love.thread</h2>
+
+Allows you to work with threads.<br><br>Threads are separate Lua environments, running in parallel to the main code. As their code runs separately, they can be used to compute complex operations without adversely affecting the frame rate of the main thread. However, as they are separate environments, they cannot access the variables and functions of the main thread, and communication between threads is limited.<br><br>All LOVE objects (userdata) are shared among threads so you'll only have to send their references across threads. You may run into concurrency issues if you manipulate an object on multiple threads at the same time.<br><br>When a Thread is started, it only loads the love.thread module. Every other module has to be loaded with require.
+
+<h3 style='border-bottom: 1px solid rgb(77, 94, 105);'>Functions</h3>
+
+<table style='border-radius:4px; max-width:fit-content'>
+  <tbody>
+    <tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.thread.getChannel</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Creates or retrieves a named thread channel.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.thread.newChannel</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Create a new unnamed thread channel.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.thread.newThread</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Creates a new Thread from a filename, string or FileData object containing Lua code.</td>
+</tr>
+  </tbody>
+</table>
+<br>

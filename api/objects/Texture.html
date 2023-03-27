@@ -1,0 +1,96 @@
+<h2 style='margin:0; border:none'>Texture</h2>
+
+Superclass for drawable objects which represent a texture. All Textures can be drawn with Quads. This is an abstract type that can't be created directly.
+
+<h3 style='border-bottom: 1px solid rgb(77, 94, 105);'>Functions</h3>
+
+<table style='border-radius:4px; max-width:fit-content'>
+  <tbody>
+    <tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getDPIScale</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the DPI scale factor of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getDepth</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the depth of a Volume Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getDepthSampleMode</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the comparison mode used when sampling from a depth texture in a shader.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getDimensions</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the width and height of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getFilter</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the filter mode of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getFormat</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the pixel format of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getHeight</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the height of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getLayerCount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the number of layers / slices in an Array Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getMipmapCount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the number of mipmaps contained in the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getMipmapFilter</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the mipmap filter mode for a Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getPixelDimensions</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the width and height in pixels of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getPixelHeight</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the height in pixels of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getPixelWidth</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the width in pixels of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getTextureType</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the type of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getWidth</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the width of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:getWrap</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the wrapping properties of a Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:isReadable</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets whether the Texture can be drawn and sent to a Shader.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:setDepthSampleMode</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the comparison mode used when sampling from a depth texture in a shader.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:setFilter</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the filter mode of the Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:setMipmapFilter</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the mipmap filter mode for a Texture.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Texture:setWrap</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the wrapping properties of a Texture.</td>
+</tr>
+  </tbody>
+</table>
+<br>
+<br>

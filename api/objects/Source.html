@@ -1,0 +1,88 @@
+<h2 style='margin:0; border:none'>Source</h2>
+
+A Source represents audio you can play back.
+
+You can do interesting things with Sources, like set the volume, pitch, and its position relative to the listener. Please note that positional audio only works for mono (i.e. non-stereo) sources.
+
+The Source controls (play/pause/stop) act according to the following state table.
+
+<h3 style='border-bottom: 1px solid rgb(77, 94, 105);'>Functions</h3>
+
+<table style='border-radius:4px; max-width:fit-content'>
+  <tbody>
+    <tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:clone</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Creates an identical copy of the Source in the stopped state.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:getChannelCount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the number of channels in the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:getDuration</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the duration of the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:getFreeBufferCount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the number of free buffer slots in a queueable Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:getType</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the type of the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:getVolume</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the current volume of the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:getVolumeLimits</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Returns the volume limits of the source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:isLooping</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Returns whether the Source will loop.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:isPlaying</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Returns whether the Source is playing.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:pause</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Pauses the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:play</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Starts playing the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:queue</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Queues SoundData for playback in a queueable Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:seek</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the currently playing position of the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:setLooping</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets whether the Source should loop.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:setVolume</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the current volume of the Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:setVolumeLimits</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the volume limits of the source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:stop</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Stops a Source.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Source:tell</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the currently playing position of the Source.</td>
+</tr>
+  </tbody>
+</table>
+<br>
+<br>

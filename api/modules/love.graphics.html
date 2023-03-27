@@ -1,0 +1,127 @@
+<h2 style='margin:0; border:none'>love.graphics</h2>
+
+The primary responsibility for the love.graphics module is the drawing of lines, shapes, text, Images and other Drawable objects onto the screen. Its secondary responsibilities include loading external files (including Images and Fonts) into memory, creating specialized objects (such as ParticleSystems or Canvases) and managing screen geometry.<br><br>LÖVE's coordinate system is rooted in the upper-left corner of the screen, which is at location (0, 0). The x axis is horizontal: larger values are further to the right. The y axis is vertical: larger values are further towards the bottom.<br><br>In many cases, you draw images or shapes in terms of their upper-left corner.<br><br>Many of the functions are used to manipulate the graphics coordinate system, which is essentially the way coordinates are mapped to the display. You can change the position, scale, and even rotation in this way.
+
+<h3 style='border-bottom: 1px solid rgb(77, 94, 105);'>Functions</h3>
+
+<table style='border-radius:4px; max-width:fit-content'>
+  <tbody>
+    <tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.applyTransform</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Applies the given Transform object to the current coordinate transformation.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.clear</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Clears the screen or active Canvas to the specified color.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.draw</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Draws a Drawable object (an Image, Canvas, SpriteBatch, ParticleSystem, Mesh, Text object, or Video) on the screen with optional rotation, scaling and shearing.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.getBackgroundColor</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the current background color.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.getColor</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the current color.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.getDimensions</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the width and height in pixels of the window.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.getFont</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the current Font object.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.getHeight</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the height in pixels of the window.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.getWidth</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the width in pixels of the window.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.inverseTransformPoint</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Converts the given 2D position from screen-space into global coordinates.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.isActive</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets whether the graphics module is able to be used.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.newFont</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Creates a new Font from a TrueType Font or BMFont file.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.newQuad</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Creates a new Quad.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.origin</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Resets the current coordinate transformation.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.pop</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Pops the current coordinate transformation from the transformation stack.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.present</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Displays the results of drawing operations on the screen.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.print</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Draws text on screen.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.printf</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Draws formatted text, with word wrap and alignment.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.push</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Copies and pushes the current coordinate transformation to the transformation stack.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.replaceTransform</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Replaces the current coordinate transformation with the given Transform object.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.reset</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Resets the current graphics settings.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.rotate</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Rotates the coordinate system in two dimensions.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.scale</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Scales the coordinate system in two dimensions.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.setBackgroundColor</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the background color.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.setColor</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the color used for drawing.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.setFont</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Set an already-loaded Font as the current font or create and load a new one from the file and size.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.shear</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Shears the coordinate system.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.transformPoint</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Converts the given 2D position from global coordinates into screen-space.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.graphics.translate</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Translates the coordinate system in two dimensions.</td>
+</tr>
+  </tbody>
+</table>
+<br>

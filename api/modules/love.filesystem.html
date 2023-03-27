@@ -1,0 +1,111 @@
+<h2 style='margin:0; border:none'>love.filesystem</h2>
+
+Provides an interface to the user's filesystem.
+
+<h3 style='border-bottom: 1px solid rgb(77, 94, 105);'>Functions</h3>
+
+<table style='border-radius:4px; max-width:fit-content'>
+  <tbody>
+    <tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.append</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Append data to an existing file.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.createDirectory</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Recursively creates a directory.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getDirectoryItems</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Returns a table with the names of files and subdirectories in the specified path.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getIdentity</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the write directory name for your game.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getInfo</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets information about the specified file or directory.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getRealDirectory</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the platform-specific absolute path of the directory containing a filepath.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getRequirePath</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the filesystem paths that will be searched when require is called.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getSaveDirectory</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the full path to the designated save directory.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getSource</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Returns the full path to the the .</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getSourceBaseDirectory</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Returns the full path to the directory containing the .</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getUserDirectory</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>nil</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.getWorkingDirectory</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets the current working directory.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.init</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Initializes love.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.isFused</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Gets whether the game is in fused mode or not.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.lines</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Iterate over the lines in a file.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.load</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Loads a Lua file (but does not run it).</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.mount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Mounts a zip file or folder in the game's save directory for reading.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.newFileData</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Creates a new FileData object from a file on disk, or from a string in memory.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.read</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Read the contents of a file.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.remove</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Removes a file or empty directory.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.setIdentity</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the write directory for your game.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.setRequirePath</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the filesystem paths that will be searched when require is called.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.setSource</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Sets the source of the game, where the code is present.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.unmount</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Unmounts a zip file or folder previously mounted for reading with love.</td>
+</tr>
+<tr>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>love.filesystem.write</td>
+<td style='border:none; padding-top: 0.50em; padding-bottom: 0.50em'>Write data to a file in the save directory.</td>
+</tr>
+  </tbody>
+</table>
+<br>
