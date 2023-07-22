@@ -24,7 +24,7 @@ Open your favorite browser and navigate to [the bundler app](https://www.bundle.
 
 1. Create a new folder, `Content`
 2. Inside of your `SuperGame` directory, highlight all items and compress them into a zip archive.
-  - Bring this zip file to the `Content` directory.
+    - Bring this zip file to the `Content` directory.
 3. Inside of the `SuperProject` directory, copy your lovebrew.toml to `Content`.
 4. Highlight all items inside of `Content` and zip them up.
 5. Drag and drop the zip archive you just created into the website.
