@@ -43,3 +43,39 @@ Content.zip
 ¹This zip file must be named the same as in the `lovebrew.toml` `source` field.
 
 The website, if all goes well, will bundle your game into the formats requested in the `lovebrew.toml` file and pack them into a resulting zip archive. This zip archive also contains a `debug.log` file for debugging purposes, should something go wrong during the build process. If your project fails to build and an error toast shows up at the top of the site, please make note of it. These errors should be clear enough to indicate your issue, but if they are not, please report an issue on GitHub.
+
+### Configuration File
+
+?> If you are unfamiliar with the TOML spec, [please read this](https://toml.io/en/) for its official documentation
+
+### The **[metadata]** Section
+
+This section defines the metadata for your game.
+
+| Key         | Value Type | Default                             | Notes                       |
+|-------------|------------|-------------------------------------|-----------------------------|
+| title       | string     | `"SuperGame"`                       | Game title                  |
+| author      | string     | ``SuperAuthor``                     | Game author                 |
+| description | string     | `"SuperDescription"`                | Game description            |
+| version     | string     | `"0.1.0"`                           | Game version                |
+| icons       | table      | `{ ctr = "", hac = "", cafe = "" }` | Icon paths in the zip file¹ |
+
+¹See [this section for more details](lovebrew?id=custom-metadata-amp-icons)
+
+### The **[build]** Section
+
+This section defines how the application should build your game.
+
+| Key         | Value Type | Default                  | Notes                               |
+|-------------|------------|--------------------------|-------------------------------------|
+| targets     | array      | `["ctr", "hac", "cafe"]` | Target console(s) to build for      |
+| source      | string     | `"game"`                 | Game source zip name                |
+| app_version | integer    | 2                        | Version of LÖVE Potion to build for |
+
+### The **[debug]** Section
+
+This section is used for debugging purposes and should always be up-to-date.
+
+| Key         | Value Type | Default   | Notes                      |
+|-------------|------------|-----------|----------------------------|
+| version     | string     | `"0.8.0"` | Configuration version      |
