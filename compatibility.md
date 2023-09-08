@@ -118,8 +118,8 @@ Since the Nintendo 3DS and Nintendo Switch are a bit different than your traditi
 
 These are especially useful for either UI, netplay, or even multi-language support!
 
-²Originally `love.system.getNetworkStatus()`
-³Originally `love.system.getUsername()`
+²Originally `love.system.getNetworkStatus()`<br>
+³Originally `love.system.getUsername()`<br>
 ⁴Replaced with `love.system.getPreferredLocales()` (for LÖVE 12)
 
 ## Console-Only Constants
