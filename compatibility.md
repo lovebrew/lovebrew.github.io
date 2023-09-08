@@ -1,4 +1,4 @@
-!> LÖVE Potion is a work in progress, so things may be missing. Please open an issue on the [GitHub Repository](https://github.com/TurtleP/LovePotion) if there's a feature you'd like to request.
+!> LÖVE Potion is a work in progress, so things may be missing. Please open an issue on the [GitHub Repository](https://github.com/TurtleP/LovePotion) if there's a feature you'd like to request. Furthermore, any items noted with a superscript number (e.g. ¹) have been changed in 3.0.0. For their original 2.x calls, please see their footnotes.
 
 ## Drawing
 
@@ -24,7 +24,7 @@ Additionally, textures (such as png or jpg files) must be converted to the t3x f
 
 !> Stereoscopic depth is only for Nintendo 3DS. This is function will always return zero on Nintendo 2DS family systems. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
 
-The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.get3DDepth()` . This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
+The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getDepth()`¹ . This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
 
 ```lua
 local str, font = "Hello World", nil
@@ -38,7 +38,7 @@ function love.draw(screen)
         return
     end
 
-    local sysDepth = -love.graphics.get3DDepth()
+    local sysDepth = -love.graphics.getDepth()
 
     if screen == "right" then
         sysDepth = -sysDepth
@@ -50,6 +50,8 @@ end
 ```
 
 We define where the main `x` coordinate should be defined as `left` . This specifically is the anchor point to draw at. In this case, it's going to be in the center of the screen. This value is then subtracted by what the depth value currently is on the system and multiplied by a constant `z` value.
+
+¹Originally `love.graphics.get3DDepth()`
 
 ## System Font Loading
 
@@ -75,7 +77,9 @@ One can load a system font using the follwing names in place of the path paramet
 | korean                      | Korean font                         |
 | nintendo extended           | Nintendo Extended Symbols font      |
 
-It is important to note that for custom fonts you must convert your TrueType or OpenType font to bfnt using `mkbcfnt` . It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details. The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
+It is important to note that for custom fonts you must convert your TrueType or OpenType font to bcnft on Nintendo 3DS. This can be done when bundling your game via [the bundler website](/packaging.md)
+
+The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
 
 ```lua
 local utf8 = require("utf8")
@@ -85,7 +89,7 @@ local glyph = utf8.char("0xE075")
 
 function love.load()
     -- if we're on Switch, set extended as our current font
-    if love._console_name == "Switch" then
+    if love._console == "Switch" then
         love.graphics.setNewFont("nintendo extended", 14)
     end
 end
@@ -105,23 +109,29 @@ end
 
 Since the Nintendo 3DS and Nintendo Switch are a bit different than your traditional LOVE environment, the following `system` module functions were added:
 
-* `love.system.getNetworkStatus()`
+* `love.system.getNetworkInfo()`²
     - Returns whether or not the system has an internet connection
-* `love.system.getUsername()`
-    - Returns the name of the user running LÖVE Potion (or your game)
-* `love.system.getLanguage()`
+* `love.system.getFriendInfo()`³
+    - Returns the name of the user running LÖVE Potion (or your game) and friend code (if applicable)
+* `love.system.getLanguage()`⁴
     - Returns the current System Language as a string
 
 These are especially useful for either UI, netplay, or even multi-language support!
+
+²Originally `love.system.getNetworkStatus()`
+³Originally `love.system.getUsername()`
+⁴Replaced with `love.system.getPreferredLocales()` (for LÖVE 12)
 
 ## Console-Only Constants
 
 Both the 3DS and Switch versions of LÖVE Potion have the following constants:
 
-* `love._console_name`
+* `love._console`⁵
     - Returns the name of the console, "3DS" or "Switch"
 * `love._potion_version`
     - Returns the version of LÖVE Potion
+
+⁵Originally `_console_name`
 
 ## Software Keyboard
 
@@ -151,32 +161,4 @@ Calling `love.keyboard.setTextInput` brings up the System Software Keyboard appl
 
 ?> Wondering why this section got updated? [Check out the FAQ](faq?id=why-did-it-take-so-long-for-game-debugging)!
 
-Debugging LÖVE Potion games has always been a big pain. We couldn't use the toolchain provided console, especially on Nintendo Switch due to complications. However, users can now use `nxlink` on Switch and even the 3DS's gdb debugger for output of `print` . Simply enable the console flag inside of your [ `conf.lua` ](https://love2d.org/wiki/Config_Files)!
-
-### Nintendo 3DS
-
-This is a little more involved and advanced, but developers will be required to follow [setting up a development environment](building?id=getting-started). Once devkitpro-pacman is installed, install the 3DS gdb components:
-
-<!-- tabs:start -->
-
-#### **Windows (msys2)**
-
-```bash
-pacman -S devkitARM-gdb
-```
-
-#### **Unix-like (Linux, macOS)**
-
-```bash
-sudo (dkp-)pacman -S devkitARM-gdb
-```
-
-Once this is installed, go to the hbmenu. Run the rosalina menu combo (default `L + R + Down + Select` ) and enter "debugger options" and then press `a` on "Enable Debugger". Take note of the IP and port that is assigned to the debugger! Press `b` to go back and select "Force-debug next application at launch". Select LÖVE Potion, then in your terminal, type `/opt/devkitpro/devkitARM/bin/arm-none-eabi-gdb` and hit enter. Next, `target remote ip:port` , where the IP and port are from the debugger's information from before. Debugging will begin and any `print` calls ran will output to this terminal's window.
-
-### Nintendo Switch
-
-Since `nxlink` comes with the `switch-tools` package, all that's required is to load the netsender in hbmenu by pressing `y` and in the terminal running `nxlink -s path/to/nro` . The Switch will receive the nro and immediately run it once it's fully downloaded. Any `print` calls ran will output to this terminal's window.
-
-### Alternatives
-
-The only other alternative method for the *absolute* best experience is to use LÖVE itself. Simply plug in a controller and [use the nëst](https://github.com/TurtleP/nest) library. Not all features in LÖVE Potion are available, of course, so please bear this in mind.
+Debugging LÖVE Potion games has always been a big pain. We couldn't use the toolchain provided console, especially on Nintendo Switch due to complications. However, users can now [use `nestlink`](.
