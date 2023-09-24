@@ -1,3 +1,5 @@
+!> Currently the Wii U version **only** supports Aroma custom firmware, no support will be provided for others.
+
 ### Directory Structure
 
 A typical directory structure when using LÖVEBrew looks like the following:
