@@ -22,7 +22,7 @@ If a custom icon is desired, please note that for Nintendo 3DS, you must create 
 
 ### Building Your Project
 
-Open your favorite browser and navigate to [the bundler app](https://www.bundle.lovebrew.org). Find your project and do the following:
+Open your favorite browser and navigate to [the bundler app](https://bundle.lovebrew.org). Find your project and do the following:
 
 1. Create a new folder, `Content`
 2. Inside of your `SuperGame` directory, highlight all items and compress them into a zip archive.
