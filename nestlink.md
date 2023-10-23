@@ -1,4 +1,4 @@
-### Initial Setup
+## Setup
 
 Download the [latest release of nëstlink](https://github.com/lovebrew/nestlink/releases/latest) to your computer for your Operating System. Extract the contents of the zip file to a memorable location, somewhere you won't forget. Now, open your terminal in the same directory that the application is in and execute the application by typing `nestlink` ¹ . It will start the server and begin listening for connections.²
 

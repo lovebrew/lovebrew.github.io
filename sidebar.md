@@ -1,36 +1,19 @@
-* **Main**
-* [Home](/)
-* [Building LÖVE Potion](building)
-* [Compatibility](compatibility)
-* [Game Distribution](packaging)
-* [LÖVEBrew Tutorial](lovebrew)
-* [Debugging Your Game](nestlink)
-* **Other**
-* [FAQ](faq)
-* [Showcase](showcase)
-* [Credits](credits)
-* **API Reference**
-* [love](api/love)
-* [love.audio](api/audio)
-* [love.data](https://love2d.org/wiki/love.data)
-* [love.event](https://love2d.org/wiki/love.event)
-* [love.filesystem](api/filesystem)
-* [love.font](api/font)
-* [love.graphics](api/graphics)
-* [love.image](https://love2d.org/wiki/love.image)
-* [love.joystick](api/joystick)
-* [love.keyboard](api/keyboard)
-* [love.math](api/math)
-* [love.physics](https://love2d.org/wiki/love.physics)
-* [love.sound](api/sound)
-* [love.system](api/system)
-* [love.thread](https://love2d.org/wiki/love.thread)
-* [love.timer](https://love2d.org/wiki/love.timer)
-* [love.touch](https://love2d.org/wiki/love.touch)
-* [love.window](api/window)
-* **Resources**
-* [![Discord](https://icongr.am/simple/discord.svg?colored&size=16)Discord Server](https://discord.gg/ggbKkhc)
-* [![How to LÖVE](https://icongr.am/simple/readthedocs.svg?colored&size=16)How to LÖVE](https://sheepolution.com/learn/book/contents)
-* **Links**
-* [![PayPal](https://icongr.am/simple/buymeacoffee.svg?colored&size=16)Buy me a Coffee](https://paypal.me/TurtleP)
-* [![devkitPro Patreon](https://icongr.am/simple/patreon.svg?colored&size=16)Support devkitPro](https://www.patreon.com/devkitPro)
+- **Main**
+- [Home](/)
+- [Building LÖVE Potion](building)
+- [Compatibility](compatibility)
+- [Game Distribution](packaging)
+- [Debugging Your Game](nestlink)
+- **Bundler**
+- [Configuration](bundler/index)
+- [API Documentation](bundler/api)
+- **Other**
+- [FAQ](faq)
+- [Showcase](showcase)
+- [Credits](credits)
+- **Resources**
+- [![Discord](https://icongr.am/simple/discord.svg?colored&size=16)Discord Server](https://discord.gg/ggbKkhc)
+- [![How to LÖVE](https://icongr.am/simple/readthedocs.svg?colored&size=16)How to LÖVE](https://sheepolution.com/learn/book/contents)
+- **Links**
+- [![PayPal](https://icongr.am/simple/buymeacoffee.svg?colored&size=16)Buy me a Coffee](https://paypal.me/TurtleP)
+- [![devkitPro Patreon](https://icongr.am/simple/patreon.svg?colored&size=16)Support devkitPro](https://www.patreon.com/devkitPro)

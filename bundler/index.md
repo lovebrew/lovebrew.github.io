@@ -1,6 +1,6 @@
 !> Currently the Wii U version **only** supports Aroma custom firmware, no support will be provided for others.
 
-### Directory Structure
+## Getting Started
 
 A typical directory structure when using LÖVEBrew looks like the following:
 
@@ -26,7 +26,7 @@ Open your favorite browser and navigate to [the bundler app](http://bundle.loveb
 
 1. Create a new folder, `Content`
 2. Inside of your `SuperGame` directory, highlight all items and compress them into a zip archive.
-    - Bring this zip file to the `Content` directory.
+   - Bring this zip file to the `Content` directory.
 3. Inside of the `SuperProject` directory, copy your lovebrew.toml to `Content`.
 4. Highlight all items inside of `Content` and zip them up.
 5. Drag and drop the zip archive you just created into the website.
@@ -55,9 +55,9 @@ The website, if all goes well, will bundle your game into the formats requested 
 This section defines the metadata for your game.
 
 | Key         | Value Type | Default                             | Notes                       |
-|-------------|------------|-------------------------------------|-----------------------------|
+| ----------- | ---------- | ----------------------------------- | --------------------------- |
 | title       | string     | `"SuperGame"`                       | Game title                  |
-| author      | string     | ``SuperAuthor``                     | Game author                 |
+| author      | string     | `SuperAuthor`                       | Game author                 |
 | description | string     | `"SuperDescription"`                | Game description            |
 | version     | string     | `"0.1.0"`                           | Game version                |
 | icons       | table      | `{ ctr = "", hac = "", cafe = "" }` | Icon paths in the zip file¹ |
@@ -69,7 +69,7 @@ This section defines the metadata for your game.
 This section defines how the application should build your game.
 
 | Key         | Value Type | Default                  | Notes                               |
-|-------------|------------|--------------------------|-------------------------------------|
+| ----------- | ---------- | ------------------------ | ----------------------------------- |
 | targets     | array      | `["ctr", "hac", "cafe"]` | Target console(s) to build for      |
 | source      | string     | `"game"`                 | Game source zip name                |
 | app_version | integer    | 2                        | Version of LÖVE Potion to build for |
@@ -78,7 +78,7 @@ This section defines how the application should build your game.
 
 This section is used for debugging purposes and should always be up-to-date.
 
-| Key         | Value Type | Default   | Notes                       |
-|-------------|------------|-----------|-----------------------------|
-| version     | string     | `"0.8.0"` | Configuration version       |
-| logging     | boolean    | `false`   | Enable logging (for errors) |
+| Key     | Value Type | Default   | Notes                       |
+| ------- | ---------- | --------- | --------------------------- |
+| version | string     | `"0.8.0"` | Configuration version       |
+| logging | boolean    | `false`   | Enable logging (for errors) |

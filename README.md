@@ -9,11 +9,12 @@ Once you understand how LÖVE works, check out the [compatibility](compatibility
 ![](files/lovepotion.png)
 
 ## Hello World
-This is the full source for 'hello world' in LÖVE Potion.
+This is the full source for 'Hello World!' in LÖVE Potion.
 
 ```lua
-function love.draw()
-    love.graphics.print('Hello World!', 200, 120)
+function love.draw(screen)
+    local width, height = love.graphics.getDimensions(screen)
+    love.graphics.print('Hello World!', width / 2, height / 2)
 end
 
 -- we need to quit the app when a button is pressed
