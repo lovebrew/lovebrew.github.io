@@ -35,6 +35,12 @@
 - [notquiteapex](https://github.com/aqex71)
   - Various commits from early stages
 - [TSnake](https://github.com/TSnake41)
+- [piepie62](https://github.com/piepie62)
+- [pablomayobre](https://github.com/pablomayobre)
+- [Dax](https://github.com/thedax)
+- [ajusa](https://github.com/ajusa)
+- [Nawias](https://github.com/Nawias)
+- [MegaPiggy](https://github.com/MegaPiggy)
 
 ## Debuggers
 
