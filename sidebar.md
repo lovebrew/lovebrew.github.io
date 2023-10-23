@@ -14,6 +14,7 @@
 - **Resources**
 - [![Discord](https://icongr.am/simple/discord.svg?colored&size=16)Discord Server](https://discord.gg/ggbKkhc)
 - [![How to LÖVE](https://icongr.am/simple/readthedocs.svg?colored&size=16)How to LÖVE](https://sheepolution.com/learn/book/contents)
+- [![LÖVE Wiki](https://icongr.am/fontawesome/heart.svg?size=16&color=ff75e1)LÖVE Wiki](https://love2d.org/wiki)
 - **Links**
 - [![PayPal](https://icongr.am/simple/buymeacoffee.svg?colored&size=16)Buy me a Coffee](https://paypal.me/TurtleP)
 - [![devkitPro Patreon](https://icongr.am/simple/patreon.svg?colored&size=16)Support devkitPro](https://www.patreon.com/devkitPro)
