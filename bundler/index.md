@@ -44,6 +44,15 @@ This section defines the metadata for your game.
 
 ¹See [this section for more details](lovebrew?id=custom-metadata-amp-icons). Icons are relative to the root of the zip file.
 
+Icons can also be defined in `[metadata.icons]`:
+
+```toml
+[metadata.icons]
+ctr  = "icon48.png"
+hac  = "icon.jpeg"
+cafe = "icon128.png"
+```
+
 ### The **[build]** Section
 
 This section defines how the application should build your game.
