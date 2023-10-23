@@ -62,7 +62,7 @@ This section defines the metadata for your game.
 | version     | string     | `"0.1.0"`                           | Game version                |
 | icons       | table      | `{ ctr = "", hac = "", cafe = "" }` | Icon paths in the zip file¹ |
 
-¹See [this section for more details](lovebrew?id=custom-metadata-amp-icons)
+¹See [this section for more details](lovebrew?id=custom-metadata-amp-icons). Icons are relative to the root of the zip file.
 
 ### The **[build]** Section
 
@@ -78,6 +78,7 @@ This section defines how the application should build your game.
 
 This section is used for debugging purposes and should always be up-to-date.
 
-| Key         | Value Type | Default   | Notes                      |
-|-------------|------------|-----------|----------------------------|
-| version     | string     | `"0.8.0"` | Configuration version      |
+| Key         | Value Type | Default   | Notes                       |
+|-------------|------------|-----------|-----------------------------|
+| version     | string     | `"0.8.0"` | Configuration version       |
+| logging     | boolean    | `false`   | Enable logging (for errors) |
