@@ -25,24 +25,24 @@ If a custom icon is desired, please note that for Nintendo 3DS, you must create 
 Open your favorite browser and navigate to [the bundler app](http://bundle.lovebrew.org). Find your project and do the following:
 
 1. Create a new folder, `Content`
-2. Inside of your `SuperGame` directory, highlight all items and compress them into a zip archive.
-   - Bring this zip file to the `Content` directory.
-3. Inside of the `SuperProject` directory, copy your lovebrew.toml to `Content`.
-4. Highlight all items inside of `Content` and zip them up.
-5. Drag and drop the zip archive you just created into the website.
-6. Notice the alert dialog at the top asking about uploading your project and confirm.
+2. Copy the following to the `Content` folder:
+   - Game source folder
+   - Custommized `lovebrew.toml`
+3. Highlight all items inside of `Content` and zip them up.
+4. Drag and drop the zip archive you just created into the website.
+5. Notice the alert dialog at the top asking about uploading your project and confirm.
 
 Your zip file structure should look like the following:
 
 ```
 Content.zip
-├── SuperGame.zip¹
+├── SuperGame¹
 │   ├── conf.lua
 │   └── main.lua
 └── lovebrew.toml
 ```
 
-¹This zip file must be named the same as in the `lovebrew.toml` `source` field.
+¹This directory must be named the same as in the `lovebrew.toml` `source` field.
 
 The website, if all goes well, will bundle your game into the formats requested in the `lovebrew.toml` file and pack them into a resulting zip archive. This zip archive also contains a `debug.log` file for debugging purposes, should something go wrong during the build process. If your project fails to build and an error toast shows up at the top of the site, please make note of it. These errors should be clear enough to indicate your issue, but if they are not, please report an issue on GitHub.
 
