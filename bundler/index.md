@@ -57,17 +57,7 @@ cafe = "icon128.png"
 
 This section defines how the application should build your game.
 
-| Key         | Value Type | Default                  | Notes                               |
-| ----------- | ---------- | ------------------------ | ----------------------------------- |
-| targets     | array      | `["ctr", "hac", "cafe"]` | Target console(s) to build for      |
-| source      | string     | `"game"`                 | Game source zip name                |
-| app_version | integer    | 2                        | Version of LÖVE Potion to build for |
-
-### The **[debug]** Section
-
-This section is used for debugging purposes and should always be up-to-date.
-
-| Key     | Value Type | Default   | Notes                       |
-| ------- | ---------- | --------- | --------------------------- |
-| version | string     | `"0.8.0"` | Configuration version       |
-| logging | boolean    | `false`   | Enable logging (for errors) |
+| Key     | Value Type | Default                  | Notes                          |
+| ------- | ---------- | ------------------------ | ------------------------------ |
+| targets | array      | `["ctr", "hac", "cafe"]` | Target console(s) to build for |
+| source  | string     | `"game"`                 | Game source zip name           |
