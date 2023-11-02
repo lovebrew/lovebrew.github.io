@@ -22,9 +22,3 @@ icons = { ctr = "", hac = "", cafe = "" }
 [build]
 targets = ["ctr", "hac", "cafe"]
 source = "game"
-
-[debug]
-# DO NOT MODIFY #
-version = "0.8.1"
-logging = false
-# ------------- #

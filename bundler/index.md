@@ -1,8 +1,8 @@
 !> Currently the Wii U version **only** supports Aroma custom firmware, no support will be provided for others.
 
-### Directory Structure
+## Getting Started
 
-A typical directory structure when using LÖVEBrew looks like the following:
+A typical directory structure looks like the following:
 
 ```
 SuperProject
@@ -22,27 +22,7 @@ If a custom icon is desired, please note that for Nintendo 3DS, you must create 
 
 ### Building Your Project
 
-Open your favorite browser and navigate to [the bundler app](http://bundle.lovebrew.org). Find your project and do the following:
-
-1. Create a new folder, `Content`
-2. Inside of your `SuperGame` directory, highlight all items and compress them into a zip archive.
-    - Bring this zip file to the `Content` directory.
-3. Inside of the `SuperProject` directory, copy your lovebrew.toml to `Content`.
-4. Highlight all items inside of `Content` and zip them up.
-5. Drag and drop the zip archive you just created into the website.
-6. Notice the alert dialog at the top asking about uploading your project and confirm.
-
-Your zip file structure should look like the following:
-
-```
-Content.zip
-├── SuperGame.zip¹
-│   ├── conf.lua
-│   └── main.lua
-└── lovebrew.toml
-```
-
-¹This zip file must be named the same as in the `lovebrew.toml` `source` field.
+Open your favorite browser and navigate to [the bundler app](http://bundle.lovebrew.org). Find your project, zip all of the contents within `SuperProject` and drag the new zip file into the browser. It should ask you to confirm the upload; click yes and it will begin the process.
 
 The website, if all goes well, will bundle your game into the formats requested in the `lovebrew.toml` file and pack them into a resulting zip archive. This zip archive also contains a `debug.log` file for debugging purposes, should something go wrong during the build process. If your project fails to build and an error toast shows up at the top of the site, please make note of it. These errors should be clear enough to indicate your issue, but if they are not, please report an issue on GitHub.
 
@@ -55,30 +35,29 @@ The website, if all goes well, will bundle your game into the formats requested 
 This section defines the metadata for your game.
 
 | Key         | Value Type | Default                             | Notes                       |
-|-------------|------------|-------------------------------------|-----------------------------|
+| ----------- | ---------- | ----------------------------------- | --------------------------- |
 | title       | string     | `"SuperGame"`                       | Game title                  |
-| author      | string     | ``SuperAuthor``                     | Game author                 |
+| author      | string     | `SuperAuthor`                       | Game author                 |
 | description | string     | `"SuperDescription"`                | Game description            |
 | version     | string     | `"0.1.0"`                           | Game version                |
 | icons       | table      | `{ ctr = "", hac = "", cafe = "" }` | Icon paths in the zip file¹ |
 
 ¹See [this section for more details](lovebrew?id=custom-metadata-amp-icons). Icons are relative to the root of the zip file.
 
+Icons can also be defined in `[metadata.icons]`:
+
+```toml
+[metadata.icons]
+ctr  = "icon48.png"
+hac  = "icon.jpeg"
+cafe = "icon128.png"
+```
+
 ### The **[build]** Section
 
 This section defines how the application should build your game.
 
-| Key         | Value Type | Default                  | Notes                               |
-|-------------|------------|--------------------------|-------------------------------------|
-| targets     | array      | `["ctr", "hac", "cafe"]` | Target console(s) to build for      |
-| source      | string     | `"game"`                 | Game source zip name                |
-| app_version | integer    | 2                        | Version of LÖVE Potion to build for |
-
-### The **[debug]** Section
-
-This section is used for debugging purposes and should always be up-to-date.
-
-| Key         | Value Type | Default   | Notes                       |
-|-------------|------------|-----------|-----------------------------|
-| version     | string     | `"0.8.0"` | Configuration version       |
-| logging     | boolean    | `false`   | Enable logging (for errors) |
+| Key     | Value Type | Default                  | Notes                          |
+| ------- | ---------- | ------------------------ | ------------------------------ |
+| targets | array      | `["ctr", "hac", "cafe"]` | Target console(s) to build for |
+| source  | string     | `"game"`                 | Game source zip name           |

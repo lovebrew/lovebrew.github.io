@@ -4,7 +4,7 @@
 
 ### Fused Binary
 
-You can bundle your game into the LÖVE Potion executable for your console for ease of distribution. This is recommended for when you are done developing you game and want to show it off to your friends! For more information, visit [the LÖVEBrew page](/lovebrew.md)
+You can bundle your game into the LÖVE Potion executable for your console for ease of distribution. This is recommended for when you are done developing you game and want to show it off to your friends! For more information, visit [the bundler page](/bundler/index.md)
 
 ### LÖVE Executable
 
@@ -12,9 +12,9 @@ You can bundle your game into the LÖVE Potion executable for your console for e
 
 Please refer to 'creata a `love` file' [at the official LÖVE wiki](https://love2d.org/wiki/Game_Distribution#Create_a_.love-file).
 
-Once the LÖVE binary is created, download the file association zip for [switch](files/switch-config.zip ':ignore') or [3ds](files/3ds-config.zip ':ignore'). Copy the `lovepotion.cfg` file to your Switch micro SD card under `/nx-hbmenu/config/fileassoc` or `hbmenu/config/fileassoc`. The `lovepotion` folder can be placed under `/switch`. The only thing missing is the latest copy of LÖVE Potion, so download the [latest *.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `lovepotion` folder.
+Once the LÖVE binary is created, download the file association zip for [switch](files/switch-config.zip ":ignore") or [3ds](files/3ds-config.zip ":ignore"). Copy the `lovepotion.cfg` file to your Switch micro SD card under `/nx-hbmenu/config/fileassoc` or `hbmenu/config/fileassoc`. The `lovepotion` folder can be placed under `/switch`. The only thing missing is the latest copy of LÖVE Potion, so download the [latest \*.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `lovepotion` folder.
 
-All that's left is to copy the new *SuperGame.love* file to the `/switch` or `/3ds` folder on your micro SD card and open the Homebrew Menu. It will now show up as an entry that you can run.
+All that's left is to copy the new _SuperGame.love_ file to the `/switch` or `/3ds` folder on your micro SD card and open the Homebrew Menu. It will now show up as an entry that you can run.
 
 ### 'Game' Folder
 

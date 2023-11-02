@@ -70,12 +70,6 @@ sudo (dkp-)pacman -S --needed - < pkglist.txt
 
 <!-- tabs:end -->
 
-#### LÖVE Potion 2.x
-
-Once everything finishes installing, run `make` . You can specify more jobs to allocate via `make -j{CPU_CORES}` where {CPU_CORES} is the amount of processor cores your CPU has. It is recommended to use MAX_CORES minus one.
-
-#### LÖVE Potion 3.x
-
 Once everything finishes installing, run the following, depending on the console:
 
 - 3DS: /opt/devkitpro/portlibs/3ds/bin/arm-none-eabi-cmake -S . -B build
