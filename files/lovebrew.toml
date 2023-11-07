@@ -19,6 +19,9 @@ icons = { ctr = "", hac = "", cafe = "" }
 #
 # [string] @source        : Game source directory; relative to the config
 #                           file. Default: "game".
+# [bool]   @packaged      : Whether to bundle your game into the executable.
+#                           Default: false.
 [build]
 targets = ["ctr", "hac", "cafe"]
 source = "game"
+packaged = false
