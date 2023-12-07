@@ -136,15 +136,17 @@ Both the 3DS and Switch versions of LÖVE Potion have the following constants:
 
 ## Software Keyboard
 
-Calling `love.keyboard.setTextInput` brings up the System Software Keyboard applet. Pass a table to configure it:
+Calling [`love.keyboard.setTextInput`](https://love2d.org/wiki/love.keyboard.setTextInput) brings up the System Software Keyboard applet. Instead of passing the rectangle, pass a table for different options:
 
-| Config     | Notes                                   |
-| ---------- | --------------------------------------- |
-| type       | basic, numpad, and standard<sup>1</sup> |
-| isPassword | makes the text hidden after entry       |
-| hint       | Text to prompt for on the input         |
+| Config     | Type    | Notes                                         |
+| ---------- | ------- | --------------------------------------------- |
+| type       | string  | `basic`, `numpad`, and `standard`<sup>1</sup> |
+| isPassword | boolean | makes the text hidden after entry             |
+| hint       | string  | Text to prompt for on the input               |
 
 <sup>1</sup> Nintendo Switch only
+
+Similarly to LÖVE, once the text is accepted by the user, it gets passed to [`love.textinput`](https://love2d.org/wiki/love.textinput) as the entire input string. So, if you type "Hello World!", the argument `text` would be the string "Hello World!".
 
 ## Gamepad Constants
 
