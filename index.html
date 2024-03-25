@@ -25,6 +25,7 @@
   <nav>
     <a href="#/">English</a>
     <a href="#/ko-kr/">한국어</a>
+    <a href="#/pl-pl/">한국어</a>
   </nav>
   <div id="app"></div>
   <script>
@@ -37,6 +38,7 @@
       nameLink: {
         '/ko-kr/': '#/ko-kr/',
         '/': '#/',
+        '/traslations/pl-pl/': '#/pl-pl/'
       },
       maxLevel: 4,
       auto2top: true,
@@ -49,13 +51,15 @@
         noData: {
           '/ko-kr/': '결과 없음!',
           '/': 'No results!',
+          '//pl-pl/': 'Brak wyników!',
         },
         paths: 'auto',
         placeholder: {
           '/ko-kr/': '검색',
           '/': 'Search',
+          '/pl-pl/': 'Szukaj',
         },
-        pathNamespaces: ['/ko-kr']
+        pathNamespaces: ['/ko-kr','/pl-pl/']
       }
     }
   </script>

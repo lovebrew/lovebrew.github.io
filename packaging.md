@@ -10,7 +10,7 @@ You can bundle your game into the LÖVE Potion executable for your console for e
 
 !> This method does not apply to the Wii U version.
 
-Please refer to 'creata a `love` file' [at the official LÖVE wiki](https://love2d.org/wiki/Game_Distribution#Create_a_.love-file).
+Please refer to 'create a `love` file' [at the official LÖVE wiki](https://love2d.org/wiki/Game_Distribution#Create_a_.love-file).
 
 Once the LÖVE binary is created, download the file association zip for [switch](files/switch-config.zip ":ignore") or [3ds](files/3ds-config.zip ":ignore"). Copy the `lovepotion.cfg` file to your Switch micro SD card under `/nx-hbmenu/config/fileassoc` or `hbmenu/config/fileassoc`. The `lovepotion` folder can be placed under `/switch`. The only thing missing is the latest copy of LÖVE Potion, so download the [latest \*.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `lovepotion` folder.
 
