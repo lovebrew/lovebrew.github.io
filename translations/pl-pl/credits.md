@@ -1,39 +1,39 @@
-## Big Thanks
+## Wielkie Podziękowania
 
-- devkitPro for the amazing toolchains and libraries:
+- devkitPro za niesamowite narzędzia i biblioteki:
 
-  - libctru and devkitARM
-  - libnx and devkitA64
-  - wut and devkitPPC
-  - citro2d and citro3d
+  - libctru i devkitARM
+  - libnx i devkitA64
+  - wut i devkitPPC
+  - citro2d i citro3d
   - deko3d
 
-- WinterMute, fincs, mtheall, piepie, and DeltaV
+- WinterMute, fincs, mtheall, piepie, oraz DeltaV
 
-  - Help with my random, dumb mistakes ( ͡° ͜ʖ ͡°)
+  - Pomoc z moimi dziwnymi, głupimi pomyłkami ( ͡° ͜ʖ ͡°)
 
-- Everyone who worked on:
+- Wszyscy, którzy pracowali nad:
   - [lua-compat-5.2](https://github.com/keplerproject/lua-compat-5.2)
   - [ctruLua](https://github.com/Firew0lf/ctruLua)
   - [Citra](http://citra-emu.org)
   - [Yuzu](https://yuzu-emu.org)
-- rxi for [lovedos](https://github.com/rxi/lovedos)
-- All of the LÖVE community, for being awesome!
+- rxi za [lovedos](https://github.com/rxi/lovedos)
+- Całej społeczności LÖVE, za bycie _awesome_!
 
-## Hall of Fame
+## Hala Sław
 
 - [VideahGams](https://github.com/videah)
-  - Original contributions
-  - Inspiration for 3DS Homebrew
+  - Oryginalny wkład
+  - Inspiracja do pisania Homebrew na 3DS
 - [Mik Embley](https://github.com/mikembley)
-  - Creating the No Game & Wiki assets
+  - Stworzenie obrazów No Game i ilustracji na Wiki
 - [TSnake](https://github.com/TSnake41)
-  - LuaJIT for 3DS/Switch
+  - LuaJIT dla 3DS/Switch
 
-## Contributors
+## Wkład w projekcie
 
 - [notquiteapex](https://github.com/aqex71)
-  - Various commits from early stages
+  - Przeróżne commity na wczesnych etapach
 - [TSnake](https://github.com/TSnake41)
 - [piepie62](https://github.com/piepie62)
 - [pablomayobre](https://github.com/pablomayobre)
@@ -42,7 +42,7 @@
 - [Nawias](https://github.com/Nawias)
 - [MegaPiggy](https://github.com/MegaPiggy)
 
-## Debuggers
+## Debugujący
 
 - [916253](https://github.com/916253)
 - [7v1](https://github.com/afriendlytrashcan)
