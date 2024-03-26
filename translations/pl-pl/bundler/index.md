@@ -1,8 +1,6 @@
-!> Currently the Wii U version **only** supports Aroma custom firmware, no support will be provided for others.
+## Jak zacząć
 
-## Getting Started
-
-A typical directory structure looks like the following:
+Typowa struktura katalogów projektu wygląda następująco:
 
 ```
 SuperProject
@@ -12,39 +10,39 @@ SuperProject
 └── lovebrew.toml
 ```
 
-`SuperProject` is the top-level folder name of what the project will be called. `SuperGame` is the directory to hold all of the game assets that will be used during the build process. The `lovebrew.toml` file is created by right clicking inside the `SuperProject` directory and creating a new file. You can find the [configuration template here](files/lovebrew.toml ":ignore"). There are several settings that can be changed, but the more important ones are detailed below.
+`SuperProject` jest nazwą folderu nadrzędnego całego projektu. `SuperGame` jest katalogiem zawierającym wszystkie zasoby gry używane w procesie pakowania. Plik `lovebrew.toml` należy utworzyć klikając prawym przyciskiem myszy w katalogu `SuperProject` i tworząc nowy plik tekstowy. Wzorzec zawartości pliku konfiguracyjnego znajdziesz [tutaj](../../files/lovebrew.toml ":ignore"). Znajdziesz tam kilka ustawień, które możesz zmienić, ale najważniejsze z nich opisano poniżej.
 
-### Custom Metadata & Icons
+### Metadane i Ikony
 
-The `lovebrew.toml` file can be opened in any text editor, including Notepad on Windows (even if Windows prompts what to open the file with, you can still use Notepad). There are comments for each item, so please read them carefully. Any `string` values may contain spaces.
+Plik `lovebrew.toml` otworzysz dowolnym edytorem tekstu, włącznie z Notatnikiem systemu Windows (jeśli Windows zapyta o to, jakim programem otworzyć plik, możesz wybrać Notatnik). Do każdego z ustawień są komentarze, proszę zapoznaj się z nimi uważnie. Wszelkie wartości typu `string` mogą zawierać spacje.
 
-If a custom icon is desired, please note that for Nintendo 3DS, you must create a 48x48 PNG image. For the Nintendo Switch version, the image must be 256x256 pixels and saved as a JPG image. If the icon for the Switch has issues, you may need to turn off the `progressive` flag when saving. Some programs, like GIMP are able to do this; Wii U icons are 128x128px PNG images. When a custom icon is not provided (or not found), LÖVEBrew will use a default icon.
+Jeśli potrzebujesz niestandardowej ikony, pamiętaj że na Nintendo 3DS musisz stworzyć obraz PNG o wymiarach 48x48 pikseli. Dla Nintendo Switch obraz musi mieć rozmiar 256x256 pikseli i być zapisany w formacie JPG. Jeśli masz problemy z ikoną dla Switcha, spróbuj wyłaczyć flagę `progressive` przy zapisie obrazu. Niektóre programy, np. GIMP, potrafią to zrobić. Ikony dla Wii U to obrazy PNG o wymiarach 128x128 pikseli. Jeśli nie podano nazwy ikony (lub jej nie znaleziono), LÖVEBrew użyje ikony domyślnej.
 
-### Building Your Project
+### Budowanie Projektu
 
-Open your favorite browser and navigate to [the bundler app](http://bundle.lovebrew.org). Find your project, zip all of the contents within `SuperProject` and drag the new zip file into the browser. It should ask you to confirm the upload; click yes and it will begin the process.
+Korzystając z ulubionej przeglądarki przejdź na stronę [aplikacji bundlera](http://bundle.lovebrew.org). Spakuj swój projekt, czyli całą zawartość folderu `SuperProject` i przeciągnij tak utworzony plik zip w okno przeglądarki. Aplikacja poprosi cię o potwierdzenie przesłania; klknij "tak" by rozpocząć proces budowania.
 
-The website, if all goes well, will bundle your game into the formats requested in the `lovebrew.toml` file and pack them into a resulting zip archive. This zip archive also contains a `debug.log` file for debugging purposes, should something go wrong during the build process. If your project fails to build and an error toast shows up at the top of the site, please make note of it. These errors should be clear enough to indicate your issue, but if they are not, please report an issue on GitHub.
+Jeśli wszystko pójdzie dobrze, strona spakuje twoją grę do formatów wyszczególnionych w pliku `lovebrew.toml` i pobierze plik zip zawierający pliki wykonywalne w tych formatach. Archiwum zawierać też będzie plik `debug.log` służący do debugowania samego procesu pakowania, gdyby coś poszło nie tak. Jeśli Twojego projektu nie udało się zbudować, a komunikat z kodem błędu pojawi się na górze strony, proszę zapamiętaj go lub zapisz. Te kody błędu powinny być wystarczająco jasne by wskazać źródło Twojego problemu, ale jeśli nie są, proszę zgłoś problem w wątku na GitHub.
 
-### Configuration File
+### Plik Konfiguracyjny
 
-?> If you are unfamiliar with the TOML spec, [please read this](https://toml.io/en/) for its official documentation
+?> Jeśli nie znasz specyfikacji formatu TOML, [przeczytaj ten artykuł](https://toml.io/en/) zawierający oficjalną dokumentację
 
-### The **[metadata]** Section
+### Sekcja **[metadata]**
 
-This section defines the metadata for your game.
+Ta sekcja definiuje metadane twojej gry.
 
-| Key         | Value Type | Default                             | Notes                       |
-| ----------- | ---------- | ----------------------------------- | --------------------------- |
-| title       | string     | `"SuperGame"`                       | Game title                  |
-| author      | string     | `SuperAuthor`                       | Game author                 |
-| description | string     | `"SuperDescription"`                | Game description            |
-| version     | string     | `"0.1.0"`                           | Game version                |
-| icons       | table      | `{ ctr = "", hac = "", cafe = "" }` | Icon paths in the zip file¹ |
+| Klucz       | Typ Wartości | Domyślnie                           | Uwagi                       |
+| ----------- | ------------ | ----------------------------------- | --------------------------- |
+| title       | string       | `"SuperGame"`                       | Tytuł gry                   |
+| author      | string       | `SuperAuthor`                       | Autor gry                   |
+| description | string       | `"SuperDescription"`                | Opis gry                    |
+| version     | string       | `"0.1.0"`                           | Wersja gry                  |
+| icons       | table        | `{ ctr = "", hac = "", cafe = "" }` | Ścieżki ikon w pliku zip¹   |
 
-¹See [this section for more details](lovebrew?id=custom-metadata-amp-icons). Icons are relative to the root of the zip file.
+¹Sprawdź [tę sekcję](lovebrew?id=custom-metadata-amp-icons) by uzyskać więcej informacji. Ścieżki ikon są w odniesieniu do nadrzędnej warstwy pliku zip.
 
-Icons can also be defined in `[metadata.icons]`:
+Ikony można też zdefiniować w `[metadata.icons]`:
 
 ```toml
 [metadata.icons]
@@ -53,14 +51,14 @@ hac  = "icon.jpeg"
 cafe = "icon128.png"
 ```
 
-### The **[build]** Section
+### Sekcja **[build]**
 
-This section defines how the application should build your game.
+Ta sekcja definiuje jak aplikacja powinna zbudować Twoją grę.
 
-| Key      | Value Type | Default                  | Notes                                                         |
-| -------- | ---------- | ------------------------ | ------------------------------------------------------------- |
-| targets  | array      | `["ctr", "hac", "cafe"]` | Target console(s) to build for                                |
-| source   | string     | `"game"`                 | Game source zip name                                          |
-| packaged | boolean    | `false`                  | Whether to package the game assets into the final executable¹ |
+| Klucz    | Typ Wartości | Domyślnie                | Uwagi                                                         |
+| -------- | ------------ | ------------------------ | ------------------------------------------------------------- |
+| targets  | array        | `["ctr", "hac", "cafe"]` | Konsola/konsole docelowe, dla których gra ma zostać zbudowana |
+| source   | string       | `"game"`                 | Nazwa katalogu z kodem gry                                    |
+| packaged | boolean      | `false`                  | Czy zasoby gry mają zostać spakowane do pliku wykonywalnego¹  |
 
-¹When this is set to `false`, the bundler will return the game assets you wanted for each target, converted or not.
+¹Jeśli ta opcja ustawiona jest na `false`, aplikacja bundlera zwróci zasoby gry dla każdej żądanej konsoli docelowej z osobna, przekonwertowane lub nie.

@@ -2,6 +2,8 @@
 
 ?> On Nintendo Switch, please use Atmosphère's title takeover functionality. This allows for your game to use all the system memory allowed along with the Software Keyboard. For Nintendo 3DS, please use the regular Homebrew Menu. I do not support the building a cia or "installable" nsp file.
 
+!> Currently the Wii U version **only** supports Aroma custom firmware, no support will be provided for others.
+
 ### Fused Binary
 
 You can bundle your game into the LÖVE Potion executable for your console for ease of distribution. This is recommended for when you are done developing you game and want to show it off to your friends! For more information, visit [the bundler page](/bundler/index.md)
@@ -19,8 +21,6 @@ All that's left is to copy the new _SuperGame.love_ file to the `/switch` or `/3
 ### 'Game' Folder
 
 ?> This is meant for developing your game. Use one of the prior methods when you are finished. If you want a custom game icon and title/author, package it using the lovebrew bundler site.
-
-!> Currently the Wii U version **only** supports Aroma custom firmware, no support will be provided for others.
 
 The quickest way to debug is through the `game` folder. Just [download the latest release binary](https://github.com/TurtleP/LovePotion/releases) for your console and put it under the proper directory:
 
