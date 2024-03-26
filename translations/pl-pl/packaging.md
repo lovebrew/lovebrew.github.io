@@ -4,7 +4,7 @@
 
 ### Złączony plik binarny
 
-Możesz spakować swoją grę wewnątrz pliku wykonywalnego LÖVE Potion dla ułatwienia dystrybucji. To podejście jest polecane gdy już zakończysz prace nad grą i chcesz pokazać ją znajomym! Po więcej informacji zapraszam na [stronę bundlera](/bundler/index.md).
+Możesz spakować swoją grę wewnątrz pliku wykonywalnego LÖVE Potion dla ułatwienia dystrybucji. To podejście jest polecane gdy już zakończysz prace nad grą i chcesz pokazać ją znajomym! Po więcej informacji zapraszam do skorzystania z [bundlera](/translations/pl-pl/bundler/index.md).
 
 ### Plik wykonywalny LÖVE
 
@@ -12,7 +12,7 @@ Możesz spakować swoją grę wewnątrz pliku wykonywalnego LÖVE Potion dla uł
 
 Proszę o zapoznanie się z 'create a `love` file' [na oficjalnej LÖVE wiki](https://love2d.org/wiki/Game_Distribution#Create_a_.love-file).
 
-Gdy utworzysz archiwum .love, pobierz odpowiedni zip dla [Switcha](files/switch-config.zip ":ignore") lub[3ds](files/3ds-config.zip ":ignore").
+Gdy utworzysz archiwum .love, pobierz odpowiedni zip dla [Switcha](files/switch-config.zip ":ignore") lub [3DS](files/3ds-config.zip ":ignore").
 Skopiuj plik `lovepotion.cfg` na swoją kartę micro SD Switch do `/nx-hbmenu/config/fileassoc` lub `hbmenu/config/fileassoc`. Folder `lovepotion` może zostać umieszczony w ścieżce `/switch`. Ostatnią brakującą rzeczą jest najnowsza kopia LÖVE Potion, więc pobierz [najnowszy plik \*.nro](https://github.com/TurtleP/LovePotion/releases) i wstaw go do folderu `lovepotion`.
 
 Teraz tylko musisz skopiować nowy plik _SuperGame.love_ do folderu `/switch` lub `/3ds` na swojej karcie pamięci i otworzyć Homebrew Menu. Gra pokaże się jako ikona do uruchomienia.

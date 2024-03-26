@@ -1,12 +1,12 @@
-?> Please read everything carefully. Follow all necessary links and read those thoroughly. They contain important information.
+?> Upewnij się, że czytasz wszystko ze zrozumieniem. Przechodź na podlinkowane strony tam, gdzie to konieczne i czytaj dokładnie treści na nich zamieszczone; zawierają one ważne informacje.
 
-## Getting Started
+## Jak zacząć
 
-In order to start contributing, you will need to follow [the instructions on the devkitPro Wiki](https://devkitpro.org/wiki/Getting_Started) for setting up a development environment. If you have an existing pacman installation (e.g. msys2 or Linux) then [refer to this section on the devkitPro Wiki](https://devkitpro.org/wiki/devkitPro_pacman#Customising_Existing_Pacman_Install)
+Aby zacząć udzielać się w projekcie, musisz zainstalować środowisko deweloperskie według [instrukcji zamieszczonych na devkitPro Wiki](https://devkitpro.org/wiki/Getting_Started). Jeśli masz już zainstalowany menedżer pakietów `pacman` (np. zawarty w msys2 lub Linux), możesz skorzystać z [tej sekcji na devkitPro Wiki](https://devkitpro.org/wiki/devkitPro_pacman#Customising_Existing_Pacman_Install).
 
-### Dependencies
+### Zależności
 
-Once the environment is set up, open your terminal and sync the package listing:
+Gdy już ustawisz środowisko, otwórz terminal i zsynchronizuj repozytoria pakietów:
 
 <!-- tabs:start -->
 
@@ -24,7 +24,7 @@ sudo (dkp-)pacman -Syu
 
 <!-- tabs:end -->
 
-Once the packages have syncronized, run the following:
+Po synchronizacji pakietów, uruchom następujące polecenie:
 
 <!-- tabs:start -->
 
@@ -42,17 +42,17 @@ sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env wiiu-dev¹
 
 <!-- tabs:end -->
 
-¹This is only applicable to LÖVE Potion 3.x
+¹Tylko dla LÖVE Potion 3.x
 
-!> The following information is for development purposes only! Do not build LÖVE Potion directly if you don't understand programming or are not going to contribute. It only leads to [fragmentation](https://en.wikipedia.org/wiki/Market_fragmentation). If you wish to package your game for distribution, please see [Game Distribution](packaging)
+!> Następujące informacje są tylko do celów rozwoju projektu! Nie buduj LÖVE Potion bezpośrednio jeśli nie rozumiesz programowania lub nie zamierzasz udzielać się w projekcie. W przeciwnym wypadku przyczyniasz się tylko do [fragmentacji](https://en.wikipedia.org/wiki/Market_fragmentation). Jeśli jesteś tu, by skompilować swoją grę do dalszej dystrybucji, proszę sprawdź sekcję [Dystrybucja Gier](/translations/pl-pl/packaging)
 
-Next, clone the repository. If you are contributing code, [please fork and then clone locally](https://help.github.com/articles/fork-a-repo/). Afterwards, using the terminal, change your directory to where LÖVE Potion was cloned:
+Następnie sklonuj repozytorium. Jeśli zamierzasz udzielać swój kod, [proszę utwórz swój fork i sklonuj go lokalnie](https://help.github.com/articles/fork-a-repo/). Dalej, używając terminala, przejdź do katalogu, do którego sklonowany został projekt:
 
 ```bash
 cd LovePotion
 ```
 
-Install the required portlibs:
+Zainstaluj potrzebne biblioteki portlib:
 
 <!-- tabs:start -->
 
@@ -84,73 +84,73 @@ sudo (dkp-)pacman -S --needed - < platform/cafe/pkglist.txt
 
 <!-- tabs:end -->
 
-Once everything finishes installing, run the following, depending on the console:
+Gdy wszystko już się zainstaluje, uruchom jedno z poniższych poleceń, w zależności od wybranej konsoli:
 
 - 3DS: /opt/devkitpro/portlibs/3ds/bin/arm-none-eabi-cmake -S . -B build
 - Switch: /opt/devkitpro/portlibs/switch/bin/aarch64-none-elf-cmake -S . -B build
 - Wii U: /opt/devkitpro/portlibs/wiiu/bin/powerpc-eabi-cmake -S . -B build
 
-## Pull Requests
+## Tworzenie Pull Request
 
-### Naming
+### Nazewnictwo
 
-When you open a new [pull request](https://help.github.com/articles/about-pull-requests/), please give it an easy to recognize name such as `fix-filesystem-reading` . This will help track down [when a defect occurs](https://sqa.stackexchange.com/a/20258) in the event of it being merged (after approval) from a future commit.
+Gdy utworzysz nowy [pull request](https://help.github.com/articles/about-pull-requests/), nazwij go w sposób łatwy do zidentyfikowania, np. `fix-filesystem-reading`. To pomoże wykryć [ewentualne defekty](https://sqa.stackexchange.com/a/20258) w przypadku zcalenia go (po zatwierdzeniu) w jednym z przyszłych commitów.
 
-### Brace Style
+### Klamry
 
-Curly braces ({}) should always be [Allman style](https://pbs.twimg.com/media/CXlB_kpVAAA0pDM.png) for consistency. However, if a statement is only a single-line long, please omit the braces:
+Klamry (`{}`) powinny zawsze być pisane według [stylu Allman'a](https://pbs.twimg.com/media/CXlB_kpVAAA0pDM.png) dla jednolitości. Jednakże, gdy wyrażenie jest tylko jednolinijkowe, proszę pomijać klamry całkowicie:
 
 ```cpp
 if (something)
-    printf("Woah!");
+    printf("Łał!");
 else if (otherThing)
-    printf("Amazing!");
+    printf("Niesamowite!");
 else
-    printf("Welp");
+    printf("No cóż");
 
 for (size_t i = 0; i < 10; i++)
-    printf("Count is %zu", i);
+    printf("Wynik licznika: %zu", i);
 ```
 
-### Variable & Function Names
+### Nazwy Zmiennych i Funkcji
 
-- Variable names should be in camelCase.
-- Class names and their functions should be CamelCase.
-  - Examples: `JoystickModule` versus `Channel`.
-- Lua wrapper functions should be placed in a respective `Wrap_{type}` namespace.
-  - These functions will also be in CamelCase.
+- Nazwy zmiennych powinny być w camelCase.
+- Nazwy klas i ich funkcje powinny być w PascalCase.
+  - Przykłady: `JoystickModule` oraz `Channel`.
+- Funkcje opakowujące Lua powinny zostać umieszczone w odpowiedniej przestrzeni nazw `Wrap_{type}`.
+  - Te funkcje powinny również być w camelCase.
 
-## Debugging Crashes
+## Debugowanie Crash'y
 
-If your changes happen to be crashing the console, you can use a few tools to find the backtrace and find where the real problem is.
+Jeśli twoje zmiany zaczną crash'ować konsolę, istnieje kilka narzędzi, których możesz użyć by znaleźć ślad błędu *(backtrace)*, a następnie jego źródło.
 
 ### brewDebug
 
-One solution is to [use brewDebug](https://github.com/TurtleP/brewDebug) with the PC and LR addresses. It can also use luma3ds and atmosphère logs that are dumped to parse these and find the issue.
+Jednym ze sposobów jest użycie [brewDebug](https://github.com/TurtleP/brewDebug) do sprawdzenia błędu po adresach PC i LR. Narzędzie może też użyć logów z luma3ds i atmosphère w celu odnalezienia błędu po tych adresach.
 
-You will need to install either the `devkitARM` or `devkitA64` packages from devkitpro-pacman. These will provide special addr2line binaries that work with Nintendo 3DS and Nintendo Switch, respectively. In order for luma3ds logs to be parsed, you will also need the [luma3ds exceptions parser](https://github.com/LumaTeam/luma3ds_exception_dump_parser).
+Będzie ci potrzebna instalacja pakietów `devkitARM` lub `devkitA64` z menedżera devkitpro-pacman. Pakiety te zawierają specjalne programy addr2line, działające odpowiednio dla Nintendo 3DS i Nintendo Switch. Do przetworzenia logów z luma3ds będziesz również potrzebować [luma3ds exceptions parser](https://github.com/LumaTeam/luma3ds_exception_dump_parser).
 
-Please follow the readme documentation on the repository for further instructions.
+Skorzystaj z dokumentacji readme na repozytorium narzędzia dla dalszych instrukcji.
 
 ### GDB
 
-There is a special tool called gdb which provides better in-depth analysis of these crashes. It attaches remotely to the console while it is running.
+Istnieje specjalne narzędzie o nazwie `gdb`, umożliwiające lepszą, dogłębną analizę tych crash'y. Łączy się ono zdalnie z konsolą w trakcie jej działania.
 
 #### Nintendo 3DS
 
-!> You will need to install `devkitARM-gdb` from devkitpro-pacman.
+!> Musisz zainstalować `devkitARM-gdb` z menedżera paczek devkitpro-pacman.
 
-You will have to open the rosalina menu and navigate to `Debugger Options`. Inside this menu, enable the Debugger and make note of the IP address for your system. Next, enable `Force-debug next application at launch`.
+Należy otworzyć menu Rosalina i przejść do `Debugger Options`. W tym menu, włącz Debugger i zapamiętaj adres IP swojej konsoli. Następnie, włącz opcję `Force-debug next application at launch`.
 
-Once this is done, close the menu fully and in the terminal, run `/opt/devkitpro/devkitARM/bin/arm-none-eabi-gdb`. This will load the program. Run `file "path/to/ELF.elf"` where the path is to the compiled LÖVE Potion ELF binary. This is so we can have debug symbols loaded in and our backtrace can figure things out.
+Po wykonaniu tych kroków zamknij menu całkowicie, a w terminalu uruchom `/opt/devkitpro/devkitARM/bin/arm-none-eabi-gdb`. To załaduje program `gdb`. Wpisz polecenie `file "ścieżka/do/ELF.elf"`, gdzie `"ścieżka/do/ELF.elf"` to ścieżka do skompilowanego pliku binarnego ELF LÖVE Potion. Dzięki temu symbole debugowania zostaną załadowane i będzie można rozeznać się w ścieżce błędu *(backtrace)*.
 
-Execute `target remote {ip}:4003`, where `{ip}` is the console IP address, e.g. `target remote 192.168.3.30:4003`. Once it confirms it has been attached, run LÖVE Potion, then type `continue` and hit enter. Once it hits the interrupt for the segfault, type `bt` and hit enter, it will populate the backtrace in the terminal and you can figure out what went wrong from there.
+Wykonaj polecenie `target remote {ip}:4003`, gdzie `{ip}` to adres IP konsoli, np. `target remote 192.168.3.30:4003`. Gdy program potwierdzi połączenie, uruchom LÖVE Potion, a następnie wpisz `continue` i wciśnij enter. Gdy program napotka przerwanie błędu segmentacji, wpisz `bt` i wciśnij enter. Ślad błędu wyświetli się w terminalu, co pozwoli dalej rozeznać się w problemie.
 
 #### Nintendo Switch
 
-!> You will need to install `devkitA64-gdb` from devkitpro-pacman.
+!> Musisz zainstalować `devkitA64-gdb` z menedżera paczek devkitpro-pacman.
 
-You will need to be running atmosphère 1.2.4 or higher. Create a file (or if it exists, modify it) called `system_settings.ini` under the `/atmosphere/config` config directory. Add the following to the config file:
+Potrzebujesz zainstalowanego atmosphère w wersji 1.2.4 lub wyższej. Utwórz lub zmodyfikuj plik o nazwie `system_settings.ini` w katalogu `/atmosphere/config`. Dodaj następującą treść do pliku konfiguracyjnego:
 
 ```ini
 [atmosphere]
@@ -158,18 +158,18 @@ enable_htc = u8!0x0
 enable_standalone_gdbstub = u8!0x1
 ```
 
-You will need to reboot your console in order for it to take affect.
+Aby zmiany przyniosły skutek musisz uruchomić ponownie konsolę.
 
-Once rebooted, title override whatever game you want. In your terminal, run `/opt/devkitpro/devkitA64/bin/aarch64-none-elf-gdb`. You will need to know your console's IP address. It can be found by pressing `y` on the right JoyCon, via the NetLoader functionality of hbmenu.
+Po uruchomieniu, użyj przejęcia tytułu na dowolnej grze. W terminalu uruchom `/opt/devkitpro/devkitA64/bin/aarch64-none-elf-gdb`. Musisz znać adres IP swojej konsoli. Możesz go sprawdzić wciskając `Y` na prawym JoyConie, przez funkcjonalność NetLoader w hbmenu.
 
-With the address known, run the following commands:
+Gdy adres jest już znany, uruchom następujące polecenia w `gdb`:
 
 1. `target extended-remote {ip}:22225`
-   - e.g. `target extended-remote 192.168.3.30:22225`
+   - np. `target extended-remote 192.168.3.30:22225`
 2. `info os processes`
-   - Lists the process IDs running on the console, find hbloader
+   - Wyświetla listę ID procesów działających na konsoli, znajdź `hbloader`
 3. `attach {pid}`
-   - e.g. `attach 136` -- the pid should be from step #3
-4. Execute the LÖVE Potion binary on console
+   - np. `attach 136` -- ID procesu znalezione w kroku #2
+4. Uruchom program LÖVE Potion na konsoli
 
-gdb will immediately break once LÖVE Potion is loaded. Run `share {path/to/elf_file}`. The path does not require to be the \*.elf itself. This will load the symbols in and you can debug further. You will want to most likely enter the `continue` command until the app crashes. For more details see [this GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), primarily the alternate backtrace located further down, which will be super useful.
+`gdb` natychmiast się zatrzyma gdy LÖVE Potion zostanie załadowane. Uruchom `share {ścieżka/do/pliku_elf}`. Ścieżka nie musi być do samego pliku \*.elf, wystarczy do katalogu go zawierającego. Dzięki temu symbole zostaną załadowane, co pozwoli na rozpoczęcie procesu debugowania. Teraz należy wprowadzać polecenie `continue` dopóki nie wystąpi błąd. Więcej informacji znadziejsz w [tym artykule GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), szczególnie alternatywny ślad błędu w niższej części, bardzo przydatny.

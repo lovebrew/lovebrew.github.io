@@ -115,10 +115,10 @@ for (size_t i = 0; i < 10; i++)
 ### Variable & Function Names
 
 - Variable names should be in camelCase.
-- Class names and their functions should be CamelCase.
+- Class names and their functions should be PascalCase.
   - Examples: `JoystickModule` versus `Channel`.
 - Lua wrapper functions should be placed in a respective `Wrap_{type}` namespace.
-  - These functions will also be in CamelCase.
+  - These functions will also be in camelCase.
 
 ## Debugging Crashes
 
@@ -169,7 +169,7 @@ With the address known, run the following commands:
 2. `info os processes`
    - Lists the process IDs running on the console, find hbloader
 3. `attach {pid}`
-   - e.g. `attach 136` -- the pid should be from step #3
+   - e.g. `attach 136` -- the pid should be from step #2
 4. Execute the LÖVE Potion binary on console
 
 gdb will immediately break once LÖVE Potion is loaded. Run `share {path/to/elf_file}`. The path does not require to be the \*.elf itself. This will load the symbols in and you can debug further. You will want to most likely enter the `continue` command until the app crashes. For more details see [this GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), primarily the alternate backtrace located further down, which will be super useful.
