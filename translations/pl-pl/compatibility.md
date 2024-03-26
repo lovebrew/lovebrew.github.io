@@ -1,31 +1,31 @@
-!> LÖVE Potion is a work in progress, so things may be missing. Please open an issue on the [GitHub Repository](https://github.com/TurtleP/LovePotion) if there's a feature you'd like to request.
+!> LÖVE Potion jest w trakcie rozwoju, więc niektórych rzeczy może brakować. Jeśli chcesz poprosić o dodanie jakiejś funkcjonalności, otwórz wątek na [repozytorium GitHub](https://github.com/TurtleP/LovePotion).
 
-## Drawing
+## Rysowanie
 
-The `love.draw` callback has a `screen` parameter. This does not affect the Nintendo Switch version.
-For example, if you wish to draw to only _one_ screen. You would simply check against the `screen` value that was passed in:
+W odwołaniu `love.draw` przekazywany jest parametr `screen`. Nie ma on zastosowania na konsoli Switch.
+Na przykład, jesli chcesz rysować tylko na _jednym_ ekranie. Po prostu użyj wartości zmiennej `screen` w wyrażeniu warunkowym:
 
 ```lua
 function love.draw(screen)
     if screen ~= "bottom" then
-        -- render top screen
+        -- rysowanie tylko na górnym ekranie
     end
 end
 ```
 
-The following screen values are what get passed per console:
+Zmienna `screen` przyjmuje następujące wartości w zależności od konsoli:
 
-- Nintendo 3DS: `left` , `right` , and `bottom` .
+- Nintendo 3DS: `left` , `right` oraz `bottom` .
 - Nintendo Switch: `default`
-- Nintendo Wii U: `tv` and `gamepad`
+- Nintendo Wii U: `tv` oraz `gamepad`
 
-Additionally, textures (such as png or jpg files) must be converted to the their proper formats on Nintendo 3DS before they can be used.
+Dodatkowo, tekstury (takie jak pliki `png` lub `jpg`) muszą zostać przekonwertowane na odpowiednie formaty zanim zostaną użyte na Nintendo 3DS.
 
-## Stereoscopic 3D Depth
+## Głębia Stereoskopowa 3D
 
-!> Stereoscopic depth is only for Nintendo 3DS. This is function will always return zero on Nintendo 2DS family systems. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
+!> Głębia stereoskopowa to funkcjonalność ekskluzywna konsoli Nintendo 3DS. Na systemach z rodziny Nintendo 2DS funkcja zawsze zwróci zero. Jeśli chcesz przetestować głębię 3D, spróbuj poprosić kogoś z konsolą 3DS o pomoc.
 
-The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getDepth()`. This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
+Nintendo 3DS ma stereoskopowy efekt 3D -- pozwala to na używanie efektów 3D na górnym ekranie bez potrzeby noszenia okularów 3D. Aby kontrolować tą funkcjonalność, użyj funkcji `love.graphics.getDepth()`. Pozwoli ona odczytać wartość suwaka 3D, w skali od zera do jeden. Przykład zastosowania tej funkcji jest następujacy:
 
 ```lua
 local str, font = "Hello World", nil
@@ -50,52 +50,52 @@ function love.draw(screen)
 end
 ```
 
-We define where the main `x` coordinate should be defined as `left` . This specifically is the anchor point to draw at. In this case, it's going to be in the center of the screen. This value is then subtracted by what the depth value currently is on the system and multiplied by a constant `z` value.
+Definiujemy miejsce głównej współrzędnej `x` jako `left`. To będzie nasz punkt odniesienia. W tym przypadku: sam środek ekranu. Następnie od tej wartości odejmowana jest wartość głębi pomnożona przez stałą `z`.
 
-## System Font Loading
+## Ładowanie czcionek systemowych
 
-One can load a system font using the follwing names in place of the path parameter for `love.graphics.newFont`:
+Można załadować czcionkę systemową używając jednej z następujących nazw zamiast ścieżki do pliku w `love.graphics.newFont`:
 
-### Nintendo 3DS & Wii U
+### Nintendo 3DS oraz Wii U
 
-| Name      | Notes                               |
-| --------- | ----------------------------------- |
-| standard  | JPN, USA, EUR, and AUS regions font |
-| chinese   | Chinese font                        |
-| korean    | Korean font                         |
-| taiwanese | Taiwanese font                      |
+| Nazwa     | Uwagi                                         |
+| --------- | --------------------------------------------- |
+| standard  | Czcionka dla regionów JPN, USA, EUR, oraz AUS |
+| chinese   | Chińska czcionka                              |
+| korean    | Koreańska czcionka                            |
+| taiwanese | Tajwańska czcionka                            |
 
 ### Nintendo Switch
 
-| Name                        | Notes                               |
-| --------------------------- | ----------------------------------- |
-| standard                    | JPN, USA, EUR, and AUS regions font |
-| chinese simplified          | Simplified Chinese font             |
-| chinese traditional         | Traditional Chinese font            |
-| extended chinese simplified | Extended Simplified Chinese font    |
-| korean                      | Korean font                         |
-| nintendo extended           | Nintendo Extended Symbols font      |
+| Nazwa                       | Uwagi                                         |
+| --------------------------- | --------------------------------------------- |
+| standard                    | Czcionka dla regionów JPN, USA, EUR, oraz AUS |
+| chinese simplified          | Uproszczona Chińska czcionka                  |
+| chinese traditional         | Tradycyjna Chińska czcionka                   |
+| extended chinese simplified | Rozszerzona Uproszczona Chińska czcionka      |
+| korean                      | Koreańska czcionka                            |
+| nintendo extended           | Czcionka Nintendo Extended Symbols            |
 
-It is important to note that for custom fonts you must convert your TrueType or OpenType font to bcnft on Nintendo 3DS. This can be done when bundling your game via [the bundler website](/packaging.md)
+Należy pamiętać, że użycie własnych, niestandardowych czcionek TrueType lub OpenType na Nintendo 3DS wymaga ich przekonwertowania do formatu `bcnft`. Można tego dokonać podczas pakowania gry z użyciem [strony bundlera](/translations/pl-pl/packaging.md). 
 
-The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
+Czcionka standardowa na Nintendo 3DS zawiera dane glifów różnych symboli, takich jak ikona Play Coin. Za to na konsoli Nintendo Switch, te znaki trzymane są w czcionce Nintendo Extended Symbols. Oto prosty przykład:
 
 ```lua
 local utf8 = require("utf8")
 
--- get the encoded utf8 of the Play Coin icon
+-- wyciągnij enkodowaną wartość utf8 ikony Play Coin
 local glyph = utf8.char("0xE075")
 
 function love.load()
-    -- if we're on Switch, set extended as our current font
+    -- jeśli jesteśmy na Switch, ustaw czcionkę extended jako używaną
     if love._console == "Switch" then
         love.graphics.setNewFont("nintendo extended", 14)
     end
 end
 
 function love.draw(screen)
-    -- this will only render on the top
-    -- screen for 3DS and will render on Switch regardless
+    -- To wyświetli się tylko na górnym ekranie 3DS
+    -- Na Switch wyświetli się normalnie
     if (screen and screen ~= "top") then
         return
     end
@@ -104,53 +104,53 @@ function love.draw(screen)
 end
 ```
 
-## ImageData on 3DS
+## ImageData na 3DS
 
-?> If you're not familiar with ImageData, please [view the LÖVE Wiki](https://love2d.org/wiki/ImageData)
+?> Jeśli nie wiesz czym jest ImageData lub jak z niej korzystać, odwiedź [LÖVE Wiki](https://love2d.org/wiki/ImageData)
 
-The main difference between LÖVE and LÖVE Potion when it comes to ImageData is the `rawdata` parameter for the constructor. When it is supplied, the data must be tiled (e.g. with data from a \*.t3x texture). This will throw an error otherwise.
+Główną różnicą pomiędzy LÖVE and LÖVE Potion jeśli chodzi o ImageData jest parametr `rawdata` w konstruktorze. Jeśli jest używany, dane muszą być specjalnie kafelkowane (np. dane z tekstury \*.t3x). W przeciwnym wypadku funkcja wyrzuci błąd.
 
-## Extended System Functions
+## Rozszerzone Funkcje Systemowe
 
-Since the Nintendo 3DS and Nintendo Switch are a bit different than your traditional LOVE environment, the following `system` module functions were added:
+Ponieważ konsole Nintendo korzystające z LÖVE Potion różnią się nieco od typowego środowiska LÖVE, dodano następujące funkcje do modułu `system`:
 
 - `love.system.getNetworkInfo()`
-  - Returns whether or not the system has an internet connection
+  - Zwraca informację na temat tego, czy system ma połączenie z internetem.
 - `love.system.getFriendInfo()`
-  - Returns the name of the user running LÖVE Potion (or your game) and friend code (if applicable)
+  - Zwraca nazwę użytkownika uruchamiającego LÖVE Potion (lub twoją grę) oraz Friend Code (3DS oraz Switch)
 - `love.system.getPreferredLocales()` (LÖVE 12)
-  - Returns the current System Language as a string
+  - Zwraca aktualnie ustawiony język systemowy jako ciąg znaków
 
-These are especially useful for either UI, netplay, or even multi-language support!
+Funkcje te są szczególnie przydatne do implementacji interfejsu użytkownika, rozgrywki sieciowej lub lokalizacji!
 
-## Console-Only Constants
+## Stałe Specyficzne dla Konsol
 
-Both the 3DS and Switch versions of LÖVE Potion have the following constants:
+Wszystkie wersje LÖVE Potion mają następujące stałe wartości:
 
 - `love._console`⁵
-  - Returns the name of the console, "3DS", "Switch", or "Wii U"
+  - Zwraca nazwę konsoli, "3DS", "Switch", lub "Wii U"
 - `love._potion_version`
-  - Returns the version of LÖVE Potion
+  - Zwraca wersję LÖVE Potion
 - `love._os`
-  - Returns the Operating System of the console, "Horizon" or "Cafe"
+  - Zwraca nazwę Systemu Operacyjnego konsoli, "Horizon" (3DS, Switch) lub "Cafe" (Wii U)
 
-## Software Keyboard
+## Klawiatura Ekranowa
 
-Calling [`love.keyboard.setTextInput`](https://love2d.org/wiki/love.keyboard.setTextInput) brings up the System Software Keyboard applet. Instead of passing the rectangle, pass a table for different options:
+Wywołanie [`love.keyboard.setTextInput`](https://love2d.org/wiki/love.keyboard.setTextInput) uruchamia aplet Systemowej Klawiatury Ekranowej. Zamiast prostokąta, przekaż w parametrze tablicę opcji:
 
-| Config     | Type    | Notes                                         |
+| Pole       | Typ     | Uwagi                                         |
 | ---------- | ------- | --------------------------------------------- |
-| type       | string  | `basic`, `numpad`, and `standard`<sup>1</sup> |
-| isPassword | boolean | makes the text hidden after entry             |
-| hint       | string  | Text to prompt for on the input               |
+| type       | string  | `basic`, `numpad`, oraz `standard`<sup>1</sup>|
+| isPassword | boolean | Ukrywa tekst po wpisaniu (np. hasło)          |
+| hint       | string  | Podpowiedź do wyświetlenia na polu tekstowym  |
 
-<sup>1</sup> Nintendo Switch only
+<sup>1</sup> Tylko na Nintendo Switch
 
-Similarly to LÖVE, once the text is accepted by the user, it gets passed to [`love.textinput`](https://love2d.org/wiki/love.textinput) as the entire input string. So, if you type "Hello World!", the argument `text` would be the string "Hello World!".
+Podobnie do LÖVE, po zatwierdzeniu tekstu przez użytkownika zostaje on przekazany do odwołania [`love.textinput`](https://love2d.org/wiki/love.textinput). Więc, jeżeli wpisałeś "Hello World!", wartością argumentu `text` będzie ciąg znaków "Hello World!".
 
-## Gamepad Constants
+## Stałe Kontrolera
 
-?> LÖVE Potion only uses the `love.gamepad*` callbacks for input handling (with the joycon or the 3DS system itself). For a list of button names, please see [the official LÖVE wiki](https://love2d.org/wiki/GamepadButton).
+?> Aby zobaczyć listę nazw przycisków, odwiedź [oficjalną LÖVE wiki](https://love2d.org/wiki/GamepadButton).
 
 ### Nintendo 3DS
 
