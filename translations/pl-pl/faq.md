@@ -1,39 +1,39 @@
-?> Here is a list of the most Frequently Asked Questions about LÖVE Potion.
+?> Oto lista najczęściej zadawanych pytańna temat LÖVE Potion.
 
-### Can I run my LÖVE game on this?
+### Czy mogę uruchomić na tym swoją grę napisaną w LÖVE?
 
-Running your game without any changes is possible, but it's recommended to currently use LÖVE Potion to make games from the ground up.<br>
-Take a look at [compatibility](compatibility) and the API reference on the sidebar to see what may need changing.
+Uruchomienie swojej gry bez żadnych zmian jest możliwe, ale zaleca się używać LÖVE Potion do tworzenia nowych gier od zera.<br>
+Zajrzyj do sekcji [Kompatybilność](/translations/pl-pl/compatibility) oraz dokumentacji API, by dowiedzieć się co może wymagać zmian.
 
-### Can I help?
+### Mogę pomóc?
 
-Yes, see [Building](building) for more details.
+Tak, sprawdź sekcję [Kompilacja](/translations/pl-pl/building) by dowiedzieć się więcej.
 
-### LÖVE Potion is missing feature 'x' from LÖVE, and I need it!
+### LÖVE Potion brakuje 'tej' lub 'tamtej' funkcjonalności z LÖVE, potrzebuję jej!
 
-Well that's great to hear! Please open an issue so that I can keep track of your request. I'll gladly implement what you've asked for, as long as it's feasible.
+Świetnie, że mówisz! Otwórz proszę wątek na GitHub, to pomoże mi zapamiętać i śledzić postępy co do Twojej prośby. Chętnie zaimplementuję brakującą funkcjonalność, jeśli tylko jest ona możliwa do wykonania.
 
-### I just got a Lua error! The app crashed! What do I do?
+### Wyskoczył mi błąd Lua! Aplikacja zcrashowała! Co mam zrobić?
 
-!> Please be advised: we do not support the use of custom firmwares other than Atmosphère.
+!> Uwaga: nie wspieramy używania CFW innych niż Atmosphère.
 
-If it's a programming error, feel free to join the LÖVE Potion Discord community and ask for help!<br>
-Should you encounter a different error, such as an arm11 (3DS) or fatal (Switch) exception, please attach the relevant files into a GitHub issue.<br>
+Jeśli to błąd w programowaniu, dołącz do społeczności LÖVE Potion na Discord i poproś o pomoc!<br>
+Jeśli napotkasz inny błąd, taki jak wyjątek arm11 (3DS) lub fatal (Switch), utwórz proszę wątek na GitHub z odpowiednimi plikami.<br>
 
-arm11 dumps:
+logi arm11:
 - sdmc:/luma/dumps/arm11
 
-fatal exceptions:
+wyjątki fatal:
 - sdmc:/atmosphere/crash_reports
 
-### Neat! I'm gonna send my game to Nintendo and get cartridge of my game and I'll-
+### Super! Wyślę swoją grę do Nintendo i wyprodukują mi kartridż a potem-
 
-Stop right there, this is for Homebrew only. This is not for releasing a real console title. I dunno, contact Nintendo if that's what you want.
+Hola hola, LÖVE Potion jest tylko do pisania Homebrew. Nie wypuścisz na tym prawdziwej gry konsolowej. Nie wiem, skontaktuj się z Nintendo jeśli taki jest twój cel.
 
-### Can this run Mari0?!
+### Mogę uruchomić na tym Mari0?!
 
-You know, if I had a nickel for every time someone asked that since LÖVE Potion first existed, I'd be pretty darn rich. Now for the actual answer: no. Not yet.
+Wiesz, gdyby ktoś dawał mi grosika za każdym razem kiedy słyszę to pytanie odkąd LÖVE Potion istnieje, byłaby z tego niezła suma. A co do pytania: nie. Jeszcze nie.
 
-### Why did it take so long for game debugging?
+### Dlaczego tak długo zajęło opracowanie debugowania gier?
 
-I know this is probably not even a frequent question yet, but it will be. Simply put, all this time LÖVE Potion didn't have any proper means to debug other than the "dev build" logger. This output to a file on the SD card, which it's not entirely about the *speed* impact, it's more of the actual SD card's lifespan being affected with a ton of file writes, especially if it's in something like love.update.
+To pytanie może i nie jest jeszcze często zadawane, ale będzie. Najprościej rzecz ujmując, przez ten cały czas LÖVE Potion nie miało żadnych porządnych sposobów na debugowanie z wyjątkiem loggera w kompilacjach deweloperskich. Ten z kolei wypisywał tekst do pliku na karcie SD. Problem nie leży nawet w *prędkości* tego rozwiązania, a raczej w tym, że żywotność karty SD jest mocno skracana przez wielokrotne zapisy do pliku, szczególnie jeśli logowanie jest w czymś jak `love.update`.
