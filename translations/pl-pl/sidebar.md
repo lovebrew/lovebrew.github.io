@@ -10,7 +10,7 @@
 - **Inne**
 - [FAQ](translations/pl-pl/faq)
 - [Projekty](translations/pl-pl/showcase)
-- [Twórcy](translations/pl-pl/credits)
+- [Podziękowania](translations/pl-pl/credits)
 - **Zasoby**
 - [![Discord](https://icongr.am/simple/discord.svg?colored&size=16)Serwer Discord](https://discord.gg/ggbKkhc)
 - [![How to LÖVE](https://icongr.am/simple/readthedocs.svg?colored&size=16)How to LÖVE](https://sheepolution.com/learn/book/contents)
