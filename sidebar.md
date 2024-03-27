@@ -3,7 +3,7 @@
 - [Building LÖVE Potion](building)
 - [Compatibility](compatibility)
 - [Game Distribution](packaging)
-- [Debugging Your Game](nestlink)
+- [Debugging Your Game](debugging)
 - **Bundler**
 - [Configuration](bundler/index)
 - [API Documentation](bundler/api)
