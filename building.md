@@ -59,13 +59,27 @@ Install the required portlibs:
 #### **Windows (msys2)**
 
 ```bash
-pacman -S --needed - < pkglist.txt
+# 3DS
+pacman -S --needed - < platform/ctr/pkglist.txt
+
+# Switch
+pacman -S --needed - < platform/hac/pkglist.txt
+
+# Wii U
+pacman -S --needed - < platform/cafe/pkglist.txt
 ```
 
 #### **Unix-like (Linux, macOS)**
 
 ```bash
-sudo (dkp-)pacman -S --needed - < pkglist.txt
+# 3DS
+sudo (dkp-)pacman -S --needed - < platform/ctr/pkglist.txt
+
+# Switch
+sudo (dkp-)pacman -S --needed - < platform/hac/pkglist.txt
+
+# 3DS
+sudo (dkp-)pacman -S --needed - < platform/cafe/pkglist.txt
 ```
 
 <!-- tabs:end -->
