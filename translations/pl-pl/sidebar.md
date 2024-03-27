@@ -3,7 +3,7 @@
 - [Kompilacja LÖVE Potion](translations/pl-pl/building)
 - [Kompatybilność](translations/pl-pl/compatibility)
 - [Dystrybucja Gier](translations/pl-pl/packaging)
-- [Debugowanie Gier](translations/pl-pl/nestlink)
+- [Debugowanie Gier](translations/pl-pl/debugging)
 - **Bundler**
 - [Konfiguracja](translations/pl-pl/bundler/index)
 - [Dokumentacja API](translations/pl-pl/bundler/api)
