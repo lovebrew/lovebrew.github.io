@@ -1,12 +1,12 @@
-## Metody
+﻿## Metody
 
-?> Na Nintendo Switch proszę używać funkcjonalności przejęcia tytułu Atmosphère. to pozwala twojej grze używać całej dozwolonej pamięci operacyjnej oraz Klawiatury Systemowej. Na Nintendo 3DS, prosze używać Homebrew Menu. Budowanie plików CIA lub "instalowalnych" NSP nie jest wspierane.
+?> Na Nintendo Switch proszę używać funkcjonalności przejęcia tytułu Atmosphère. To pozwala Twojej grze używać całej dozwolonej pamięci operacyjnej oraz Klawiatury Systemowej. Na Nintendo 3DS proszę używać Homebrew Menu. Budowanie plików CIA lub "instalowalnych" NSP nie jest wspierane.
 
 !> W tej chwili Wii U wspiera **tylko** CFW Aroma, wsparcie dla innych nie jest w planach.
 
 ### Złączony plik binarny
 
-Możesz spakować swoją grę wewnątrz pliku wykonywalnego LÖVE Potion dla ułatwienia dystrybucji. To podejście jest polecane gdy już zakończysz prace nad grą i chcesz pokazać ją znajomym! Po więcej informacji zapraszam do skorzystania z [bundlera](/translations/pl-pl/bundler/index.md).
+Możesz spakować swoją grę wewnątrz pliku wykonywalnego LÖVE Potion dla ułatwienia dystrybucji. To podejście jest polecane, gdy już zakończysz prace nad grą i chcesz pokazać ją znajomym! Po więcej informacji zapraszam do skorzystania z [bundlera](/translations/pl-pl/bundler/index.md).
 
 ### Plik wykonywalny LÖVE
 
@@ -21,12 +21,12 @@ Teraz tylko musisz skopiować nowy plik _SuperGame.love_ do folderu `/switch` lu
 
 ### 'Game' Folder
 
-?> Ta metoda jest przydatna w trakcie tworzenia gier. Używaj poprzednich metod gdy już skończysz. Jeśli chcesz niestandardowej ikony i tytułu/autora, spakuj swoją grę używając lovebrew bundler'a.
+?> Ta metoda jest przydatna w trakcie tworzenia gier. Używaj poprzednich metod, gdy już skończysz. Jeśli chcesz niestandardowej ikony i tytułu/autora, spakuj swoją grę, używając lovebrew bundlera.
 
-Najszybszym sposobem na uruchomienie i debugowanie gry jest folder `game`. Po prostu [pobierz najnowszy plik wykonywalny](https://github.com/TurtleP/LovePotion/releases) dla swojej konsoli i wstaw go do odpowiedniego kataolgu:
+Najszybszym sposobem na uruchomienie i debugowanie gry jest folder `game`. Po prostu [pobierz najnowszy plik wykonywalny](https://github.com/TurtleP/LovePotion/releases) dla swojej konsoli i wstaw go do odpowiedniego katalogu:
 
 - `/switch/lovepotion`
 - `/3ds/lovepotion`
 - `vol/external01/wiiu/apps/lovepotion`
 
-Stwórz folder o nazwie `game` w tymże katalogu. Będzie to miejsce na wszystkie twoje pliki źródłowe i zasoby. Pamiętaj jednak, że na Nintendo 3DS musisz przekonwertować tekstury i czcionki na konkretny format. W tym celu możesz użyć `tex3ds` oraz `mkbcfnt` by zrobić to ręcznie lub przeciągnąć i upuścić te pliki na stronie bundlera. Gdy już wszystko będzie zrobione, otwórz Homebrew Menu i uruchom program LÖVE Potion, który załaduje i uruchomi twoją grę!
+Stwórz folder o nazwie `game` w tymże katalogu. Będzie to miejsce na wszystkie Twoje pliki źródłowe i zasoby. Pamiętaj jednak, że na Nintendo 3DS musisz przekonwertować tekstury i czcionki na konkretny format. W tym celu możesz użyć `tex3ds` oraz `mkbcfnt`, by zrobić to ręcznie lub przeciągnąć i upuścić te pliki na stronie bundlera. Gdy już wszystko będzie zrobione, otwórz Homebrew Menu i uruchom program LÖVE Potion, który załaduje i uruchomi Twoją grę!

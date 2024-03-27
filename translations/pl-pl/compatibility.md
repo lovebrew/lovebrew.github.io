@@ -1,9 +1,9 @@
-!> LÖVE Potion jest w trakcie rozwoju, więc niektórych rzeczy może brakować. Jeśli chcesz poprosić o dodanie jakiejś funkcjonalności, otwórz wątek na [repozytorium GitHub](https://github.com/TurtleP/LovePotion).
+﻿!> LÖVE Potion jest w trakcie rozwoju, więc niektórych rzeczy może brakować. Jeśli chcesz poprosić o dodanie jakiejś funkcjonalności, otwórz wątek na [repozytorium GitHub](https://github.com/TurtleP/LovePotion).
 
 ## Rysowanie
 
-W odwołaniu `love.draw` przekazywany jest parametr `screen` służący do określania ekranu, na którym rysowana będzie grafika. Nie ma on zastosowania na konsoli Switch.
-Na przykład, jesli chcesz rysować tylko na _jednym_ ekranie, po prostu użyj wartości zmiennej `screen` w wyrażeniu warunkowym:
+W odwołaniu `love.draw` przekazywany jest parametr `screen`, służący do określania ekranu, na którym rysowana będzie grafika. Nie ma on zastosowania na konsoli Switch.
+Na przykład, jeśli chcesz rysować tylko na _jednym_ ekranie, po prostu użyj wartości zmiennej `screen` w wyrażeniu warunkowym:
 
 ```lua
 function love.draw(screen)
@@ -19,13 +19,13 @@ Zmienna `screen` przyjmuje następujące wartości w zależności od konsoli:
 - Nintendo Switch: `default`
 - Nintendo Wii U: `tv` oraz `gamepad`
 
-Dodatkowo, tekstury (takie jak pliki `png` lub `jpg`) muszą zostać przekonwertowane na odpowiednie formaty zanim zostaną użyte na Nintendo 3DS.
+Dodatkowo tekstury (takie jak pliki `png` lub `jpg`) muszą zostać przekonwertowane na odpowiednie formaty, zanim zostaną użyte na Nintendo 3DS.
 
 ## Głębia Stereoskopowa 3D
 
 !> Głębia stereoskopowa to funkcjonalność ekskluzywna konsoli Nintendo 3DS. Na systemach z rodziny Nintendo 2DS funkcja zawsze zwróci zero. Jeśli chcesz przetestować głębię 3D, spróbuj poprosić kogoś z konsolą 3DS o pomoc.
 
-Nintendo 3DS ma stereoskopowy efekt 3D -- pozwala to na używanie efektów 3D na górnym ekranie bez potrzeby noszenia okularów 3D. Aby kontrolować tą funkcjonalność, użyj funkcji `love.graphics.getDepth()`. Pozwoli ona odczytać wartość suwaka 3D, w skali od zera do jeden. Przykład zastosowania tej funkcji jest następujacy:
+Nintendo 3DS ma stereoskopowy efekt 3D -- pozwala to na używanie efektów 3D na górnym ekranie bez potrzeby noszenia okularów 3D. Aby kontrolować tę funkcjonalność, użyj funkcji `love.graphics.getDepth()`. Pozwoli ona odczytać wartość suwaka 3D, w skali od zera do jeden. Przykład zastosowania tej funkcji jest następujący:
 
 ```lua
 local str, font = "Hello World", nil
@@ -54,7 +54,7 @@ Definiujemy miejsce głównej współrzędnej `x` jako `left`. To będzie nasz p
 
 ## Ładowanie czcionek systemowych
 
-Można załadować czcionkę systemową używając jednej z następujących nazw zamiast ścieżki do pliku w `love.graphics.newFont`:
+Można załadować czcionkę systemową, używając jednej z następujących nazw zamiast ścieżki do pliku w `love.graphics.newFont`:
 
 ### Nintendo 3DS oraz Wii U
 
@@ -70,15 +70,15 @@ Można załadować czcionkę systemową używając jednej z następujących nazw
 | Nazwa                       | Uwagi                                         |
 | --------------------------- | --------------------------------------------- |
 | standard                    | Czcionka dla regionów JPN, USA, EUR, oraz AUS |
-| chinese simplified          | Uproszczona Chińska czcionka                  |
-| chinese traditional         | Tradycyjna Chińska czcionka                   |
-| extended chinese simplified | Rozszerzona Uproszczona Chińska czcionka      |
+| chinese simplified          | Uproszczona chińska czcionka                  |
+| chinese traditional         | Tradycyjna chińska czcionka                   |
+| extended chinese simplified | Rozszerzona uproszczona chińska czcionka      |
 | korean                      | Koreańska czcionka                            |
 | nintendo extended           | Czcionka Nintendo Extended Symbols            |
 
 Należy pamiętać, że użycie własnych, niestandardowych czcionek TrueType lub OpenType na Nintendo 3DS wymaga ich przekonwertowania do formatu `bcnft`. Można tego dokonać podczas pakowania gry z użyciem [strony bundlera](/translations/pl-pl/packaging.md). 
 
-Czcionka standardowa na Nintendo 3DS zawiera dane glifów różnych symboli, takich jak ikona Play Coin. Za to na konsoli Nintendo Switch, te znaki trzymane są w czcionce Nintendo Extended Symbols. Oto prosty przykład:
+Czcionka standardowa na Nintendo 3DS zawiera dane glifów różnych symboli, takich jak ikona Play Coin. Za to na konsoli Nintendo Switch te znaki trzymane są w czcionce Nintendo Extended Symbols. Oto prosty przykład:
 
 ```lua
 local utf8 = require("utf8")
@@ -106,9 +106,9 @@ end
 
 ## ImageData na 3DS
 
-?> Jeśli nie wiesz czym jest ImageData lub jak z niej korzystać, odwiedź [LÖVE Wiki](https://love2d.org/wiki/ImageData)
+?> Jeśli nie wiesz, czym jest ImageData lub jak z niej korzystać, odwiedź [LÖVE Wiki](https://love2d.org/wiki/ImageData)
 
-Główną różnicą pomiędzy LÖVE and LÖVE Potion jeśli chodzi o ImageData jest parametr `rawdata` w konstruktorze. Jeśli jest używany, dane muszą być specjalnie kafelkowane (np. dane z tekstury \*.t3x). W przeciwnym wypadku funkcja zwróci błąd.
+Główną różnicą pomiędzy LÖVE and LÖVE Potion, jeśli chodzi o ImageData, jest parametr `rawdata` w konstruktorze. Jeśli jest używany, dane muszą być specjalnie kafelkowane (np. dane z tekstury \*.t3x). W przeciwnym wypadku funkcja zwróci błąd.
 
 ## Rozszerzone Funkcje Systemowe
 
@@ -117,7 +117,7 @@ Ponieważ konsole Nintendo korzystające z LÖVE Potion różnią się nieco od 
 - `love.system.getNetworkInfo()`
   - Zwraca informację na temat tego, czy system ma połączenie z internetem.
 - `love.system.getFriendInfo()`
-  - Zwraca nazwę użytkownika uruchamiającego LÖVE Potion (lub twoją grę) oraz Friend Code (3DS oraz Switch).
+  - Zwraca nazwę użytkownika uruchamiającego LÖVE Potion (lub Twoją grę) oraz Friend Code (3DS oraz Switch).
 - `love.system.getPreferredLocales()` (LÖVE 12)
   - Zwraca aktualnie ustawiony język systemowy jako ciąg znaków.
 

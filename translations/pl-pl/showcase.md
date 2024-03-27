@@ -1,4 +1,4 @@
-?> Chcesz zobaczyć tu swoją grę lub bibliotekę? Napisz na serwerze Discord!
+﻿?> Chcesz zobaczyć tu swoją grę lub bibliotekę? Napisz na serwerze Discord!
 
 ## Nintendo Switch
 
@@ -8,7 +8,7 @@
 
 [LoveStory](https://shrikey.itch.io/lovestory) to biblioteka do tworzenia gier z gatunku Visual Novel dla LÖVE Potion na Nintendo Switch. Celem LoveStory jest uproszczenie procesu tworzenia gier Visual Novel oraz integracja prostego w użyciu Systemu Dialogów dla gier fabularnych na Nintendo Switch.
 
-By stworzyć własną grę Visual Novel polecam pobrać demo i edytować novel.lua wedlug potrzeby. Pełną dokumentację jak używać LoveStory znajdziesz w dokumencie LoveStory Documentation PDF na stronie itch.io.
+By stworzyć własną grę Visual Novel, polecam pobrać demo i edytować novel.lua według potrzeby. Pełną dokumentację, jak używać LoveStory, znajdziesz w dokumencie LoveStory Documentation PDF na stronie itch.io.
 
 ![](../../showcase/lovestory.png)
 
@@ -36,7 +36,7 @@ Klub Książki jest pełen uroczych dziewcząt! Czy uda ci się wpisać w ich se
 
 #### autorstwa Nawiasa
 
-[TaśmanQuest](https://nawias.itch.io/tasmanquest) to krótka gra zręcznościowa na Nintendo 3DS! Zwiedź słynny Księżomierski sklep Lewiatan i wytęż swoje umiejętności taśmowania w walce z czasem!
+[TaśmanQuest](https://nawias.itch.io/tasmanquest) to krótka gra zręcznościowa na Nintendo 3DS! Zwiedź słynny księżomierski sklep Lewiatan i wytęż swoje umiejętności taśmowania w walce z czasem!
 
 ![](../../showcase/tasmanquest.png)
 

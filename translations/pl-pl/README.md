@@ -1,10 +1,10 @@
-## Witaj ♥
+﻿## Witaj ♥
 
 LÖVE Potion jest frameworkiem do gier homebrew dla Nintendo 3DS, Nintendo Switch oraz Nintendo Wii U.
 
-Jeśli nie masz jeszcz znajomości LÖVE i/lub Lua, szczerze polecam najpierw kliknąć w link "How to LÖVE" znajdujący się w menu bocznym.
+Jeśli nie masz jeszcze znajomości LÖVE i/lub Lua, szczerze polecam najpierw kliknąć w link "How to LÖVE" znajdujący się w menu bocznym.
 
-Gdy już zrozumiesz jak działa LÖVE, sprawdź sekcję [Kompatybilność](translations/pl-pl/compatibility), aby dowiedzieć się o różnicach między LÖVE a LÖVE Potion. W menu bocznym jest również link do LÖVE Wiki, które zawiera dokumentację API - API LÖVE Potion jest prawie w pełni kompatybilne z LÖVE.
+Gdy już zrozumiesz, jak działa LÖVE, sprawdź sekcję [Kompatybilność](translations/pl-pl/compatibility), aby dowiedzieć się o różnicach między LÖVE a LÖVE Potion. W menu bocznym jest również link do LÖVE Wiki, które zawiera dokumentację API - API LÖVE Potion jest prawie w pełni kompatybilne z LÖVE.
 
 ![](../../files/lovepotion.png)
 

@@ -1,4 +1,4 @@
-?> Oto lista najczęściej zadawanych pytańna temat LÖVE Potion.
+﻿?> Oto lista najczęściej zadawanych pytań na temat LÖVE Potion.
 
 ### Czy mogę uruchomić na tym swoją grę napisaną w LÖVE?
 
@@ -7,13 +7,13 @@ Zajrzyj do sekcji [Kompatybilność](/translations/pl-pl/compatibility) oraz dok
 
 ### Mogę pomóc?
 
-Tak, sprawdź sekcję [Kompilacja](/translations/pl-pl/building) by dowiedzieć się więcej.
+Tak, sprawdź sekcję [Kompilacja](/translations/pl-pl/building), by dowiedzieć się więcej.
 
 ### LÖVE Potion brakuje 'tej' lub 'tamtej' funkcjonalności z LÖVE, potrzebuję jej!
 
 Świetnie, że mówisz! Otwórz proszę wątek na GitHub, to pomoże mi zapamiętać i śledzić postępy co do Twojej prośby. Chętnie zaimplementuję brakującą funkcjonalność, jeśli tylko jest ona możliwa do wykonania.
 
-### Wyskoczył mi błąd Lua! Aplikacja zcrashowała! Co mam zrobić?
+### Wyskoczył mi błąd Lua! Aplikacja scrashowała! Co mam zrobić?
 
 !> Uwaga: nie wspieramy używania CFW innych niż Atmosphère.
 
@@ -26,14 +26,14 @@ logi arm11:
 wyjątki fatal:
 - sdmc:/atmosphere/crash_reports
 
-### Super! Wyślę swoją grę do Nintendo i wyprodukują mi kartridż a potem-
+### Super! Wyślę swoją grę do Nintendo i wyprodukują mi kartridż, a potem...
 
-Hola hola, LÖVE Potion jest tylko do pisania Homebrew. Nie wypuścisz na tym prawdziwej gry konsolowej. Nie wiem, skontaktuj się z Nintendo jeśli taki jest twój cel.
+Hola, hola, LÖVE Potion jest tylko do pisania Homebrew. Nie wypuścisz na tym prawdziwej gry konsolowej. Nie wiem, skontaktuj się z Nintendo, jeśli taki jest Twój cel.
 
 ### Mogę uruchomić na tym Mari0?!
 
-Wiesz, gdyby ktoś dawał mi grosika za każdym razem kiedy słyszę to pytanie odkąd LÖVE Potion istnieje, byłaby z tego niezła suma. A co do pytania: nie. Jeszcze nie.
+Wiesz, gdyby ktoś dawał mi grosika za każdym razem, kiedy słyszę to pytanie, odkąd LÖVE Potion istnieje, byłaby z tego niezła suma. A co do pytania: nie. Jeszcze nie.
 
 ### Dlaczego tak długo zajęło opracowanie debugowania gier?
 
-To pytanie może i nie jest jeszcze często zadawane, ale będzie. Najprościej rzecz ujmując, przez ten cały czas LÖVE Potion nie miało żadnych porządnych sposobów na debugowanie z wyjątkiem loggera w kompilacjach deweloperskich. Ten z kolei wypisywał tekst do pliku na karcie SD. Problem nie leży nawet w *prędkości* tego rozwiązania, a raczej w tym, że żywotność karty SD jest mocno skracana przez wielokrotne zapisy do pliku, szczególnie jeśli logowanie jest w czymś jak `love.update`.
+To pytanie może i nie jest jeszcze często zadawane, ale będzie. Najprościej rzecz ujmując, przez ten cały czas LÖVE Potion nie miało żadnych porządnych sposobów na debugowanie, z wyjątkiem loggera w kompilacjach deweloperskich. Ten z kolei wypisywał tekst do pliku na karcie SD. Problem nie leży nawet w *prędkości* tego rozwiązania, a raczej w tym, że żywotność karty SD jest mocno skracana przez wielokrotne zapisy do pliku, szczególnie jeśli logowanie jest w czymś jak `love.update`.

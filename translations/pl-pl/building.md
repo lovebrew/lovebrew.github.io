@@ -1,4 +1,4 @@
-?> Upewnij się, że czytasz wszystko ze zrozumieniem. Przechodź na podlinkowane strony tam, gdzie to konieczne i czytaj dokładnie treści na nich zamieszczone; zawierają one ważne informacje.
+﻿?> Upewnij się, że czytasz wszystko ze zrozumieniem. Przechodź na podlinkowane strony tam, gdzie to konieczne, i czytaj dokładnie treści na nich zamieszczone; zawierają one ważne informacje.
 
 ## Jak zacząć
 
@@ -24,7 +24,7 @@ sudo (dkp-)pacman -Syu
 
 <!-- tabs:end -->
 
-Po synchronizacji pakietów, uruchom następujące polecenie:
+Po synchronizacji pakietów uruchom następujące polecenie:
 
 <!-- tabs:start -->
 
@@ -44,7 +44,7 @@ sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env wiiu-dev¹
 
 ¹Tylko dla LÖVE Potion 3.x
 
-!> Następujące informacje są tylko do celów rozwoju projektu! Nie buduj LÖVE Potion bezpośrednio jeśli nie rozumiesz programowania lub nie zamierzasz udzielać się w projekcie. W przeciwnym wypadku przyczyniasz się tylko do [fragmentacji](https://en.wikipedia.org/wiki/Market_fragmentation). Jeśli jesteś tu, by skompilować swoją grę do dalszej dystrybucji, proszę sprawdź sekcję [Dystrybucja Gier](/translations/pl-pl/packaging)
+!> Następujące informacje są tylko do celów rozwoju projektu! Nie buduj LÖVE Potion bezpośrednio, jeśli nie rozumiesz programowania lub nie zamierzasz udzielać się w projekcie. W przeciwnym wypadku przyczyniasz się tylko do [fragmentacji](https://en.wikipedia.org/wiki/Market_fragmentation). Jeśli jesteś tu, by skompilować swoją grę do dalszej dystrybucji, proszę sprawdź sekcję [Dystrybucja Gier](/translations/pl-pl/packaging)
 
 Następnie sklonuj repozytorium. Jeśli zamierzasz udzielać swój kod, [proszę utwórz swój fork i sklonuj go lokalnie](https://help.github.com/articles/fork-a-repo/). Dalej, używając terminala, przejdź do katalogu, do którego sklonowany został projekt:
 
@@ -94,11 +94,11 @@ Gdy wszystko już się zainstaluje, uruchom jedno z poniższych poleceń, w zale
 
 ### Nazewnictwo
 
-Gdy utworzysz nowy [pull request](https://help.github.com/articles/about-pull-requests/), nazwij go w sposób łatwy do zidentyfikowania, np. `fix-filesystem-reading`. To pomoże wykryć [ewentualne defekty](https://sqa.stackexchange.com/a/20258) w przypadku zcalenia go (po zatwierdzeniu) w jednym z przyszłych commitów.
+Gdy utworzysz nowy [pull request](https://help.github.com/articles/about-pull-requests/), nazwij go w sposób łatwy do zidentyfikowania, np. `fix-filesystem-reading`. To pomoże wykryć [ewentualne defekty](https://sqa.stackexchange.com/a/20258) w przypadku scalenia go (po zatwierdzeniu) w jednym z przyszłych commitów.
 
 ### Klamry
 
-Klamry (`{}`) powinny zawsze być pisane według [stylu Allman'a](https://pbs.twimg.com/media/CXlB_kpVAAA0pDM.png) dla jednolitości. Jednakże, gdy wyrażenie jest tylko jednolinijkowe, proszę pomijać klamry całkowicie:
+Klamry (`{}`) powinny zawsze być pisane według [stylu Allmana](https://pbs.twimg.com/media/CXlB_kpVAAA0pDM.png) dla jednolitości. Jednakże, gdy wyrażenie jest tylko jednolinijkowe, proszę pomijać klamry całkowicie:
 
 ```cpp
 if (something)
@@ -120,9 +120,9 @@ for (size_t i = 0; i < 10; i++)
 - Funkcje opakowujące Lua powinny zostać umieszczone w odpowiedniej przestrzeni nazw `Wrap_{type}`.
   - Te funkcje powinny również być w camelCase.
 
-## Debugowanie Crash'y
+## Debugowanie Crashów
 
-Jeśli twoje zmiany zaczną crash'ować konsolę, istnieje kilka narzędzi, których możesz użyć by znaleźć ślad błędu *(backtrace)*, a następnie jego źródło.
+Jeśli Twoje zmiany zaczną crashować konsolę, istnieje kilka narzędzi, których możesz użyć, by znaleźć ślad błędu *(backtrace)*, a następnie jego źródło.
 
 ### brewDebug
 
@@ -130,17 +130,17 @@ Jednym ze sposobów jest użycie [brewDebug](https://github.com/TurtleP/brewDebu
 
 Będzie ci potrzebna instalacja pakietów `devkitARM` lub `devkitA64` z menedżera devkitpro-pacman. Pakiety te zawierają specjalne programy addr2line, działające odpowiednio dla Nintendo 3DS i Nintendo Switch. Do przetworzenia logów z luma3ds będziesz również potrzebować [luma3ds exceptions parser](https://github.com/LumaTeam/luma3ds_exception_dump_parser).
 
-Skorzystaj z dokumentacji readme na repozytorium narzędzia dla dalszych instrukcji.
+Skorzystaj z dokumentacji readme na repozytorium narzędzia w celu uzyskania dalszych instrukcji.
 
 ### GDB
 
-Istnieje specjalne narzędzie o nazwie `gdb`, umożliwiające lepszą, dogłębną analizę tych crash'y. Łączy się ono zdalnie z konsolą w trakcie jej działania.
+Istnieje specjalne narzędzie o nazwie `gdb`, umożliwiające lepszą, dogłębną analizę tych crashów. Łączy się ono zdalnie z konsolą w trakcie jej działania.
 
 #### Nintendo 3DS
 
 !> Musisz zainstalować `devkitARM-gdb` z menedżera paczek devkitpro-pacman.
 
-Należy otworzyć menu Rosalina i przejść do `Debugger Options`. W tym menu, włącz Debugger i zapamiętaj adres IP swojej konsoli. Następnie, włącz opcję `Force-debug next application at launch`.
+Należy otworzyć menu Rosalina i przejść do `Debugger Options`. W tym menu włącz Debugger i zapamiętaj adres IP swojej konsoli. Następnie włącz opcję `Force-debug next application at launch`.
 
 Po wykonaniu tych kroków zamknij menu całkowicie, a w terminalu uruchom `/opt/devkitpro/devkitARM/bin/arm-none-eabi-gdb`. To załaduje program `gdb`. Wpisz polecenie `file "ścieżka/do/ELF.elf"`, gdzie `"ścieżka/do/ELF.elf"` to ścieżka do skompilowanego pliku binarnego ELF LÖVE Potion. Dzięki temu symbole debugowania zostaną załadowane i będzie można rozeznać się w ścieżce błędu *(backtrace)*.
 
@@ -158,9 +158,9 @@ enable_htc = u8!0x0
 enable_standalone_gdbstub = u8!0x1
 ```
 
-Aby zmiany przyniosły skutek musisz uruchomić ponownie konsolę.
+Aby zmiany przyniosły skutek, musisz uruchomić ponownie konsolę.
 
-Po uruchomieniu, użyj przejęcia tytułu na dowolnej grze. W terminalu uruchom `/opt/devkitpro/devkitA64/bin/aarch64-none-elf-gdb`. Musisz znać adres IP swojej konsoli. Możesz go sprawdzić wciskając `Y` na prawym JoyConie, przez funkcjonalność NetLoader w hbmenu.
+Po uruchomieniu użyj przejęcia tytułu na dowolnej grze. W terminalu uruchom `/opt/devkitpro/devkitA64/bin/aarch64-none-elf-gdb`. Musisz znać adres IP swojej konsoli. Możesz go sprawdzić, wciskając `Y` na prawym JoyConie, przez funkcjonalność NetLoader w hbmenu.
 
 Gdy adres jest już znany, uruchom następujące polecenia w `gdb`:
 
@@ -172,4 +172,4 @@ Gdy adres jest już znany, uruchom następujące polecenia w `gdb`:
    - np. `attach 136` -- ID procesu znalezione w kroku #2
 4. Uruchom program LÖVE Potion na konsoli
 
-`gdb` natychmiast się zatrzyma gdy LÖVE Potion zostanie załadowane. Uruchom `share {ścieżka/do/pliku_elf}`. Ścieżka nie musi być do samego pliku \*.elf, wystarczy do katalogu go zawierającego. Dzięki temu symbole zostaną załadowane, co pozwoli na rozpoczęcie procesu debugowania. Teraz należy wprowadzać polecenie `continue` dopóki nie wystąpi błąd. Więcej informacji znadziejsz w [tym artykule GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), szczególnie alternatywny ślad błędu w niższej części, bardzo przydatny.
+`gdb` natychmiast się zatrzyma, gdy LÖVE Potion zostanie załadowane. Uruchom `share {ścieżka/do/pliku_elf}`. Ścieżka nie musi być do samego pliku \*.elf, wystarczy do katalogu go zawierającego. Dzięki temu symbole zostaną załadowane, co pozwoli na rozpoczęcie procesu debugowania. Teraz należy wprowadzać polecenie `continue`, dopóki nie wystąpi błąd. Więcej informacji znajdziesz w [tym artykule GitHub gist](https://gist.github.com/nolberto82/2ad4235627b56cae769872e903f7c1b9#appendix), szczególnie alternatywny ślad błędu w niższej części, bardzo przydatny.
