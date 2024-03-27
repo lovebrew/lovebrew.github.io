@@ -62,7 +62,7 @@ curl --location 'http://bundle.lovebrew.org/convert/bcfnt' --form 'font.ttf=@"/f
 http://bundle.lovebrew.org/compile
 ```
 
-This endpoint will accept a query parameter string for metadata (see below) and icon files. Icon files must be supplied as `multipart/form-data`, named as `icon-ctr`, `icon-nx` and `icon-cafe` for Nintendo 3DS, Switch and Wii U respectively. The resulting response is `application/json` containing a JSON object the target names and base64-encoded data.
+This endpoint will accept a query parameter string for metadata (see below) and icon files. Icon files must be supplied as `multipart/form-data`, named as `icon-ctr`, `icon-nx` and `icon-cafe` for Nintendo 3DS, Switch and Wii U respectively. The resulting response is `application/json` containing a JSON object with the target names and base64-encoded data.
 
 | Parameter   | Notes                           | Default          |
 | ----------- | ------------------------------- | ---------------- |
@@ -93,17 +93,17 @@ curl --location 'http://bundle.lovebrew.org/compile?:title&:description&:version
 
 ## Error Messages
 
-| Error                      | Description                                                                                                                                    |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| TARGET_NOT_VALID           | A specified build target is invalid.                                                                                                           |
-| COMMAND_ARGUMENT_NOT_FOUND | (internal) A command's argument was not found.                                                                                                 |
-| COMMAND_FAILED             | (internal) A command failed.                                                                                                                   |
-| COMMAND_EXE_NOT_FOUND      | (internal) A command's executable binary was not found.                                                                                        |
-| DESCRIPTION_TOO_LONG       | The metadata description was too long. This can cause issues when building.                                                                    |
-| INVALID_FILE_TYPE          | A file was supplied, but in the wrong format.                                                                                                  |
-| WIDTH_TOO_LARGE            | A texture for t3x conversion has too large of a width (> 1024px)                                                                               |
-| HEIGHT_TOO_LARGE           | A texture for t3x conversion has too large of a height (> 1024px)                                                                              |
-| ICON_TOO_LARGE             | The metadata icon dimensions were incorrect. See [the configuration page](http://localhost:3000/#/bundler/index?id=custom-metadata-amp-icons). |
-| NO_FILE_UPLOADED           | Files were not uploaded when they were expected.                                                                                               |
-| NO_PARAMETERS_SUPPLIED     | URL query parameters were not supplied.                                                                                                        |
-| EMPTY_FILE                 | A file that was submitted was empty.                                                                                                           |
+| Error                      | Description                                                                                                            |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| TARGET_NOT_VALID           | A specified build target is invalid.                                                                                   |
+| COMMAND_ARGUMENT_NOT_FOUND | (internal) A command's argument was not found.                                                                         |
+| COMMAND_FAILED             | (internal) A command failed.                                                                                           |
+| COMMAND_EXE_NOT_FOUND      | (internal) A command's executable binary was not found.                                                                |
+| DESCRIPTION_TOO_LONG       | The metadata description was too long. This can cause issues when building.                                            |
+| INVALID_FILE_TYPE          | A file was supplied, but in the wrong format.                                                                          |
+| WIDTH_TOO_LARGE            | A texture for t3x conversion has too large of a width (> 1024px)                                                       |
+| HEIGHT_TOO_LARGE           | A texture for t3x conversion has too large of a height (> 1024px)                                                      |
+| ICON_TOO_LARGE             | The metadata icon dimensions were incorrect. See [the configuration page](bundler/index?id=custom-metadata-amp-icons). |
+| NO_FILE_UPLOADED           | Files were not uploaded when they were expected.                                                                       |
+| NO_PARAMETERS_SUPPLIED     | URL query parameters were not supplied.                                                                                |
+| EMPTY_FILE                 | A file that was submitted was empty.                                                                                   |

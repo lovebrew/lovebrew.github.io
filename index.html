@@ -25,6 +25,7 @@
   <nav>
     <a href="#/">English</a>
     <a href="#/ko-kr/">한국어</a>
+    <a href="#/pl-pl/">한국어</a>
   </nav>
   <div id="app"></div>
   <script>
@@ -32,10 +33,13 @@
       alias: {
         '/ko-kr/(.*)':
           'https://raw.githubusercontent.com/2jun0/lovebrew-ko-kr/master/$1',
+        '/pl-pl/(.*)':
+          '/traslations/pl-pl/$1'
       },
       name: 'LÖVE Potion',
       nameLink: {
         '/ko-kr/': '#/ko-kr/',
+        '/pl-pl/': '#/translations/pl-pl/',
         '/': '#/',
       },
       maxLevel: 4,
@@ -48,14 +52,16 @@
       search: {
         noData: {
           '/ko-kr/': '결과 없음!',
+          '/pl-pl/': 'Brak wyników!',
           '/': 'No results!',
         },
         paths: 'auto',
         placeholder: {
           '/ko-kr/': '검색',
+          '/pl-pl/': 'Szukaj',
           '/': 'Search',
         },
-        pathNamespaces: ['/ko-kr']
+        pathNamespaces: ['/ko-kr','/pl-pl/']
       }
     }
   </script>
