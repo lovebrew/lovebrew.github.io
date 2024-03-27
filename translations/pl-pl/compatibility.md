@@ -2,8 +2,8 @@
 
 ## Rysowanie
 
-W odwołaniu `love.draw` przekazywany jest parametr `screen`. Nie ma on zastosowania na konsoli Switch.
-Na przykład, jesli chcesz rysować tylko na _jednym_ ekranie. Po prostu użyj wartości zmiennej `screen` w wyrażeniu warunkowym:
+W odwołaniu `love.draw` przekazywany jest parametr `screen` służący do określania ekranu, na którym rysowana będzie grafika. Nie ma on zastosowania na konsoli Switch.
+Na przykład, jesli chcesz rysować tylko na _jednym_ ekranie, po prostu użyj wartości zmiennej `screen` w wyrażeniu warunkowym:
 
 ```lua
 function love.draw(screen)
@@ -108,7 +108,7 @@ end
 
 ?> Jeśli nie wiesz czym jest ImageData lub jak z niej korzystać, odwiedź [LÖVE Wiki](https://love2d.org/wiki/ImageData)
 
-Główną różnicą pomiędzy LÖVE and LÖVE Potion jeśli chodzi o ImageData jest parametr `rawdata` w konstruktorze. Jeśli jest używany, dane muszą być specjalnie kafelkowane (np. dane z tekstury \*.t3x). W przeciwnym wypadku funkcja wyrzuci błąd.
+Główną różnicą pomiędzy LÖVE and LÖVE Potion jeśli chodzi o ImageData jest parametr `rawdata` w konstruktorze. Jeśli jest używany, dane muszą być specjalnie kafelkowane (np. dane z tekstury \*.t3x). W przeciwnym wypadku funkcja zwróci błąd.
 
 ## Rozszerzone Funkcje Systemowe
 
@@ -117,9 +117,9 @@ Ponieważ konsole Nintendo korzystające z LÖVE Potion różnią się nieco od 
 - `love.system.getNetworkInfo()`
   - Zwraca informację na temat tego, czy system ma połączenie z internetem.
 - `love.system.getFriendInfo()`
-  - Zwraca nazwę użytkownika uruchamiającego LÖVE Potion (lub twoją grę) oraz Friend Code (3DS oraz Switch)
+  - Zwraca nazwę użytkownika uruchamiającego LÖVE Potion (lub twoją grę) oraz Friend Code (3DS oraz Switch).
 - `love.system.getPreferredLocales()` (LÖVE 12)
-  - Zwraca aktualnie ustawiony język systemowy jako ciąg znaków
+  - Zwraca aktualnie ustawiony język systemowy jako ciąg znaków.
 
 Funkcje te są szczególnie przydatne do implementacji interfejsu użytkownika, rozgrywki sieciowej lub lokalizacji!
 
@@ -154,8 +154,8 @@ Podobnie do LÖVE, po zatwierdzeniu tekstu przez użytkownika zostaje on przekaz
 
 ### Nintendo 3DS
 
-![](files/3DSControllerMap.png)
+![](../../files/3DSControllerMap.png)
 
 ### Nintendo Switch
 
-![](files/SwitchControllerMap.png)
+![](../../files/SwitchControllerMap.png)
