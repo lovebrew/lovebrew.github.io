@@ -1,0 +1,20 @@
+- **Główna**
+- [Strona Główna](translations/pl-pl/)
+- [Kompilacja LÖVE Potion](translations/pl-pl/building)
+- [Kompatybilność](translations/pl-pl/compatibility)
+- [Dystrybucja Gier](translations/pl-pl/packaging)
+- [Debugowanie Gier](translations/pl-pl/debugging)
+- **Bundler**
+- [Konfiguracja](translations/pl-pl/bundler/index)
+- [Dokumentacja API](translations/pl-pl/bundler/api)
+- **Inne**
+- [FAQ](translations/pl-pl/faq)
+- [Projekty](translations/pl-pl/showcase)
+- [Podziękowania](translations/pl-pl/credits)
+- **Zasoby**
+- [![Discord](https://icongr.am/simple/discord.svg?colored&size=16)Serwer Discord](https://discord.gg/ggbKkhc)
+- [![How to LÖVE](https://icongr.am/simple/readthedocs.svg?colored&size=16)How to LÖVE](https://sheepolution.com/learn/book/contents)
+- [![LÖVE Wiki](https://icongr.am/fontawesome/heart.svg?size=16&color=ff75e1)LÖVE Wiki](https://love2d.org/wiki)
+- **Linki**
+- [![PayPal](https://icongr.am/simple/buymeacoffee.svg?colored&size=16)Kup mi kawę](https://paypal.me/TurtleP)
+- [![devkitPro Patreon](https://icongr.am/simple/patreon.svg?colored&size=16)Wesprzyj devkitPro](https://www.patreon.com/devkitPro)

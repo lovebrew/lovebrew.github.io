@@ -25,7 +25,7 @@ Additionally, textures (such as png or jpg files) must be converted to the their
 
 !> Stereoscopic depth is only for Nintendo 3DS. This is function will always return zero on Nintendo 2DS family systems. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
 
-The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getDepth()`. This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
+The Nintendo 3DS has stereoscopic 3D -- it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getDepth()`. This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
 
 ```lua
 local str, font = "Hello World", nil
@@ -112,10 +112,10 @@ The main difference between LÖVE and LÖVE Potion when it comes to ImageData is
 
 ## Extended System Functions
 
-Since the Nintendo 3DS and Nintendo Switch are a bit different than your traditional LOVE environment, the following `system` module functions were added:
+Since the Nintendo systems running LÖVE Potion are a bit different than your traditional LÖVE environment, the following `system` module functions were added:
 
 - `love.system.getNetworkInfo()`
-  - Returns whether or not the system has an internet connection
+  - Returns whether or not the system has an internet connection.
 - `love.system.getFriendInfo()`
   - Returns the name of the user running LÖVE Potion (or your game) and friend code (if applicable)
 - `love.system.getPreferredLocales()` (LÖVE 12)
@@ -125,14 +125,14 @@ These are especially useful for either UI, netplay, or even multi-language suppo
 
 ## Console-Only Constants
 
-Both the 3DS and Switch versions of LÖVE Potion have the following constants:
+All versions of LÖVE Potion have the following constants:
 
 - `love._console`⁵
   - Returns the name of the console, "3DS", "Switch", or "Wii U"
 - `love._potion_version`
   - Returns the version of LÖVE Potion
 - `love._os`
-  - Returns the Operating System of the console, "Horizon" or "Cafe"
+  - Returns the Operating System of the console, "Horizon" (3DS, Switch) or "Cafe" (Wii U)
 
 ## Software Keyboard
 
@@ -141,7 +141,7 @@ Calling [`love.keyboard.setTextInput`](https://love2d.org/wiki/love.keyboard.set
 | Config     | Type    | Notes                                         |
 | ---------- | ------- | --------------------------------------------- |
 | type       | string  | `basic`, `numpad`, and `standard`<sup>1</sup> |
-| isPassword | boolean | makes the text hidden after entry             |
+| isPassword | boolean | Makes the text hidden after entry             |
 | hint       | string  | Text to prompt for on the input               |
 
 <sup>1</sup> Nintendo Switch only
@@ -150,12 +150,12 @@ Similarly to LÖVE, once the text is accepted by the user, it gets passed to [`l
 
 ## Gamepad Constants
 
-?> LÖVE Potion only uses the `love.gamepad*` callbacks for input handling (with the joycon or the 3DS system itself). For a list of button names, please see [the official LÖVE wiki](https://love2d.org/wiki/GamepadButton).
+?> For a list of button names, please see [the official LÖVE wiki](https://love2d.org/wiki/GamepadButton).
 
 ### Nintendo 3DS
 
-![](files/3DSControllerMap.png)
+![](../../files/3DSControllerMap.png)
 
 ### Nintendo Switch
 
-![](files/SwitchControllerMap.png)
+![](../../files/SwitchControllerMap.png)

@@ -36,4 +36,4 @@ You know, if I had a nickel for every time someone asked that since LÖVE Potion
 
 ### Why did it take so long for game debugging?
 
-I know this is probably not even a frequent question yet, but it will be. Simply put, all this time LÖVE Potion didn't have any proper means to debug other than the "dev build" logger. This output to a file on the SD card, which it's not entirely about the *speed* impact, it's more of the actual SD card's lifespan being affected with a ton of file writes, especially if it's in something like love.update.
+I know this is probably not even a frequent question yet, but it will be. Simply put, all this time LÖVE Potion didn't have any proper means to debug other than the "dev build" logger. This output to a file on the SD card, which it's not entirely about the *speed* impact, it's more of the actual SD card's lifespan being affected with a ton of file writes, especially if it's in something like `love.update`.
