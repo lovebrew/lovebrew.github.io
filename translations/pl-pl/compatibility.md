@@ -134,6 +134,28 @@ Wszystkie wersje LÖVE Potion mają następujące stałe wartości:
 - `love._os`
   - Zwraca nazwę Systemu Operacyjnego konsoli, "Horizon" (3DS, Switch) lub "Cafe" (Wii U)
 
+# Hashing on Wii U
+
+LÖVE nie ma własnych implementacji Big Endian dla funkcji hashujących w module `data`. Z tego powodu, by umożliwić kompilację sprawdzanie, czy Big Endian zostało zdefiniowane, zostało wyłączone i nie powoduje błędu. Przez brak poprawnej implementacji rezultaty funkcji hashujących będą się różnić.
+
+## Filesystem Operations
+
+LÖVE używa `physfs` jako wewnętrznego uchwytu do systemu plików, co daje świetną abstrakcję dla operacji na plikach zależnych od systemu operacyjnego. Szkopuł w tym, że systemy Horizon (3DS i Switch) oraz Cafe (Wii U) nie pozwalają na otwarcie tego samego pliku dwa razy jednocześnie. Pliki **muszą** zostać zamknięte przed ponownym otwarciem. Dla przykładu spójrz na poniższy przypadek:
+
+```lua
+local save_file = love.filesystem.openFile("save.dat", "w") -- tworzenie pliku
+save_file:write("test lolololo")
+
+local error = nil
+
+save_file, error = love.filesystem.openFile("save.dat", "r") -- otwarcie pliku do odczytu
+save_file:read() -- save_file byłby nil, próba operacji na wartości nil
+
+print(error) -- błąd wejścia/wyjścia lub zajętości systemu
+```
+
+Nie powinno to jednak dotyczyć funkcji takich jak `love.filesystem.read/write/append`, gdyż nie wypychają one obiektów Lua na stos i automatycznie zamykają plik po zakończeniu swojej pracy.
+
 ## Klawiatura Ekranowa
 
 Wywołanie [`love.keyboard.setTextInput`](https://love2d.org/wiki/love.keyboard.setTextInput) uruchamia aplet Systemowej Klawiatury Ekranowej. Zamiast prostokąta, przekaż w parametrze tablicę opcji:
