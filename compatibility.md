@@ -134,6 +134,28 @@ All versions of LÖVE Potion have the following constants:
 - `love._os`
   - Returns the Operating System of the console, "Horizon" (3DS, Switch) or "Cafe" (Wii U)
 
+## Hashing on Wii U
+
+LÖVE itself does not have a big endian implementation for the hashing functions in the data module. However, to keep things building, we have omitted the error check when checking for big endian being defined. Your hashing results will vary due to no proper big endian implementations.
+
+## Filesystem Operations
+
+LÖVE uses physfs as the internal filesystem handler, which is great for abstracting system-dependant filesystem operations. The only caveat is that Horizon (3DS and Switch) and Cafe (Wii U) OSes do not allow the same file to be opened more than once. Files **must** be closed first before re-opening them.  For example, consider the following:
+
+```lua
+local save_file = love.filesystem.openFile("save.dat", "w") -- create file
+save_file:write("lmao testing")
+
+local error = nil
+
+save_file, error = love.filesystem.openFile("save.dat", "r") -- open to read what we want
+save_file:read() -- save_file would be nil, so operating on a nil value
+
+print(error) -- might be i/o error or that the OS was busy
+```
+
+This should not affect methods like `love.filesystem.read/write/append`, however since these do not push Lua objects to the stack and will automatically close the File when done doing their operations.
+
 ## Software Keyboard
 
 Calling [`love.keyboard.setTextInput`](https://love2d.org/wiki/love.keyboard.setTextInput) brings up the System Software Keyboard applet. Instead of passing the rectangle, pass a table for different options:
