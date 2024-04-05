@@ -134,11 +134,11 @@ Wszystkie wersje LÖVE Potion mają następujące stałe wartości:
 - `love._os`
   - Zwraca nazwę Systemu Operacyjnego konsoli, "Horizon" (3DS, Switch) lub "Cafe" (Wii U)
 
-# Hashing on Wii U
+## Hashowanie na Wii U
 
 LÖVE nie ma własnych implementacji Big Endian dla funkcji hashujących w module `data`. Z tego powodu, by umożliwić kompilację sprawdzanie, czy Big Endian zostało zdefiniowane, zostało wyłączone i nie powoduje błędu. Przez brak poprawnej implementacji rezultaty funkcji hashujących będą się różnić.
 
-## Filesystem Operations
+## Operacje na systemie plików
 
 LÖVE używa `physfs` jako wewnętrznego uchwytu do systemu plików, co daje świetną abstrakcję dla operacji na plikach zależnych od systemu operacyjnego. Szkopuł w tym, że systemy Horizon (3DS i Switch) oraz Cafe (Wii U) nie pozwalają na otwarcie tego samego pliku dwa razy jednocześnie. Pliki **muszą** zostać zamknięte przed ponownym otwarciem. Dla przykładu spójrz na poniższy przypadek:
 
