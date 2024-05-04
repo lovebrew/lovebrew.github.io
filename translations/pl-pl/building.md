@@ -86,9 +86,11 @@ sudo (dkp-)pacman -S --needed - < platform/cafe/pkglist.txt
 
 Gdy wszystko już się zainstaluje, uruchom jedno z poniższych poleceń, w zależności od wybranej konsoli:
 
-- 3DS: /opt/devkitpro/portlibs/3ds/bin/arm-none-eabi-cmake -S . -B build
-- Switch: /opt/devkitpro/portlibs/switch/bin/aarch64-none-elf-cmake -S . -B build
-- Wii U: /opt/devkitpro/portlibs/wiiu/bin/powerpc-eabi-cmake -S . -B build
+- 3DS: `catnip -T 3DS`
+- Switch: `catnip -T Switch`
+- Wii U: `catnip -T WiiU`
+
+Domyślnie projekt zbuduje się w trybie `release`. Jeśli chcesz używać trybu `debug`, po prostu dodaj słówko `debug` po nazwie konsoli, np. `catnip -T 3DS debug`.
 
 ## Tworzenie Pull Request
 
