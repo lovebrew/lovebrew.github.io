@@ -88,6 +88,8 @@ Once everything finishes installing, run the following, depending on the console
 - Switch: `catnip -T Switch`
 - Wii U: `catnip -T WiiU`
 
+By default this will build in `release` mode. If you want to use `debug` mode, simply add `debug` after the console name, e.g. `catnip -T 3DS debug`.
+
 ## Pull Requests
 
 ### Naming
