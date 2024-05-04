@@ -31,18 +31,16 @@ Once the packages have syncronized, run the following:
 #### **Windows (msys2)**
 
 ```bash
-pacman -S switch-dev 3ds-dev wiiu-dev¹
+pacman -S switch-dev 3ds-dev wiiu-dev catnip
 ```
 
 #### **Unix-like (Linux, macOS)**
 
 ```bash
-sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env wiiu-dev¹
+sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env wiiu-dev
 ```
 
 <!-- tabs:end -->
-
-¹This is only applicable to LÖVE Potion 3.x
 
 !> The following information is for development purposes only! Do not build LÖVE Potion directly if you don't understand programming or are not going to contribute. It only leads to [fragmentation](https://en.wikipedia.org/wiki/Market_fragmentation). If you wish to package your game for distribution, please see [Game Distribution](packaging)
 
@@ -86,9 +84,9 @@ sudo (dkp-)pacman -S --needed - < platform/cafe/pkglist.txt
 
 Once everything finishes installing, run the following, depending on the console:
 
-- 3DS: /opt/devkitpro/portlibs/3ds/bin/arm-none-eabi-cmake -S . -B build
-- Switch: /opt/devkitpro/portlibs/switch/bin/aarch64-none-elf-cmake -S . -B build
-- Wii U: /opt/devkitpro/portlibs/wiiu/bin/powerpc-eabi-cmake -S . -B build
+- 3DS: `catnip -T 3DS`
+- Switch: `catnip -T Switch`
+- Wii U: `catnip -T WiiU`
 
 ## Pull Requests
 
