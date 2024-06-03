@@ -10,7 +10,9 @@ SuperProject
 └── lovebrew.toml
 ```
 
-`SuperProject` jest nazwą folderu nadrzędnego całego projektu. `SuperGame` jest katalogiem zawierającym wszystkie zasoby gry używane w procesie pakowania. Plik `lovebrew.toml` należy utworzyć, klikając prawym przyciskiem myszy w katalogu `SuperProject` i tworząc nowy plik tekstowy. Wzorzec zawartości pliku konfiguracyjnego znajdziesz [tutaj](../../files/lovebrew.toml ":ignore"). Znajdziesz tam kilka ustawień, które możesz zmienić, ale najważniejsze z nich opisano poniżej.
+`SuperProject` jest nazwą folderu nadrzędnego całego projektu. `SuperGame` jest katalogiem zawierającym wszystkie zasoby gry używane w procesie pakowania. Plik `lovebrew.toml` należy utworzyć, klikając prawym przyciskiem myszy w katalogu `SuperProject` i tworząc nowy plik tekstowy. Wzorzec zawartości pliku konfiguracyjnego znajdziesz [tutaj](files/lovebrew.toml ":ignore"). Znajdziesz tam kilka ustawień, które możesz zmienić, ale najważniejsze z nich opisano poniżej.
+
+[Tutaj](files/lovepotion-example.zip ":ignore") znajdziesz przykładowe archiwum zip z załączonym programem "Hello World".
 
 ### Metadane i Ikony
 

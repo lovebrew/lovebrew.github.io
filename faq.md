@@ -5,6 +5,14 @@
 Running your game without any changes is possible, but it's recommended to currently use LÖVE Potion to make games from the ground up.<br>
 Take a look at [compatibility](compatibility) and the API reference on the sidebar to see what may need changing.
 
+### Can I run my LÖVE Potion application through emulation?
+
+No, emulation is generally unreliable. It is strongly recommended to use _real_ hardware if you want to test it on-device. Alternatively you can use [nëst](https://github.com/lovebrew/nest) in order to pseudo-test your games.
+
+### Do I need to install all the devkitPro tools to build my game?
+
+No. All you need is the [bundler website](/bundler/index.md). It will automatically convert your assets to the right format and package the game for you.
+
 ### Can I help?
 
 Yes, see [Building](building) for more details.
@@ -12,6 +20,14 @@ Yes, see [Building](building) for more details.
 ### LÖVE Potion is missing feature 'x' from LÖVE, and I need it!
 
 Well that's great to hear! Please open an issue so that I can keep track of your request. I'll gladly implement what you've asked for, as long as it's feasible.
+
+### Can I use shaders?
+
+No. The 3DS doesn't support the OpenGL Shader Language, which is what LÖVE uses. Shader programs for PICA200 (the 3DS GPU) need to be written in [picasso](https://github.com/devkitPro/picasso) shader language and pre-compiled.
+
+The Switch and Wii U can use GLSL, but there are differences in implementation and they still need to be pre-compiled, so shaders from your LÖVE game wouldn't *just run*. 
+
+In general, custom shader support is a complex and difficult to implement feature.
 
 ### I just got a Lua error! The app crashed! What do I do?
 
