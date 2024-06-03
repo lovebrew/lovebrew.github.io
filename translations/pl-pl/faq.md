@@ -21,9 +21,13 @@ Tak, sprawdź sekcję [Kompilacja](/translations/pl-pl/building), by dowiedzieć
 
 Świetnie, że mówisz! Otwórz proszę wątek na GitHub, to pomoże mi zapamiętać i śledzić postępy co do Twojej prośby. Chętnie zaimplementuję brakującą funkcjonalność, jeśli tylko jest ona możliwa do wykonania.
 
-### Czy shadery są wspierane na 3DS?
+### Czy mogę używać shaderów?
 
-Nie. 3DS nie wspiera OpenGL Shader Language, którego LÖVE używa. Programy shadera dla PICA200 (układ graficzny 3DS) muszą być napisane w języku asemblera i pre-kompilowane.
+Nie. 3DS nie wspiera OpenGL Shader Language, którego LÖVE używa. Programy shadera dla PICA200 (układ graficzny 3DS) muszą być napisane w języku shadera [picasso](https://github.com/devkitPro/picasso) i pre-kompilowane.
+
+Switch oraz Wii U mogą używać GLSL, ale są pewne różnice w implementacji i programy shadera nadal muszą być pre-kompilowane, więc nie dałoby się użyć kodu z twojej gry LÖVE *ot tak*.
+
+Ogólnie rzecz biorąc, wsparcie dla niestandardowych shaderów to skomplikowana i trudna w implementacji funkcjonalność.
 
 ### Wyskoczył mi błąd Lua! Aplikacja scrashowała! Co mam zrobić?
 
