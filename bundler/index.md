@@ -12,6 +12,8 @@ SuperProject
 
 `SuperProject` is the top-level folder name of what the project will be called. `SuperGame` is the directory to hold all of the game assets that will be used during the bundling process. The `lovebrew.toml` file is created by right clicking inside the `SuperProject` directory and creating a new file. You can find the [configuration template here](files/lovebrew.toml ":ignore"). There are several settings that can be changed, but the more important ones are detailed below.
 
+You can find an example zip archive with a "Hello World" program [here](files/lovepotion-example.zip ":ignore").
+
 ### Custom Metadata & Icons
 
 The `lovebrew.toml` file can be opened in any text editor, including Notepad on Windows (even if Windows prompts what to open the file with, you can still use Notepad). There are comments for each item, so please read them carefully. Any `string` values may contain spaces.
