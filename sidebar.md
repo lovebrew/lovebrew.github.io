@@ -1,9 +1,9 @@
 - **Main**
 - [Home](/)
-- [Building LÖVE Potion](building)
 - [Compatibility](compatibility)
-- [Game Distribution](packaging)
+- [Running Your Game](packaging)
 - [Debugging Your Game](debugging)
+- [Contributing](building)
 - **Bundler**
 - [Configuration](bundler/index)
 - [API Documentation](bundler/api)
