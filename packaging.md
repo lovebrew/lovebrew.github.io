@@ -34,7 +34,10 @@ You can bundle your game into the LÖVE Potion executable for your console for e
 
 #### Manual method
 
-It is possible to append a .love-file containing your game to the LÖVE Potion executable, thus creating a **fused game**. Create the .love-file as described [in the section above](#create-a-love-file), download the [latest LÖVE Potion binary](https://github.com/TurtleP/LovePotion/releases) for your desired platform and run one of the following commands:
+It is possible to append a .love-file containing your game to the LÖVE Potion executable, thus creating a **fused game**. 
+1. Create the .love-file as described [in the section above](#create-a-love-file)
+2. Download the [latest LÖVE Potion binary](https://github.com/TurtleP/LovePotion/releases) for your desired platform 
+3. Navigate to the directory containing both your game and the LÖVE Potion binary and run one of the following commands:
 
 <!-- tabs:start -->
 

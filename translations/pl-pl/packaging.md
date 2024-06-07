@@ -34,7 +34,10 @@ Możesz spakować swoją grę wewnątrz pliku wykonywalnego LÖVE Potion dla uł
 
 #### Metoda ręczna
 
-Możliwe jest dołączenie pliku .love z grą do pliku wykonywalnego LÖVE Potion, tworząc w ten sposób **złączoną grę**. Stwórz plik .love tak jak zostało to opisane [w sekcji powyżej](#create-a-love-file), pobierz najnowszy [plik wykonywalny LÖVE Potion](https://github.com/TurtleP/LovePotion/releases) dla swojej konsoli i wywołaj jedną z następujących komend:
+Możliwe jest dołączenie pliku .love z grą do pliku wykonywalnego LÖVE Potion, tworząc w ten sposób **złączoną grę**. 
+1. Stwórz plik .love tak jak zostało to opisane [w sekcji powyżej](#create-a-love-file)
+2. Pobierz najnowszy [plik wykonywalny LÖVE Potion](https://github.com/TurtleP/LovePotion/releases) dla swojej konsoli 
+3. Przejdź do kataolgu zawierającego oba te pliki i wywołaj jedną z następujących komend:
 
 <!-- tabs:start -->
 
