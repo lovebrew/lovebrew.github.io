@@ -6,7 +6,7 @@
 
 ### 'Game' Folder
 
-?> This is meant for developing your game. Use one of the prior methods when you are finished. If you want a custom game icon and title/author, package it using the LÖVEBrew Bundler Web App.
+?> This is meant for developing your game. Use one of the other methods when you are finished. If you want a custom game icon and title/author, package it using the LÖVEBrew Bundler Web App.
 
 The quickest way to debug is through the `game` folder. Just [download the latest release binary](https://github.com/TurtleP/LovePotion/releases) for your console and put it under the proper directory:
 
@@ -34,7 +34,7 @@ You can bundle your game into the LÖVE Potion executable for your console for e
 
 #### Manual method
 
-Similarly to how [LÖVE does this for Windows](https://love2d.org/wiki/Game_Distribution#Creating_a_Windows_Executable), it is possible to append a .love-file containing your game to the LÖVE Potion executable. Create the .love-file as described [in the section above](#create-a-love-file), download the [latest LÖVE Potion binary](https://github.com/TurtleP/LovePotion/releases) for your desired platform and run one of the following commands:
+It is possible to append a .love-file containing your game to the LÖVE Potion executable, thus creating a **fused game**. Create the .love-file as described [in the section above](#create-a-love-file), download the [latest LÖVE Potion binary](https://github.com/TurtleP/LovePotion/releases) for your desired platform and run one of the following commands:
 
 <!-- tabs:start -->
 
@@ -49,6 +49,20 @@ copy /b lovepotion.nro+SuperGame.love SuperFused.nro
 
 :: Wii U
 copy /b lovepotion.wuhb+SuperGame.love SuperFused.wuhb
+
+```
+
+#### **Windows (Powershell)**
+
+```powershell
+# 3DS
+Get-Content lovepotion.3dsx,SuperGame.love -Encoding Byte | Set-Content SuperGame.3dsx -Encoding Byte
+
+# Switch
+Get-Content lovepotion.nro,SuperGame.love -Encoding Byte | Set-Content SuperGame.nro -Encoding Byte
+
+# Wii U
+Get-Content lovepotion.wuhb,SuperGame.love -Encoding Byte | Set-Content SuperGame.wuhb -Encoding Byte
 
 ```
 

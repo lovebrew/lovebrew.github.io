@@ -6,7 +6,7 @@
 
 ### 'Game' Folder
 
-?> Ta metoda jest przydatna w trakcie tworzenia gier. Używaj poprzednich metod, gdy już skończysz. Jeśli chcesz niestandardowej ikony i tytułu/autora, spakuj swoją grę, używając aplikacji LÖVEBrew Bundler.
+?> Ta metoda jest przydatna w trakcie tworzenia gier. Używaj pozostałych metod, gdy już skończysz. Jeśli chcesz niestandardowej ikony i tytułu/autora, spakuj swoją grę, używając aplikacji LÖVEBrew Bundler.
 
 Najszybszym sposobem na uruchomienie i debugowanie gry jest folder `game`. Po prostu [pobierz najnowszy plik wykonywalny](https://github.com/TurtleP/LovePotion/releases) dla swojej konsoli i wstaw go do odpowiedniego katalogu:
 
@@ -34,7 +34,7 @@ Możesz spakować swoją grę wewnątrz pliku wykonywalnego LÖVE Potion dla uł
 
 #### Metoda ręczna
 
-Podobnie jak w przypadku [LÖVE na Windows](https://love2d.org/wiki/Game_Distribution#Creating_a_Windows_Executable), możliwe jest dołączenie pliku .love z grą do pliku wykonywalnego LÖVE Potion. Stwórz plik .love tak jak zostało to opisane [w sekcji powyżej](#create-a-love-file), pobierz najnowszy [plik wykonywalny LÖVE Potion](https://github.com/TurtleP/LovePotion/releases) dla swojej konsoli i wywołaj jedną z następujących komend:
+Możliwe jest dołączenie pliku .love z grą do pliku wykonywalnego LÖVE Potion, tworząc w ten sposób **złączoną grę**. Stwórz plik .love tak jak zostało to opisane [w sekcji powyżej](#create-a-love-file), pobierz najnowszy [plik wykonywalny LÖVE Potion](https://github.com/TurtleP/LovePotion/releases) dla swojej konsoli i wywołaj jedną z następujących komend:
 
 <!-- tabs:start -->
 
@@ -49,6 +49,20 @@ copy /b lovepotion.nro+SuperGame.love SuperFused.nro
 
 :: Wii U
 copy /b lovepotion.wuhb+SuperGame.love SuperFused.wuhb
+
+```
+
+#### **Windows (Powershell)**
+
+```powershell
+# 3DS
+Get-Content lovepotion.3dsx,SuperGame.love -Encoding Byte | Set-Content SuperGame.3dsx -Encoding Byte
+
+# Switch
+Get-Content lovepotion.nro,SuperGame.love -Encoding Byte | Set-Content SuperGame.nro -Encoding Byte
+
+# Wii U
+Get-Content lovepotion.wuhb,SuperGame.love -Encoding Byte | Set-Content SuperGame.wuhb -Encoding Byte
 
 ```
 
