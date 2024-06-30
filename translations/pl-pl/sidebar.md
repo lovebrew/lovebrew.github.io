@@ -1,9 +1,9 @@
 - **Główna**
 - [Strona Główna](translations/pl-pl/)
-- [Kompilacja LÖVE Potion](translations/pl-pl/building)
 - [Kompatybilność](translations/pl-pl/compatibility)
-- [Dystrybucja Gier](translations/pl-pl/packaging)
+- [Uruchamianie Gier](translations/pl-pl/packaging)
 - [Debugowanie Gier](translations/pl-pl/debugging)
+- [Kompilacja LÖVE Potion](translations/pl-pl/building)
 - **Bundler**
 - [Konfiguracja](translations/pl-pl/bundler/index)
 - [Dokumentacja API](translations/pl-pl/bundler/api)
