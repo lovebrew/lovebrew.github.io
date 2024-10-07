@@ -6,7 +6,7 @@ const config: Config = {
   title: "LÖVEBrew",
   tagline: "LÖVE Potion",
   favicon: "images/favicon.ico",
-  url: "https://lovebrew.org",
+  url: "https://lovebrew.github.io",
   baseUrl: "/",
 
   trailingSlash: false,
