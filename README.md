@@ -1,25 +1,41 @@
-## Welcome ♥
+# Website
 
-LÖVE Potion is a homebrew game framework for Nintendo 3DS and Nintendo Switch.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-If you are new and unfamiliar with LÖVE and/or Lua, I genuinely recommend clicking the "How to LÖVE" link on the sidebar first.
+### Installation
 
-Once you understand how LÖVE works, check out the [compatibility](compatibility) section to see what's different in LÖVE Potion. There is also a quick link to the LÖVE Wiki for the API documentation, as the API is nearly fully compatible with LÖVE.
-
-![](files/lovepotion.png)
-
-## Hello World
-
-This is the full source for 'Hello World!' in LÖVE Potion.
-
-```lua
-function love.draw(screen)
-    local width, height = love.graphics.getDimensions(screen)
-    love.graphics.print('Hello World!', width / 2, height / 2)
-end
-
--- we need to quit the app when a button is pressed
-function love.gamepadpressed(joystick, button)
-    love.event.quit()
-end
 ```
+$ yarn
+```
+
+### Local Development
+
+```
+$ yarn start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

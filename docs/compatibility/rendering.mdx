@@ -1,0 +1,72 @@
+---
+hide_title: true
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Rendering
+
+:::info
+
+It is important to note that for custom textures you must convert your PNG or JPEG font to t3x format on Nintendo 3DS. This can be done when bundling your game via [the bundler website](/bundler/overview)
+
+:::
+
+## Drawing
+
+The `love.draw` callback has a screen parameter. This does not affect the Nintendo Switch version.
+If you wish to draw to only one screen. You would simply check against the screen value that was passed in:
+
+```lua title='main.lua'
+function love.draw(screen)
+    if screen ~= "bottom" then
+        -- render top screen
+    end
+end
+```
+
+The following screen values are what get passed per console:
+
+<Tabs>
+  <TabItem value="Nintendo 3DS">`left`, `right`, and `bottom`</TabItem>
+  <TabItem value="Nintendo Switch">`default`</TabItem>
+  <TabItem value="Nintendo Wii U">`tv` and `gamepad`</TabItem>
+</Tabs>
+
+## Stereoscopic 3D Depth
+
+:::info
+
+Stereoscopic depth is only for Nintendo 3DS. This is function will always return zero on Nintendo 2DS family systems. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
+
+:::
+
+The Nintendo 3DS has stereoscopic 3D – it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getDepth()`. This will return the 3D slider’s current value, which is in the range of zero to one. One way for this to work is through this example:
+
+```lua title='main.lua'
+local str, font = "Hello World", nil
+local textDepth = 6
+function love.load()
+    font = love.graphics.getFont()
+end
+
+function love.draw(screen)
+    if screen == "bottom" then
+        return
+    end
+
+    local sysDepth = -love.graphics.getDepth()
+
+    if screen == "right" then
+        sysDepth = -sysDepth
+    end
+
+    local left = math.floor(0.5 * (400 - font:getWidth(str)))
+    love.graphics.print("Hello World", left - sysDepth * textDepth, 120)
+end
+```
+
+We define where the main x coordinate should be defined as left . This specifically is the anchor point to draw at. In this case, it’s going to be in the center of the screen. This value is then subtracted by what the depth value currently is on the system and multiplied by a constant z value.
+
+You can enable or disable stereoscopic 3D at any time using `love.graphics.set3D(enable)` and passing `true` or `false`. Ideally this should only be done at application startup.

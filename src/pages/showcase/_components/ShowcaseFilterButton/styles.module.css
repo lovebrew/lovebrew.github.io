@@ -1,0 +1,43 @@
+.showcaseConsoleFilterButton {
+  border-radius: 1em;
+  font-size: .675em;
+  padding: 0 1em;
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
+  border: 1px solid var(--ifm-color-primary);
+}
+
+.showcaseConsoleFilterButton:hover {
+  color: var(--ifm-font-color-base);
+}
+
+@media screen and (min-width: 600px) {
+  .showcaseConsoleFilterButton:hover#showcaseConsoleFilter3DS {
+    border-color: var(--showcaseConsoleTag3DS);
+  }
+
+  .showcaseConsoleFilterButton:hover#showcaseConsoleFilterSwitch {
+    border-color: var(--showcaseConsoleTagSwitch);
+  }
+
+  .showcaseConsoleFilterButton:hover#showcaseConsoleFilterWiiU {
+    border-color: var(--showcaseConsoleTagWiiU);
+  }
+}
+
+.showcaseConsoleFilterButton.active#showcaseConsoleFilter3DS {
+  background-color: var(--showcaseConsoleTag3DS);
+}
+
+.showcaseConsoleFilterButton.active#showcaseConsoleFilterSwitch {
+  background-color: var(--showcaseConsoleTagSwitch);
+}
+
+.showcaseConsoleFilterButton.active#showcaseConsoleFilterWiiU {
+  background-color: var(--showcaseConsoleTagWiiU);
+}
+
+.active {
+  border-color: transparent;
+  text-shadow: 0 0 0.35em rgba(0, 0, 0, 0.85);
+}

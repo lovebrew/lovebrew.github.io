@@ -1,0 +1,82 @@
+---
+hide_title: true
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Get LÖVE Potion
+
+## Downloading
+
+In order to start working on your own games, download LÖVE Potion from its [GitHub releases page](https://github.com/lovebrew/lovepotion/releases/latest). Make sure to save this to a memorable location, usually in the `Downloads` folder. When the zip file finishes downloading, it can extracted by right clicking on it and selecting the appropriate option.
+
+## Running
+
+:::info
+
+Please check that your Custom Firmware is compatible with LÖVE Potion. You can find more details in [Compatibility](/compatibility/general).
+
+:::
+
+### `Game` Folder
+
+Once the files are done extracting, transfer the executable (3dsx, nro, wuhb) binary to your microSD card:
+
+<Tabs groupId="Path">
+  <TabItem value="CTR" label="Nintendo 3DS">
+    `sdmc:/3ds/lovepotion/lovepotion.3dsx`
+  </TabItem>
+  <TabItem value="HAC" label="Nintendo Switch">
+    `sdmc:/switch/lovepotion/lovepotion.nro`
+  </TabItem>
+  <TabItem value="CAFE" label="Nintendo Wii U">
+    `sdmc:/wiiu/apps/lovepotion/lovepotion.wuhb`
+  </TabItem>
+</Tabs>
+
+It is likely that the parent directory does not exist yet, so the folder will need to be created.
+
+Now create a folder called `game` inside of the `lovepotion` directory. Inside of this will be your source files for what LÖVE Potion will be running. Inside of `game` should be a file named `main.lua`. The content of this file is the main entry point, and for this tutorial will be [a basic "Hello World"](/docs/welcome.md#hello-world).
+
+After all files have been created, simply launch LÖVE Potion from the Homebrew Menu (3DS, Switch) or Home Menu (Wii U) and it will run your game.
+
+### Fused Binary
+
+You can bundle your game into the LÖVE Potion executable for your console for ease of distribution. This is recommended for when you are done developing you game and want to show it off to your friends!
+
+#### Manual Fusing
+
+It is possible to append a zip file containing your game to the LÖVE Potion executable, thus creating a fused game. However, you will not be able to create custom metadata, such as title, icon, or author information.
+
+<Tabs groupId='Fused'>
+    <TabItem value='Windows' label='Windows (Command Prompt)'>
+    ```batch
+    :: 3DS
+    copy /b lovepotion.3dsx+SuperGame.love SuperFused.3dsx
+
+    :: Switch
+    copy /b lovepotion.nro+SuperGame.love SuperFused.nro
+
+    :: Wii U
+    copy /b lovepotion.wuhb+SuperGame.love SuperFused.wuhb
+    ```
+    </TabItem>
+    <TabItem value='Unix' label='Unix-like (macOS, Linux)'>
+    ```bash
+    # 3DS
+    cat lovepotion.3dsx SuperGame.love > SuperGame.3dsx
+
+    # Switch
+    cat lovepotion.nro SuperGame.love > SuperGame.nro
+
+    # Wii U
+    cat lovepotion.wuhb SuperGame.love > SuperGame.wuhb
+    ```
+    </TabItem>
+
+</Tabs>
+
+#### Automatic Fusing
+
+Your game can automatically be fused together _with_ custom metadata using [the bundler](https://bundle.lovebrew.org). This will handle converting any assets for you on Nintendo 3DS as well! You can find more details about this [on its Wiki page](/bundler/overview)

@@ -1,0 +1,37 @@
+.section {
+  padding: 40px 0;
+}
+
+.showcaseFitlerContainer {
+  display: flex;
+  flex-flow: wrap;
+  margin: auto;
+  gap: 0.5em;
+  font-size: x-large;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcaseFitlerContainer .showcaseConsoleTag {
+  background-color: transparent !important;
+}
+
+.showcaseFilterHeaderContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.showcaseFilterHeader {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.showcaseFilterResults {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+  display: inline-block;
+  margin-left: 0.5em;
+}
