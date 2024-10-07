@@ -1,0 +1,26 @@
+:root {
+  --showcaseConsoleTag3DS: #d80000;
+  --showcaseConsoleTagSwitch: #e60012;
+  --showcaseConsoleTagWiiU: #009ddc;
+}
+
+.showcaseConsoleTag {
+  border-radius: 1em;
+  font-size: .675em;
+  padding: 0 1em;
+  color: white;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.showcaseConsoleTag3DS {
+  background-color: var(--showcaseConsoleTag3DS);
+}
+
+.showcaseConsoleTagSwitch {
+  background-color: var(--showcaseConsoleTagSwitch);
+}
+
+.showcaseConsoleTagWiiU {
+  background-color: var(--showcaseConsoleTagWiiU);
+}

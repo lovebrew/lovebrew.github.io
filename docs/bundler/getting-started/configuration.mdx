@@ -1,0 +1,117 @@
+---
+hide_title: true
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Bundle Configuration
+
+The `lovebrew.toml` file for a bundle is used for configuring how the Bundler service will process your game. It is written in the [TOML format](https://toml.io). This contains the important metadata about your game as well. Be sure to read about [the bundle structure](/bundler/getting-started/structure) for more details on how the Bundler finds this file.
+
+Every configuration file consists of the following sections:
+
+- [`[metadata]`](#the-metadata-section) — Defines the game metadata to display.
+  - [`title`](#the-title-field) - The title of the game.
+  - [`author`](#the-author-field) - The author of the game
+  - [`version`](#the-version-field) - The version of the game.
+  - [`icons`](#the-icons-field) - Image files to use as custom icons.
+- [`[build]`](#the-build-section) - Defines how the Bundler will process the bundle.
+  - [`targets`](#the-targets-field) - The target consoles to build for.
+  - [`source`](#the-source-field) - The name of the folder containing the game code and assets.
+  - [`packaged`](#the-packaged-field) - Whether to fuse the game source into the final binary.
+
+## The [metadata] section
+
+The first section in a `lovebrew.toml` is `[metadata]`.
+
+```toml title='lovebrew.toml'
+[metadata]
+title = "SuperGame" # title of the game
+author = "SuperAuthor" # author(s) of the game
+description = "SuperDescription" # description of the game
+version = "0.1.0" # current version, obeying semver
+icons = { ctr = "", hac = "", cafe = "" } # custom icon paths
+```
+
+All fields except `icons` are required. When these are omitted, the default LÖVE Potion icon is used.
+
+### The `title` field
+
+The game title is an identifier for your game - make it unique and relevant! Users will want to be able to identify your game at a glance, so naming your amazing Touhou-inspired shoot-em-up as "MySuper CoolG4ME!" will be hard to remember. If this does not display correctly, verify that it is within length:
+
+- Nintendo 3DS: 128 UTF-16 characters
+- Nintedo Switch: 512 UTF-8 characters
+- Nintendo Wii U: 256 UTF-8 characters
+
+### The `author` field
+
+The author field is used to credit the creator(s) of the game. If this does not display correctly, verify that it is within length:
+
+- Nintendo 3DS: Up to 128 UTF-16 characters.
+- Nintendo Switch: Up to 256 UTF-8 characters.
+- Nintendo Wii U: Up to 256 UTF-8 characters.
+
+### The `description` field
+
+The description field provides a brief overview of your game. Note that this field is only applicable to the Nintendo 3DS and must fit within 256 UTF-16 characters, minus the length of the `version` field.
+
+### The `version` field
+
+The version field indicates the version of the game in the format `{major}.{minor}.{revision}`. This field has no character limits and is essential for version control and updates. Make sure to follow the standard versioning format to maintain consistency.
+
+### The `icons` field
+
+The icons field is a table that specifies paths to custom icons for each platform. These are relative to the root of the bundle zip file. Each console requires specific icon sizes and formats:
+
+- Nintendo 3DS: 48x48 PNG
+- Nintendo Switch: 256x256 JPG
+- Nintendo Wii U: 128x128 PNG
+
+The paths can be specified directly within the `icons` table in two ways: inline and sub-table.
+
+<Tabs>
+  <TabItem value='Inline'>
+
+    ```toml title='lovebrew.toml'
+    [metadata]
+    icons = { ctr = "path/to/3ds/icon.png", hac = "path/to/switch/icon.jpg", cafe = "path/to/wiiu/icon.png" }
+    ```
+
+  </TabItem>
+  <TabItem value='Sub-Table'>
+
+    ```toml title='lovebrew.toml'
+    [metadata.icons]
+    ctr = "path/to/3ds/icon.png"
+    hac = "path/to/switch/icon.jpg"
+    cafe = "path/to/wiiu/icon.png"
+    ```
+
+  </TabItem>
+</Tabs>
+
+## The [build] section
+
+```toml title='lovebrew.toml'
+[build]
+targets = ["ctr", "hac", "cafe"]
+source = "game"
+packaged = false
+```
+
+### The `targets` field
+
+The targets field is an array of strings that specifies the desired consoles for which the game should be built. You can include any combination of the following options:
+
+- Nintendo 3DS: `"ctr"`
+- Nintendo Switch: `"hac"`
+- Nintendo Wii U: `"cafe"`
+
+### The `source` field
+
+The source field indicates the name of the folder containing your game's code and assets. This folder should be located relative to the root of the bundle zip file.
+
+### The `packaged` field
+
+The packaged field is a boolean option that determines whether to fuse the game source into the final binary. When set to `true`, the game code and assets will be bundled into a single executable file. When set to `false`, the resulting zip file download will contain the source and asset files from your game for each console in their own specified directories.

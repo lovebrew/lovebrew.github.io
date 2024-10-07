@@ -1,0 +1,19 @@
+.version-indicator {
+  display: flex;
+  align-items: center;
+  padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+}
+
+.love-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.version-text {
+  color: var(--ifm-color-content);
+  display: flex;
+  align-items: center;
+  font: var(--ifm-font-size-base) / var(--ifm-line-height-base) var(--ifm-font-family-base);
+  font-weight: var(--ifm-font-weight-semibold);
+}
