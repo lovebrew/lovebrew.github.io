@@ -1,0 +1,15 @@
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.showcaseContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #f6fdfd;
+}
+
+html[data-theme='dark'] .showcaseContainer {
+  background-color: #232525;
+}

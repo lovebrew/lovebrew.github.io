@@ -1,0 +1,119 @@
+:root {
+  --showcaseCardTransition: 0.5s ease;
+  --showcaseCardBlur: blur(4px) brightness(0.5);
+}
+
+.showcaseCard {
+  transition: transform var(--showcaseCardTransition);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.showcaseCard:hover {
+  cursor: default;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 600px) {
+  .showcaseCard:hover {
+    cursor: default;
+    transform: unset;
+  }
+}
+
+
+.showcaseCardPreview {
+  overflow: hidden;
+  width: 100%;
+  max-height: 10em;
+  position: relative;
+}
+
+.showcaseCardImage {
+  overflow: hidden;
+  height: 150px;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  object-fit: fill;
+  border-radius: 4px 4px 0 0;
+  transition: filter var(--showcaseCardTransition);
+}
+
+
+.showcaseCardDescription {
+  margin: 0;
+  padding: 1em;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-shadow: black 1px 0px 10px;
+  font-size: 1em;
+}
+
+.showcaseCardPreview:hover .showcaseCardImage {
+  filter: var(--showcaseCardBlur);
+}
+
+.showcaseCardPreview:hover .showcaseCardDescription {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .showcaseCard:hover .showcaseCardImage {
+    filter: var(--showcaseCardBlur);
+  }
+
+  .showcaseCard:hover .showcaseCardDescription {
+    opacity: 1;
+  }
+}
+
+.showcaseCardHeader {
+  align-items: center;
+  margin-right: 0.25rem;
+  display: flex;
+}
+
+.showcaseCardBody {
+  padding: var(--ifm-card-vertical-spacing) var(--ifm-card-horizontal-spacing);
+}
+
+.showcaseCardTitle {
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  margin-right: 0.25rem;
+  flex: 1 1 auto;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.showcaseCardLink {
+  text-decoration: none;
+  background: linear-gradient(var(--ifm-color-primary), var(--ifm-color-primary)) 0% 100% / 0% 1px no-repeat;
+  transition: background-size ease-out 200ms;
+}
+
+.showcaseCardTitle .showcaseCardLink:not(:focus):hover {
+  background-size: 100% 1px;
+}
+
+.showcaseCardAuthor {
+  font-size: smaller;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  color: initial;
+  margin-right: 0.25rem;
+  margin-bottom: 0;
+}
+
+.showcaseCardFooter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
