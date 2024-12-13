@@ -47,11 +47,12 @@ local utf8 = require("utf8")
 
 -- get the encoded utf8 of the Play Coin icon
 local glyph = utf8.char("0xE075")
+local font = nil
 
 function love.load()
     -- if we're on Switch, set extended as our current font
     if love._console == "Switch" then
-        love.graphics.setNewFont("nintendo extended", 14)
+        font = love.graphics.newFont("nintendo extended", 14)
     end
 end
 
@@ -62,6 +63,7 @@ function love.draw(screen)
         return
     end
 
-    love.graphics.print(glyph)
+    love.graphics.setFont(font)
+    love.graphics.print(glyph, 10, 10)
 end
 ```

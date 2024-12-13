@@ -1,0 +1,36 @@
+---
+title: Preparing for Debugging
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+:::info
+Important: Before debugging, ensure that your development environment is fully set up and all necessary dependencies are installed.
+:::
+
+# Debugging
+
+This guide will walk you through the process of identifying and resolving crashes in LÖVE Potion using `gdb` (GNU Debugger) and a specialized command-line tool for deeper analysis.
+
+## Setting Up the Debug Environment
+
+To debug crashes, you will need:
+
+- **gdb**: A powerful, open-source debugger.
+- **addr2line**: A command-line tool that converts memory addresses into specific lines of code for easier debugging.
+
+devkitPro provides both `gdb` and `addr2line` for both Nintendo 3DS and Nintendo Switch. Install `gdb` with the following, as `addr2line` was already installed when setting up the environment:
+
+<Tabs>
+    <TabItem value="Windows (msys2)">
+        ```bash
+        pacman -S devkitARM-gdb devkitA64-gdb
+        ```
+    </TabItem>
+    <TabItem value="Unix-like (Linux, macOS)">
+        ```bash
+        sudo (dkp-)pacman -S devkitARM-gdb devkitA64-gdb
+        ```
+    </TabItem>
+</Tabs>

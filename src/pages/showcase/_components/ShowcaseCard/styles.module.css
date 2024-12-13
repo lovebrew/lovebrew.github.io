@@ -85,7 +85,7 @@
 }
 
 .showcaseCardTitle {
-  font-weight: 500;
+  font-weight: bold;
   color: var(--ifm-color-primary);
   margin-right: 0.25rem;
   flex: 1 1 auto;
@@ -105,9 +105,8 @@
 
 .showcaseCardAuthor {
   font-size: smaller;
-  font-weight: 500;
-  color: var(--ifm-color-primary);
-  color: initial;
+  font-weight: bold;
+  color: var(--ifm-color-content);
   margin-right: 0.25rem;
   margin-bottom: 0;
 }

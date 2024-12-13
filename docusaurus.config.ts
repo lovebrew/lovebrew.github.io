@@ -102,7 +102,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["lua", "batch", "bash", "toml"],
+      additionalLanguages: ["lua", "batch", "bash", "toml", "ini"],
     },
   } satisfies Preset.ThemeConfig,
 };

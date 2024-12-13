@@ -9,7 +9,8 @@ import TabItem from "@theme/TabItem";
 
 :::info
 
-It is important to note that for custom textures you must convert your PNG or JPEG font to t3x format on Nintendo 3DS. This can be done when bundling your game via [the bundler website](/bundler/overview)
+It is important to note that for custom textures to work, convert your PNG or JPEG font to t3x format on Nintendo 3DS. This can be done via [the bundler website](/bundler/overview).
+Furthermore, the file paths for `love.graphics.newImage` and `love.graphics.newFont` are automatically converted to the correct file extension for the console.
 
 :::
 
@@ -29,7 +30,7 @@ end
 The following screen values are what get passed per console:
 
 <Tabs>
-  <TabItem value="Nintendo 3DS">`left`, `right`, and `bottom`</TabItem>
+  <TabItem value="Nintendo 3DS">`left`, `right`, and `bottom` (`top` and `bottom` when Stereoscopic 3D is disabled via `love.graphics.set3D(false)`)</TabItem>
   <TabItem value="Nintendo Switch">`default`</TabItem>
   <TabItem value="Nintendo Wii U">`tv` and `gamepad`</TabItem>
 </Tabs>

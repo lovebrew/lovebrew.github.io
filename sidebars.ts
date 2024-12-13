@@ -51,6 +51,16 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
+      type: "category",
+      label: "Development",
+      items: [
+        "development/environment",
+        "development/debugging",
+        "development/gnu-debugger",
+        "development/addr2line"
+      ],
+    },
+    {
       type: "html",
       value: `<span class='.sidebar-title'>Resources<hr class='sidebar-div'></hr></span>`,
       defaultStyle: true,

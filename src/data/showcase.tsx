@@ -23,6 +23,14 @@ const Showcase: Array<ShowcaseItem> = [
     preview: require("/showcase/tasmanquest.png"),
     source: "https://nawias.itch.io/tasmanquest",
     consoles: [Console.NINTENDO_3DS]
+  },
+  {
+    title: "Super Kawaii Girlfriend Breakup Simulator Portable",
+    author: "DangerBites, Haynster, & Eran",
+    description: "In this quirky dating game, your mission is to break up with Cat Grill as quickly as possible! Make choices to lower the emotion meter before the timer runs out.",
+    preview: require("/showcase/superkawaii.png"),
+    source: "https://dangerbites.itch.io/breakup-portable",
+    consoles: [Console.NINTENDO_3DS]
   }
 ];
 

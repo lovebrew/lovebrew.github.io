@@ -1,0 +1,78 @@
+---
+hide_title: true
+title: Environment Setup
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+:::info
+
+Please read everything carefully. Follow all necessary links and read those thoroughly. They contain important information.
+
+:::
+
+# Environment Setup
+
+This section provides the necessary steps for configuring a development environment to build and contribute to LÖVE Potion.
+
+In order to start contributing, you will need to [follow the instructions on the devkitPro Wiki](https://devkitpro.org/wiki/Getting_Started) for setting up a development environment. If you have an existing pacman installation (e.g. msys2 or Linux) then [refer to this section on the devkitPro Wiki](https://devkitpro.org/wiki/devkitPro_pacman#Customising_Existing_Pacman_Install).
+
+## Dependencies
+
+Once the environment is set up, open your terminal and run the following commands to sync your packages and install the base development groups. On Linux and macOS, prepend `dkp-` to the `pacman` command if `pacman` was installed via the devkitPro installer.
+
+<Tabs>
+    <TabItem value="Windows (msys2)">
+        ```bash
+        pacman -Syu && pacman -S switch-dev 3ds-dev wiiu-dev
+        ```
+    </TabItem>
+    <TabItem value="Unix-like (Linux, macOS)">
+        ```bash
+        sudo (dkp-)pacman -Syu && sudo (dkp-)pacman -S switch-dev 3ds-dev wiiu-dev catnip
+        ```
+    </TabItem>
+</Tabs>
+
+Next, please [fork and clone the LÖVE Potion repository locally](https://help.github.com/articles/fork-a-repo/). Afterwords, change the working directory to where LÖVE Potion was cloned:
+
+```bash
+cd lovepotion
+```
+
+Install the required portlibs for whichever console that will be built:
+
+<Tabs>
+    <TabItem value="Windows (msys2)">
+        ```bash
+        pacman -S --needed - < platform/{console}/pkglist.txt
+        ```
+    </TabItem>
+    <TabItem value="Unix-like (Linux, macOS)">
+        ```bash
+        sudo (dkp-)pacman -S --needed - < platform/{console}/pkglist.txt
+        ```
+    </TabItem>
+</Tabs>
+
+After everything has been installed, you can run the `catnip` build command to compile the code for your chosen console.
+`catnip` is a build tool provided by devkitPro for managing CMake builds of homebrew. Here are commands for each supported console:
+
+<Tabs>
+    <TabItem value="Nintendo 3DS">
+        ```bash
+        catnip -T 3DS
+        ```
+    </TabItem>
+    <TabItem value="Nintendo Wii U">
+        ```bash
+        catnip -T WiiU
+        ```
+    </TabItem>
+    <TabItem value="Nintendo Switch">
+        ```bash
+        catnip -T Switch
+        ```
+    </TabItem>
+</Tabs>

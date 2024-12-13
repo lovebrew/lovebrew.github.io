@@ -1,0 +1,21 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Symbol Resolution with addr2line
+
+When running a LÖVE Potion game, the system might encounter an unrecoverable crash. On the Nintendo 3DS, this will trigger the Arm11 Exceptions screen, which provides important crash details. On the Nintendo Switch, crash data is logged to the microSD card under /atmosphere/logs/crash_reports. In both cases, the most important values to look for are the PC (Program Counter) and LR (Link Register) addresses.
+
+<Tabs>
+    <TabItem value="Nintendo 3DS">
+    ```bash
+    /opt/devkitpro/devkitARM/bin/arm-none-eabi-addr2line -aipfCe arm -e path/to/lovepotion.elf [address_one, ...]
+    ```
+    </TabItem>
+    <TabItem value="Nintendo Switch">
+    ```bash
+    /opt/devkitpro/devkitA64/bin/aarch64-none-elf-addr2line -aipfCe -e path/to/lovepotion.elf [address_one, ...]
+    ```
+    </TabItem>
+</Tabs>
+
+Replace `[address_one], [address_two]`, etc., with the actual memory addresses taken from the crash logs. On Nintendo Switch, look for a line similar to `(lovepotion.nro + 0xa30498)` in the crash report, and use the hex value for `addr2line`.
