@@ -17,7 +17,7 @@ Like LÖVE, LÖVE Potion has defined constants which are useful and can be used 
 
 | Variable               | Description                                   | Value                       |
 | ---------------------- | --------------------------------------------- | --------------------------- |
-| `love._console`        | The name of the console                       | `3ds`, `switch`, or `wii u` |
+| `love._console`        | The name of the console                       | `3DS`, `Switch`, or `Wii u` |
 | `love._potion_version` | The version of LÖVE Potion                    | e.g. `3.0.0`                |
 | `love._os`             | The running "Operating System" of the console | `Horizon`/`Cafe`            |
 
