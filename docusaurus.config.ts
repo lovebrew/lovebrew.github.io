@@ -1,47 +1,47 @@
-import { themes as prismThemes } from "prism-react-renderer";
-import type { Config } from "@docusaurus/types";
-import type * as Preset from "@docusaurus/preset-classic";
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: "LÖVEBrew",
-  tagline: "LÖVE Potion",
-  favicon: "images/favicon.ico",
-  url: "https://lovebrew.github.io",
-  baseUrl: "/",
+  title: 'LÖVEBrew',
+  tagline: 'LÖVE Potion',
+  favicon: 'images/favicon.ico',
+  url: 'https://lovebrew.github.io',
+  baseUrl: '/',
 
   trailingSlash: false,
 
-  organizationName: "lovebrew",
-  projectName: "lovebrew.github.io",
+  organizationName: 'lovebrew',
+  projectName: 'lovebrew.github.io',
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       {
         docs: {
-          routeBasePath: "/",
-          sidebarPath: "./sidebars.ts",
+          routeBasePath: '/',
+          sidebarPath: './sidebars.ts',
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
   ],
 
-  plugins: [["@docusaurus/plugin-ideal-image", { disableInDev: false }]],
+  plugins: [['@docusaurus/plugin-ideal-image', { disableInDev: false }]],
 
   themeConfig: {
-      algolia: {
+    algolia: {
       appId: 'V4GA8BFAID',
       apiKey: 'b69b81a4fcaa91ed94022b5faa467f2e',
       indexName: 'lovebrew',
@@ -49,60 +49,60 @@ const config: Config = {
       // externalUrlRegex: 'external\\.com|domain\\.com',
       searchParameters: {},
       searchPagePath: false,
-      insights: false
+      insights: false,
     },
     navbar: {
-      title: "LÖVE Potion",
+      title: 'LÖVE Potion',
       logo: {
-        alt: "My Site Logo",
-        src: "images/logo.svg",
+        alt: 'My Site Logo',
+        src: 'images/logo.svg',
       },
       items: [
         {
-          type: "doc",
-          position: "left",
-          docId: "welcome",
-          label: "Wiki",
+          type: 'doc',
+          position: 'left',
+          docId: 'welcome',
+          label: 'Wiki',
         },
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "bundlerSidebar",
-          label: "Bundler",
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'bundlerSidebar',
+          label: 'Bundler',
         },
-        { to: "/showcase", label: "Showcase", position: "left" },
+        { to: '/showcase', label: 'Showcase', position: 'left' },
         {
-          type: "doc",
-          position: "left",
-          docId: "faq",
-          label: "FAQ",
-        },
-        {
-          type: "custom-badge",
-          position: "right",
-          version: "12.0",
+          type: 'doc',
+          position: 'left',
+          docId: 'faq',
+          label: 'FAQ',
         },
         {
-          type: "localeDropdown",
-          position: "right",
+          type: 'custom-badge',
+          position: 'right',
+          version: '12.0',
         },
         {
-          to: "https://discord.gg/ggbKkhc",
-          position: "right",
-          className: "header-discord-link",
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
-          href: "https://github.com/lovebrew/lovepotion",
-          position: "right",
-          className: "header-github-link",
-          "aria-label": "GitHub repository",
+          to: 'https://discord.gg/ggbKkhc',
+          position: 'right',
+          className: 'header-discord-link',
+        },
+        {
+          href: 'https://github.com/lovebrew/lovepotion',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["lua", "batch", "bash", "toml", "ini"],
+      additionalLanguages: ['lua', 'batch', 'bash', 'toml', 'ini'],
     },
   } satisfies Preset.ThemeConfig,
 };
