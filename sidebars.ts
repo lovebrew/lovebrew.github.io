@@ -44,9 +44,12 @@ const sidebars: SidebarsConfig = {
       label: 'Compatibility',
       items: [
         'compatibility/general',
+        'compatibility/filesystem',
         'compatibility/rendering',
         'compatibility/system-fonts',
+        'compatibility/touch-input',
         'compatibility/software-keyboard',
+        'compatibility/network',
         'compatibility/gamepad',
       ],
     },

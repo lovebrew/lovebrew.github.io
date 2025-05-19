@@ -40,7 +40,9 @@ The consoles come with embedded fonts for loading, referred to as _System Fonts_
 
 ## Special Font Glyphs
 
-The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
+The Standard font on Nintendo 3DS and Wii U holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. You can find [a reference sheet for the glyphs here](/images/nintendo_extended_glyphs_sheet.webp).
+
+Here is a basic example:
 
 ```lua title='main.lua'
 local utf8 = require("utf8")

@@ -10,7 +10,24 @@ The system software keyboard applet is a built-in feature on the consoles that p
 
 ## How it Works
 
-When you need to input text within your game or application, simply call `love.keyboard.setTextInput(true)`. The system software keyboard applet is then invoked, displaying an on-screen keyboard. Users can then type using the console's controls or touchscreen, and the text is passed back to your application through the `love.textinput` callback.
+When you need to input text within your game or application, simply call `love.keyboard.setTextInput(true)`. The system software keyboard applet is then invoked, displaying an on-screen keyboard. Users can then type using the console's controls or touchscreen, and the text is passed back to your application through the `love.textinput` callback once the accept button is pressed.
+
+```lua
+local my_text = ""
+function love.textinput(text)
+    my_text = text
+end
+
+function love.draw(screen)
+    love.graphics.print(my_text)
+end
+
+function love.gamepadpressed(joystick, button)
+    if button == "back" then
+        love.keyboard.setTextInput(true)
+    end
+end
+```
 
 ## Differences
 

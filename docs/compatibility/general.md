@@ -26,25 +26,9 @@ Like LÖVE, LÖVE Potion has defined constants which are useful and can be used 
 | Name                         | Description                                                         | Returns                            |
 | ---------------------------- | ------------------------------------------------------------------- | ---------------------------------- |
 | `love.system.getNetworkInfo` | Returns whether or not the system has an active internet connection | `string` status, `number` strength |
-| `love.system.getFriendInfo`  | Returns the information of the user running LÖVE Potion             | `{ name, friend code}`             |
-
-## Filesystem Operations
-
-LÖVE uses physfs as the internal filesystem handler, which is great for abstracting system-dependant filesystem operations. The only caveat is that Horizon (3DS and Switch) and Cafe (Wii U) OSes do not allow the same file to be opened more than once. For example, consider the following:
-
-```lua title='main.lua'
-local save_file = love.filesystem.openFile("save.dat", "w") -- create file
-save_file:write("lmao testing")
-
-local error = nil
-
-save_file, error = love.filesystem.openFile("save.dat", "r") -- open to read what we want
-save_file:read() -- save_file would be nil, so operating on a nil value
-
-print(error) -- might be i/o error or that the OS was busy
-```
-
-To resolve this issue, you must either call `File:close()` or set the file object to `nil` before re-opening the file. This should not affect methods like love.filesystem.read/write/append, however since these do not push Lua objects to the stack and will automatically close the File when done doing their operations.
+| `love.system.getFriendInfo`  | Returns the information of the user running LÖVE Potion             | `{ name: string, code: string }`   |
+| `love.system.getPlayCoins`   | Returns the number of Play Coins on the Nintendo 3DS system         | `integer` coins                     |
+| `love.system.setPlayCoins`   | Sets the number of Play Coins on the Nintendo 3DS system            | `nil`                              |
 
 ## Hashing Functions (Wii U)
 
