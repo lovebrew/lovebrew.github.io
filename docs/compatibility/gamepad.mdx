@@ -1,9 +1,66 @@
 ---
 hide_title: true
+title: Gamepad Buttons
 ---
 
+import React, { useState } from "react";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+
+export function GamepadSelector() {
+  const [system, setSystem] = useState("ctr");
+
+  return (
+    <>
+      <label htmlFor="system">Choose a System:</label>
+      <select
+        id="system"
+        value={system}
+        onChange={e => setSystem(e.target.value)}
+        style={{ marginLeft: 8, marginBottom: 16 }}
+      >
+        <option value="ctr">Nintendo 3DS</option>
+        <option value="hac">Nintendo Switch</option>
+        <option value="cafe">Nintendo Wii U</option>
+      </select>
+
+      {system === "ctr" && (
+        <img src="/images/controller-maps/Nintendo3DS.png" alt="Nintendo 3DS" />
+      )}
+
+      {system === "hac" && (
+        <Tabs>
+          <TabItem value="Joy-Con" label="Joy-Con">
+            <img src="/images/controller-maps/JoyCon.png" alt="Joy-Con" />
+          </TabItem>
+          <TabItem value="Switch Pro Controller" label="Switch Pro Controller">
+            <img src="/images/controller-maps/SwitchProController.png" alt="Switch Pro Controller" />
+          </TabItem>
+        </Tabs>
+      )}
+
+      {system === "cafe" && (
+        <Tabs>
+          <TabItem value="Wii U Gamepad" label="Wiiᵁ Gamepad">
+            <img src="/images/controller-maps/WiiUGamepad.png" alt="Wii U Gamepad" />
+          </TabItem>
+          <TabItem value="Wii U Pro Controller" label="Wiiᵁ Pro Controller">
+            <img src="/images/controller-maps/WiiUProController.png" alt="Wii U Pro Controller" />
+          </TabItem>
+          <TabItem value="Wii Classic Controller" label="Wii Classic Controller">
+            Coming Soon™
+          </TabItem>
+          <TabItem value="Wii Pro Controller" label="Wii Pro Controller">
+            Coming Soon™
+          </TabItem>
+          <TabItem value="Wiimote & Nunchuk" label="Wiimote & Nunchuk">
+            Coming Soon™
+          </TabItem>
+        </Tabs>
+      )}
+    </>
+  );
+}
 
 # Gamepad Buttons
 
@@ -19,29 +76,5 @@ When using LÖVE Potion on your console, you'll find that the buttons are mapped
 
 The button mappings on your console are designed to mirror the standard controller mappings used in LÖVE. This means that the standard ABXY, D-Pad, Start/Select, and L/R are mapped accordingly. Furthermore, the ZL and ZR buttons (when present) are mapped to the left and right triggers and only output either zero or one. Additionally, the Nintendo Switch Joy-Con, Pro Controller, Wii U Gamepad and Pro Controller all have access to stick pressing.
 
-<Tabs>
-  <TabItem value="Nintendo 3DS">
-    ![](/images/controller-maps/Nintendo3DS.png)
-  </TabItem>
-  <TabItem value="Wii Remote/Nunchuk">
-    Coming Soon
-  </TabItem>
-  <TabItem value="Wii Classic Controller">
-    Coming Soon
-  </TabItem>
-  <TabItem value="Wii Classic Controller Pro">
-    Coming Soon
-  </TabItem>
-  <TabItem value="Wii U Gamepad">
-    ![](/images/controller-maps/WiiUGamepad.png)
-  </TabItem>
-  <TabItem value="Wii U Pro Controller">
-    ![](/images/controller-maps/WiiUProController.png)
-  </TabItem>
-  <TabItem value="Joy-Con">
-    ![](/images/controller-maps/JoyCon.png)
-  </TabItem>
-  <TabItem value="Switch Pro Controller">
-    ![](/images/controller-maps/SwitchProController.png)
-  </TabItem>
-</Tabs>
+
+<GamepadSelector />
