@@ -6,7 +6,7 @@ hide_title: true
 
 :::info
 
-It is important to note that for custom fonts you must convert your TrueType or OpenType font to bcnft format on Nintendo 3DS. This can be done when bundling your game via [the bundler website](/bundler/overview)
+It is important to note that for custom fonts you must convert your TrueType or OpenType font to bcnft format on Nintendo 3DS. This can be done when bundling your game via [the bundler website](/bundler-app/overview)
 
 :::
 

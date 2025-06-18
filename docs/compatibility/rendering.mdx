@@ -9,7 +9,7 @@ import TabItem from "@theme/TabItem";
 
 :::info
 
-It is important to note that for custom textures to work, convert your PNG or JPEG font to t3x format on Nintendo 3DS. This can be done via [the bundler website](/bundler/overview).
+It is important to note that for custom textures to work, convert your PNG or JPEG font to t3x format on Nintendo 3DS. This can be done via [the bundler website](/bundler-app/overview).
 Furthermore, the file paths for `love.graphics.newImage` and `love.graphics.newFont` are automatically converted to the correct file extension for the console.
 
 :::
@@ -43,7 +43,7 @@ Stereoscopic depth is only for Nintendo 3DS. This is function will always return
 
 :::
 
-The Nintendo 3DS has stereoscopic 3D – it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getDepth()`. This will return the 3D slider’s current value, which is in the range of zero to one. One way for this to work is through this example:
+The Nintendo 3DS has stereoscopic 3D - it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getDepth()`. This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
 
 ```lua title='main.lua'
 local str, font = "Hello World", nil
@@ -68,6 +68,6 @@ function love.draw(screen)
 end
 ```
 
-We define where the main x coordinate should be defined as left . This specifically is the anchor point to draw at. In this case, it’s going to be in the center of the screen. This value is then subtracted by what the depth value currently is on the system and multiplied by a constant z value.
+We define where the main x coordinate should be defined as left . This specifically is the anchor point to draw at. In this case, it's going to be in the center of the screen. This value is then subtracted by what the depth value currently is on the system and multiplied by a constant z value.
 
 You can enable or disable stereoscopic 3D at any time using `love.graphics.set3D(enable)` and passing `true` or `false`. Ideally this should only be done at application startup.

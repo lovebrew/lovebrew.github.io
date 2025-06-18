@@ -46,7 +46,6 @@ const config: Config = {
       apiKey: 'b69b81a4fcaa91ed94022b5faa467f2e',
       indexName: 'lovebrew',
       contextualSearch: true,
-      // externalUrlRegex: 'external\\.com|domain\\.com',
       searchParameters: {},
       searchPagePath: false,
       insights: false,

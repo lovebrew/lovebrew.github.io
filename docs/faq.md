@@ -18,7 +18,7 @@ No, creating an "installable" version of your game (e.g. CIA or NSP) is not supp
 
 ### Do I need to build LÖVE Potion from source?
 
-No, you do not need to build the project from source manually. We provide a bundler service specifically designed to address this issue. The Bundler automatically integrates your game into the executable, allowing it to be runnable without requiring a separate game directory. For more details about how the Bundler works and its benefits, please visit [its respective page](/docs/bundler/overview.md).
+No, you do not need to build the project from source manually. We provide a bundler service specifically designed to address this issue. The Bundler automatically integrates your game into the executable, allowing it to be runnable without requiring a separate game directory. For more details about how the Bundler works and its benefits, please visit [its respective page](/docs/bundler-app/overview.md).
 
 ### Are shaders supported?
 

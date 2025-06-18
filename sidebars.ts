@@ -102,16 +102,16 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
-      id: 'bundler/overview',
+      id: 'bundler-app/overview',
       label: 'Overview',
     },
     {
       type: 'category',
       label: 'Getting Started',
       items: [
-        'bundler/getting-started/uploading',
-        'bundler/getting-started/configuration',
-        'bundler/getting-started/structure',
+        'bundler-app/getting-started/uploading',
+        'bundler-app/getting-started/configuration',
+        'bundler-app/getting-started/structure',
       ],
     },
     {
