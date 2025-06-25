@@ -19,10 +19,7 @@ end
 
 function love.draw()
     for id, touch in pairs(touches) do
-        local x = touch.x * love.graphics.getWidth()
-        local y = touch.y * love.graphics.getHeight()
-
-        love.graphics.circle("fill", x, y, 20)
+        love.graphics.circle("fill", touch.x, touch.y, 20)
     end
 end
 ```
