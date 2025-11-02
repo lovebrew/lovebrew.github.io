@@ -15,7 +15,12 @@ const config: Config = {
   projectName: 'lovebrew.github.io',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownImages: 'throw',
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -77,24 +82,20 @@ const config: Config = {
           label: 'FAQ',
         },
         {
-          type: 'custom-badge',
-          position: 'right',
-          version: '12.0',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
         {
-          to: 'https://discord.gg/ggbKkhc',
+          href: 'https://github.com/lovebrew/lovepotion',
           position: 'right',
-          className: 'header-discord-link',
+          'aria-label': 'Github Repository',
+          className: 'fa-brands fa-github',
         },
         {
           href: 'https://github.com/lovebrew/lovepotion',
           position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
+          'aria-label': 'Discord Server',
+          className: 'fa-brands fa-discord',
         },
       ],
     },
@@ -102,6 +103,9 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['lua', 'batch', 'bash', 'toml', 'ini'],
+    },
+    footer: {
+      copyright: `© ${new Date().getFullYear()} LÖVEBrew`,
     },
   } satisfies Preset.ThemeConfig,
 };

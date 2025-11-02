@@ -18,7 +18,7 @@ if not success then print("Failed to mount SD card!") end
 
 ## Gotchas
 
-LÖVE uses physfs as the internal filesystem handler, which is great for abstracting system-dependant filesystem operations. The only caveat is that Horizon (3DS and Switch) and Cafe (Wii U) OSes do not allow the same file to be opened more than once. For example, consider the following:
+LÖVE uses physfs as the internal filesystem handler, which is great for abstracting system-dependant filesystem operations. The only caveat is that Horizon (3DS and Switch) and Cafe (Wii U) OSes do not allow the same file to be opened more than once without being **closed** first. For example, consider the following:
 
 ```lua title='main.lua'
 local save_file = love.filesystem.openFile("save.dat", "w") -- create file

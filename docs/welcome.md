@@ -1,15 +1,26 @@
 ---
 slug: /
 hide_title: true
+title: Welcome
 ---
 
-# Welcome
+## Welcome
 
-Welcome to LÖVE Potion, a powerful tool for creating homebrew games and applications for the Nintendo 3DS, Nintendo Switch, and Nintendo Wii U using the LÖVE framework. LÖVE Potion currently supports LÖVE 12.0 and allows you to harness the flexibility and simplicity of LÖVE (LÖVE2D) to develop engaging and dynamic software for these platforms.
+LÖVE Potion lets you create homebrew games and apps for the Nintendo 3DS, Switch, and Wii U using the familiar LÖVE2D framework. It supports LÖVE 12.0 and keeps most of its core features, with only minor platform differences noted in the [_Compatibility_](/docs/compatibility/general.md) page.
 
-While the core features of LÖVE are maintained, there are a few minor differences in the 3DS version, which are detailed in the "Compatibility" documentation. Dive into our quick start guide to see how easy it is to bring your ideas to life on your favorite Nintendo consoles!
+Get started in minutes and see your ideas come to life on your console!
 
-## Hello World
+### Plug & Play
+
+Building from source isn't necessary - just grab a release and you're ready to run your first project!
+
+1. [Download the latest release](https://github.com/lovebrew/lovepotion/releases/latest) for your console onto the SD card.
+2. Create a `game` directory containing `main.lua` next to the binary.
+3. Launch LÖVE Potion!
+
+More details about running LÖVE Potion can be found on the next page.
+
+### Hello World
 
 This is the full source for "Hello World!" in LÖVE Potion.
 

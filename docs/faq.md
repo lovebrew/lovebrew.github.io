@@ -6,7 +6,7 @@ hide_title: true
 
 ### Can I run my LÖVE game?
 
-LÖVE Potion is designed to be API compatible with the LÖVE framework, so in most cases, yes, you can run your LÖVE game using LÖVE Potion. However, it's important to note that there are minor differences between LÖVE Potion and the standard LÖVE framework. These differences are detailed and addressed within the ['Compatibility'](/docs/compatibility/general.md) category of our documentation.
+LÖVE Potion is designed to be API compatible with the LÖVE framework, so in most cases, yes, you can run your LÖVE game using LÖVE Potion. However, it's important to note that there are minor differences between LÖVE Potion and the standard LÖVE framework. These differences are detailed and addressed within the [_Compatibility_](/docs/compatibility/general.md) section of the Wiki.
 
 ### Can I run my game via emulation?
 

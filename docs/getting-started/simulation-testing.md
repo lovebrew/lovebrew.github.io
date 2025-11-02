@@ -14,7 +14,7 @@ While simulation testing does provide the benefit of testing games without hardw
 
 Simulation testing with LÖVE Potion provides a convenient method for developers to test games without physical hardware. This approach leverages the LÖVE framework and the [nëst library](https://github.com/lovebrew/nest) to [simulate](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference) console-specific features.
 
-For more console-specific considerations and compatibility details, [refer to the 'Compatibility' section](/docs/compatibility/general.md).
+For more console-specific considerations and compatibility details, [refer to the _Compatibility_ section](/docs/compatibility/general.md).
 
 ## Using LÖVE and nëst for Testing
 
