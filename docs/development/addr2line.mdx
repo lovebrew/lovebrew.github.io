@@ -7,12 +7,14 @@ When running a LÖVE Potion game, the system might encounter an unrecoverable cr
 
 <Tabs>
   <TabItem value="Nintendo 3DS">
-    ```bash /opt/devkitpro/devkitARM/bin/arm-none-eabi-addr2line -aipfCe arm -e
-    path/to/lovepotion.elf [address_one, ...] ```
+    ```bash
+      /opt/devkitpro/devkitARM/bin/arm-none-eabi-addr2line -aipfCe arm -e path/to/lovepotion.elf [address_one, ...]
+    ```
   </TabItem>
   <TabItem value="Nintendo Switch">
-    ```bash /opt/devkitpro/devkitA64/bin/aarch64-none-elf-addr2line -aipfCe -e
-    path/to/lovepotion.elf [address_one, ...] ```
+    ```bash
+      /opt/devkitpro/devkitA64/bin/aarch64-none-elf-addr2line -aipfCe -e path/to/lovepotion.elf [address_one, ...]
+    ```
   </TabItem>
 </Tabs>
 
