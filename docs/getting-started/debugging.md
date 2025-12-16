@@ -44,3 +44,11 @@ while True:
 ```
 
 This can be ran by typing `python main.py <console_ip_address>`.
+
+## nestcli
+
+[nestcli](https://github.com/lovebrew/nestcli) is a command-line tool for LÖVE Potion games, designed to streamline the development process by providing a command-line interface for managing and connecting to debug targets over a network. It offers a range of features, including:
+
+- Connecting to debug targets over a network
+- Debugging LÖVE Potion crash dumps via addr2line
+- Creating bundles for the bundler website
